@@ -1,0 +1,65 @@
+/* ESTILOS CONTACTO — AIDA (colores, animaciones, tipografía visual) */
+
+.contacto-info h1 {
+    color: var(--accent); /* color cian desde variables */
+}
+
+.contacto-info p {
+    color: var(--text);
+}
+
+.info-item {
+    background: #101a25;
+    border-left: 4px solid rgba(0, 212, 255, 0.25);
+}
+
+.info-item h3 {
+    color: var(--accent);
+}
+
+.info-item p {
+    color: #CCCCCC;
+}
+
+.form-grupo label {
+    color: var(--text);
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    background: #0e1621;
+    color: var(--text);
+    border: 2px solid rgba(255,255,255,0.08);
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+    border-color: rgba(0, 212, 255, 0.6);
+}
+
+.btn-volver-inicio {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid rgba(0, 212, 255, 0.35);
+}
+
+.btn-volver-inicio:hover {
+    background: rgba(0, 212, 255, 0.14);
+    color: var(--text);
+}
+
+.btn-enviar {
+    background: var(--accent-secondary);
+    color: #FFFFFF;
+}
+
+.btn-enviar:hover {
+    background: #0088a8;
+}
+
+.mensaje-exito {
+    background: #4CAF50;
+    color: white;
+}

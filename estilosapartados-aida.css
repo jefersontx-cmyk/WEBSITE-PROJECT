@@ -1,0 +1,35 @@
+/* ESTILOS APARTADOS — AIDA (colores y visual) */
+
+.producto {
+    background-color: #ffffff; /* si prefieres usar variables, ajusta en AIDA principal */
+}
+
+.informacion {
+    background-color: #90a9b8;
+}
+
+.informacion h3 {
+    color: #222222;
+}
+
+.precio .dinero {
+    color: #e63946;
+}
+
+.btn-ver-producto {
+    background: #0057A8;
+    color: white;
+    border: 2px solid #0057A8;
+}
+
+.btn-ver-producto:hover {
+    background: #0011ff;
+}
+
+#intro h2 {
+    color: #bbd2e7;
+}
+
+#intro h2::after {
+    background-color: #006eff;
+}
