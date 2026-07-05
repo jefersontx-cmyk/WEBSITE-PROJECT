@@ -1,0 +1,80 @@
+/* ESTILOS CONTACTO — MELI (layout, grid y responsive) */
+
+.contacto-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.08);
+}
+
+.contacto-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.contacto-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contacto-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.info-contacto {
+    display: grid;
+    gap: 20px;
+}
+
+.info-item {
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.contacto-formulario h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-grupo textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contenedor-boton-volver {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .contacto-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .contacto-info h1 {
+        font-size: 2rem;
+    }
+    .contacto-formulario h2 {
+        font-size: 1.5rem;
+    }
+}

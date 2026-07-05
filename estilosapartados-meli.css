@@ -1,0 +1,163 @@
+/* ESTILOS APARTADOS — MELI (estructura de catálogo y tarjetas) */
+
+.catalogo {
+    display: grid;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cata-accesorios {
+    grid-template-columns: repeat(3, 1fr);
+}
+.cata-velocity{
+    grid-template-columns: 1fr;
+}
+.cata-velocity .producto img {
+    max-height: 450px;
+}
+.cata-tacos, .cata-equipacion {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.producto {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.producto:hover img {
+    transform: scale(1.08);
+}
+
+.informacion {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.4s ease;
+}
+
+.producto:hover .informacion {
+    background-color: #9aadd1;
+}
+
+.informacion h3 {
+    margin: 0 0 10px 0;
+    font-family: Arial, sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.informacion p {
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.precio .dinero {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-ver-producto {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+#intro header {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#intro h2 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#intro h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+#descripcion {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .cata-tacos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cata-accesorios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cata-equipacion {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #intro h2 {
+        font-size: 2rem;
+    }
+    #descripcion {
+        font-size: 1rem;
+    }
+    .producto img {
+        max-height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cata-tacos,
+    .cata-accesorios,
+    .cata-velocity,
+    .cata-equipacion {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .catalogo {
+        gap: 15px;
+        padding: 10px;
+    }
+    .producto img {
+        max-height: 300px;
+    }
+    .informacion h3 {
+        font-size: 1.1rem;
+    }
+    .informacion p {
+        font-size: 0.85rem;
+    }
+    #intro h2 {
+        font-size: 1.6rem;
+    }
+    #descripcion {
+        font-size: 0.9rem;
+    }
+}
