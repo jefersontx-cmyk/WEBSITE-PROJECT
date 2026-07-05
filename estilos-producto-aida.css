@@ -1,0 +1,50 @@
+/* ESTILOS PRODUCTO — AIDA (colores, efectos visuales, tipografía) */
+
+.info-producto h1 {
+    color: var(--accent-secondary);
+}
+
+.precio-producto {
+    color: var(--accent-secondary);
+}
+
+.selector-tallas h3 {
+    color: var(--text);
+}
+
+.talla {
+    border: 2px solid var(--accent-secondary);
+    color: var(--accent-secondary);
+}
+
+.talla:hover,
+.talla.seleccionada {
+    background: var(--accent-secondary);
+    color: white;
+}
+
+.btn-agregar-carrito {
+    background: var(--accent-secondary);
+    color: white;
+    border: none;
+}
+
+.btn-agregar-carrito:hover {
+    background: #cc0000; /* fallback mantenido */
+}
+
+.descripcion-detallada h3 {
+    color: var(--text);
+}
+
+.productos-relacionados h2 {
+    color: var(--accent-secondary);
+}
+
+.total-carrito {
+    color: var(--accent-secondary);
+}
+
+.cerrar-modal {
+    color: #E60000;
+}
