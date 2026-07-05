@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TX-TACOS</title>
+    <link rel="stylesheet" href="../CSS/estiloprincipal-aida.css">
+    <link rel="stylesheet" href="../CSS/estiloprincipal-meli.css">
+    <link rel="stylesheet" href="../CSS/estilosapartados-aida.css">
+    <link rel="stylesheet" href="../CSS/estilosapartados-meli.css">
+    <!-- Scripts para funcionalidad del carrito -->
+    <script src="../JS/productos.js"></script>
+    <script src="../JS/carrito.js"></script>
+</head>
+<body>
+
+    <!-- ========================
+         HEADER — La barra superior con el nombre TX
+         Es lo primero que se ve, forma de rectángulo largo
+    ======================== -->
+    <header class="header">
+        <img src="../images/logo2.png" alt="Logo TX" class="header-logo" height="350%">
+    </header>
+
+    <!-- 1. Checkbox - motor del hamburguesa -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- 2. Panel lateral - solo celular -->
+    <ul class="menu-panel">
+        <li><a href="../index.html">INICIO</a></li>
+        <li><a href="Equipacion.html">EQUIPACIÓN</a></li>
+        <li><a href="Tacos.html">TACOS</a></li>
+        <li><a href="Accesorios.html">ACCESORIOS</a></li>
+        <li><a href="Velocity.html">VELOCITY</a></li>
+        <li><a href="Contacto.html">CONTACTO</a></li>
+    </ul>
+    <label class="menu-overlay" for="menu-toggle" aria-label="Cerrar menú"></label>
+
+    <nav class="navbar">
+        <label class="menu-btn" for="menu-toggle">☰</label>
+        <ul class="nav-links">
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="Equipacion.html">EQUIPACIÓN</a></li>
+            <li><a href="Tacos.html">TACOS</a></li>
+            <li><a href="Accesorios.html">ACCESORIOS</a></li>
+            <li><a href="Velocity.html">VELOCITY</a></li>
+            <li><a href="Contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <!-- Una seccion que engloba todo el apartado de accesorios-->
+    <section id="intro">
+        <!--Una breve introduccion al apartado de accesorios-->
+        <header>
+        <h2>Tacos</h2>
+        <p id="descripcion">
+            Tacos, zapatillas, botines o como le digan en tu pais 
+            ¿Quieres verte realmente fachero y deslumbrar con tus habilidades? 
+            Aquí tienes los mejores tacos
+        </p>
+        </header>
+
+        <!-- La parte del menu para las imagenes y descripciones-->
+         <div class="catalogo cata-tacos">
+
+            <article class="producto">
+                <div>
+                    <img src="../images/tacos1.jpeg" alt="Quetxil">
+                </div>
+                <div class="informacion"> 
+                    <h3>Quetxil</h3>
+                    <p>Las alas que te hacen sentir mas ligero</p>
+                    <div class="precio">
+                        <p class="dinero">A solo: Q.650.00</p>
+                    </div>
+                    <button class="btn-ver-producto" onclick="window.location.href='producto.html?id=quetxil'">Ver Producto</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <div>
+                    <img src="../images/tacos2.jpeg" alt="Wonderping">
+                </div>
+                <div class="informacion">
+                    <h3>Wonderping</h3>
+                    <p>Los que no le temen a nada</p>
+                    <div class="precio">
+                        <p class="dinero">A solo: Q.650.00</p>
+                    </div>
+                    <button class="btn-ver-producto" onclick="window.location.href='producto.html?id=wonderping'">Ver Producto</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <div>
+                    <img src="../images/tacos3.jpeg" alt="Allegiance">
+                </div>
+                <div class="informacion">
+                    <h3>Allegiance</h3>
+                    <p>LL. EL sentimiento de lealtad y de libertad</p>
+                    <div class="precio">
+                        <p class="dinero">A solo: Q.650.00</p>
+                    </div>
+                    <button class="btn-ver-producto" onclick="window.location.href='producto.html?id=allegiance'">Ver Producto</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <div>
+                    <img src="../images/tacos4.jpeg" alt="Cavitas Oris">
+                </div>
+                <div class="informacion">
+                    <h3>Cavitas Oris</h3>
+                    <p>Donde la pasión y la humildad nunca falta</p>
+                    <div class="precio">
+                        <p class="dinero">A solo: Q.599.00</p>
+                    </div>
+                    <button class="btn-ver-producto" onclick="window.location.href='producto.html?id=cavitasoris'">Ver Producto</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <div>
+                    <img src="../images/tacos5.jpeg" alt="Kuntur">
+                </div>
+                <div class="informacion">
+                    <h3>Kuntur</h3>
+                    <p>El sol te ayudará en la velocidad que necesites</p>
+                    <div class="precio">
+                        <p class="dinero">A solo: Q.650.00</p>
+                    </div>
+                    <button class="btn-ver-producto" onclick="window.location.href='producto.html?id=kuntur'">Ver Producto</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <div>
+                    <img src="../images/tacos6.jpeg" alt="Mercury">
+                </div>
+                <div class="informacion">
+                    <h3>Mercury</h3>
+                    <p>Ligero como el espacio</p>
+                    <div class="precio">
+                        <p class="dinero">A solo: Q.650.00</p>
+                    </div>
+                    <button class="btn-ver-producto" onclick="window.location.href='producto.html?id=mercury'">Ver Producto</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <div>
+                    <img src="../images/tacos7.png" alt="Sonic Wave">
+                </div>
+                <div class="informacion">
+                    <h3>Sonic Wave</h3>
+                    <p>Con toda la velocidad de la onda</p>
+                    <div class="precio">
+                        <p class="dinero">A solo: Q.650.00</p>
+                    </div>
+                    <button class="btn-ver-producto" onclick="window.location.href='producto.html?id=sonic-wave'">Ver Producto</button>
+                </div>
+            </article>
+        
+            <article class="producto">
+                <div>
+                    <img src="../images/Proximamente.png" alt="Proximamente">
+                </div>
+                <div class="informacion">
+                    <h3>Proximamente</h3>
+                </div>
+            </article>
+
+         </div>
+    </section>
+
+    <!-- Botón para volver atrás -->
+    <div class="contenedor-boton-volver">
+        <a href="../index.html" class="btn-volver-inicio">
+            ← Volver al Inicio
+        </a>
+    </div>
+
+<!-- Solucionando el bug insano de el carrito /AC/ -->
+ <div class="carrito-flotante" onclick="mostrarCarrito()">
+        🛒 <span class="carrito-contador" id="carrito-contador">0</span>
+    </div>
+    <div class="modal-carrito" id="modal-carrito">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarCarrito()">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="items-carrito"></div>
+            <div class="total-carrito" id="total-carrito">Total: Q.0.00</div>
+            <button class="btn-agregar-carrito" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <p class="footer-derechos">
+            &copy; Derechos reservados &mdash; Estudiantes del IPC: Jeferson Ramírez y Carlos Contreras
+        </p>
+        <div class="footer-redes">
+            <a href="https://www.facebook.com/share/1EJJHtxnSB/">Facebook</a>
+            <a href="https://www.instagram.com/tx_studio8?igsh=MTV1dWxja3RocWlxaw==">Instagram</a>
+            <a href="https://wa.me/50236875828">WhatsApp</a>
+        </div>
+    </footer>
+</body>
+</html>
