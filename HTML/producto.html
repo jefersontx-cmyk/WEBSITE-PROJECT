@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TX-Camisola - TX Performance</title>
+    <link rel="stylesheet" href="../CSS/estiloprincipal-aida.css">
+    <link rel="stylesheet" href="../CSS/estiloprincipal-meli.css">
+    <link rel="stylesheet" href="../CSS/estilosapartados-aida.css">
+    <link rel="stylesheet" href="../CSS/estilosapartados-meli.css">
+    <link rel="stylesheet" href="../CSS/estilos-producto-aida.css">
+    <link rel="stylesheet" href="../CSS/estilos-producto-meli.css">
+    <!-- Scripts para funcionalidad dinámica -->
+    <script src="../JS/productos.js"></script>
+    <script src="../JS/carrito.js"></script>
+</head>
+<body>
+    <!-- ========================
+         HEADER — La barra superior con el nombre TX
+         Es lo primero que se ve, forma de rectángulo largo
+    ======================== -->
+    <header class="header">
+        <img src="../images/logo2.png" alt="Logo TX" class="header-logo" height="250%">
+    </header>
+
+    <!-- 1. Checkbox - motor del hamburguesa -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- 2. Panel lateral - solo celular -->
+    <ul class="menu-panel">
+        <li><a href="../index.html">INICIO</a></li>
+        <li><a href="Equipacion.html">EQUIPACIÓN</a></li>
+        <li><a href="Tacos.html">TACOS</a></li>
+        <li><a href="Accesorios.html">ACCESORIOS</a></li>
+        <li><a href="Velocity.html">VELOCITY</a></li>
+        <li><a href="Contacto.html">CONTACTO</a></li>
+    </ul>
+
+    <!-- ========================
+         NAV — Barra de navegación
+         Links para moverse entre secciones
+    ======================== -->
+    <nav class="navbar">
+        <label class="menu-btn" for="menu-toggle">☰</label>
+        <ul class="nav-links">
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="Equipacion.html">EQUIPACIÓN</a></li>
+            <li><a href="Tacos.html">TACOS</a></li>
+            <li><a href="Accesorios.html">ACCESORIOS</a></li>
+            <li><a href="Velocity.html">VELOCITY</a></li>
+            <li><a href="Contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+
+    <!-- Carrito flotante - aparece en todas las páginas -->
+    <div class="carrito-flotante" onclick="mostrarCarrito()">
+        🛒 <span class="carrito-contador" id="carrito-contador">0</span>
+    </div>
+
+    <!-- Modal del carrito -->
+    <div class="modal-carrito" id="modal-carrito">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarCarrito()">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="items-carrito">
+                <!-- Los items del carrito se agregarán aquí con JavaScript -->
+            </div>
+            <div class="total-carrito" id="total-carrito">
+                Total: Q.0.00
+            </div>
+            <button class="btn-agregar-carrito" onclick="finalizarCompra()">
+                Finalizar Compra
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenido principal de la página de producto -->
+    <main>
+        <div class="producto-detalle">
+            <!-- Galería de imágenes del producto -->
+            <div class="galeria-imagenes">
+                <div class="imagen-principal">
+                    <img src="../images/placeholder.png" alt="Producto TX" id="imagen-principal">
+                </div>
+                <div class="imagenes-secundarias" id="imagenes-secundarias">
+                    <!-- Las imágenes secundarias se cargarán dinámicamente -->
+                </div>
+            </div>
+
+            <!-- Información detallada del producto -->
+            <div class="info-producto">
+                <h1 id="titulo-producto">Producto TX</h1>
+                <div class="precio-producto" id="precio-producto">Q.0.00</div>
+
+                <!-- Selector de tallas -->
+                <div class="selector-tallas">
+                    <h3>Selecciona tu talla:</h3>
+                    <div class="tallas" id="contenedor-tallas">
+                        <!-- Las tallas se cargarán dinámicamente -->
+                    </div>
+                </div>
+
+                <!-- Botón agregar al carrito -->
+                <button class="btn-agregar-carrito" id="btn-agregar-carrito" onclick="agregarProductoAlCarrito()">
+                    Agregar al Carrito
+                </button>
+
+                <!-- Descripción detallada -->
+                <div class="descripcion-detallada">
+                    <h3>Descripción</h3>
+                    <p id="descripcion-producto">Cargando descripción...</p>
+
+                    <h3>Características</h3>
+                    <ul id="caracteristicas-producto">
+                        <!-- Las características se cargarán dinámicamente -->
+                    </ul>
+
+                    <h3>Cuidados</h3>
+                    <p id="cuidados-producto">Cargando información de cuidados...</p>
+                </div>
+            </div>
+        </div>
+
+           <!-- Botón para volver atrás -->
+    <div class="contenedor-boton-volver">
+        <button class="btn-volver-inicio" onclick="history.back()">
+            ← Volver Atrás
+        </button>
+    </div>
+
+    </main>
+
+    <!-- ========================
+         FOOTER — Pie de página
+         Derechos reservados e íconos de redes sociales
+    ======================== -->
+    <footer class="footer">
+        <p class="footer-derechos">
+            &copy; Derechos reservados &mdash; Estudiantes del IPC: Jeferson Ramírez y Carlos Contreras
+        </p>
+        <div class="footer-redes">
+            <a href="https://www.facebook.com/share/1EJJHtxnSB/">Facebook</a>
+            <a href="https://www.instagram.com/tx_studio8?igsh=MTV1dWxja3RocWlxaw==">Instagram</a>
+            <a href="https://wa.me/50236875828">WhatsApp</a>
+        </div>
+    </footer>
+
+    <!-- Script para cargar producto dinámicamente -->
+    <script>
+        // Variable global para el producto actual
+        let productoActual = null;
+
+        // Función para obtener parámetro de la URL
+        function obtenerParametroURL(nombre) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(nombre);
+        }
+
+        // Función para cargar producto dinámicamente
+        function cargarProducto() {
+            const productoId = obtenerParametroURL('id');
+
+            if (!productoId) {
+                // Si no hay ID, mostrar producto por defecto o error
+                mostrarErrorProducto();
+                return;
+            }
+
+            productoActual = obtenerProducto(productoId);
+
+            if (!productoActual) {
+                mostrarErrorProducto();
+                return;
+            }
+
+            // Cargar información del producto
+            document.getElementById('titulo-producto').textContent = productoActual.nombre;
+            document.getElementById('precio-producto').textContent = `Q.${productoActual.precio.toFixed(2)}`;
+            document.getElementById('descripcion-producto').textContent = productoActual.descripcion;
+            document.getElementById('cuidados-producto').textContent = productoActual.cuidados;
+
+            // Cargar imagen principal
+            document.getElementById('imagen-principal').src = productoActual.imagenes[0];
+            document.getElementById('imagen-principal').alt = productoActual.nombre;
+
+            // Cargar imágenes secundarias
+            const imagenesSecundarias = document.getElementById('imagenes-secundarias');
+            imagenesSecundarias.innerHTML = '';
+            productoActual.imagenes.forEach((imagen, index) => {
+                if (index > 0) { // Saltar la primera imagen que ya está en principal
+                    const img = document.createElement('img');
+                    img.src = imagen;
+                    img.alt = `${productoActual.nombre} vista ${index + 1}`;
+                    img.onclick = () => cambiarImagen(imagen);
+                    imagenesSecundarias.appendChild(img);
+                }
+            });
+
+            // Cargar tallas
+            const contenedorTallas = document.getElementById('contenedor-tallas');
+            contenedorTallas.innerHTML = '';
+            productoActual.tallas.forEach(talla => {
+                const btnTalla = document.createElement('button');
+                btnTalla.className = 'talla';
+                btnTalla.textContent = talla;
+                btnTalla.onclick = () => seleccionarTalla(btnTalla);
+                contenedorTallas.appendChild(btnTalla);
+            });
+
+            // Cargar características
+            const listaCaracteristicas = document.getElementById('caracteristicas-producto');
+            listaCaracteristicas.innerHTML = '';
+            productoActual.caracteristicas.forEach(caracteristica => {
+                const li = document.createElement('li');
+                li.textContent = caracteristica;
+                listaCaracteristicas.appendChild(li);
+            });
+
+    
+            // Actualizar título de la página
+            document.title = `${productoActual.nombre} - TX Performance`;
+        }
+
+        // Función para mostrar error cuando no se encuentra el producto
+        function mostrarErrorProducto() {
+            document.getElementById('titulo-producto').textContent = 'Producto no encontrado';
+            document.getElementById('precio-producto').textContent = 'Q.0.00';
+            document.getElementById('descripcion-producto').textContent = 'Lo sentimos, el producto que buscas no está disponible.';
+            document.getElementById('btn-agregar-carrito').style.display = 'none';
+            document.querySelector('.selector-tallas').style.display = 'none';
+        }
+
+        // Función para agregar producto al carrito (versión actualizada)
+        function agregarProductoAlCarrito() {
+            if (!productoActual) {
+                alert('Error: No se pudo cargar la información del producto.');
+                return;
+            }
+
+            if (!window.tallaSeleccionada) {
+                alert('Por favor selecciona una talla antes de agregar al carrito.');
+                return;
+            }
+
+            agregarAlCarrito(
+                productoActual.nombre,
+                productoActual.precio,
+                productoActual.imagenes[0],
+                window.tallaSeleccionada
+            );
+        }
+
+        // Inicializar página cuando se carga
+        document.addEventListener('DOMContentLoaded', function() {
+            cargarProducto();
+        });
+    </script>
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\J\Desktop\5TH-PROJECT\HTML\producto.html
