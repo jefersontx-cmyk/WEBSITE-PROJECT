@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TX Performance</title>
+    <title>Sports Rain - Ropa y Artículos Deportivos</title>
     <link rel="stylesheet" href="CSS/estiloprincipal-aida.css">
     <link rel="stylesheet" href="CSS/estiloprincipal-meli.css">
     <!-- Scripts para funcionalidad del carrito -->
@@ -15,11 +15,15 @@
 <body>
 
     <!-- ========================
-         HEADER — La barra superior con el nombre TX
+         HEADER — La barra superior con el nombre de la tienda
          Es lo primero que se ve, forma de rectángulo largo
     ======================== -->
     <header class="header">
+<<<<<<< HEAD
         <img src="images/logo2.png" alt="Logo TX" class="header-logo">
+=======
+        <img src="images/logo2.png" alt="Logo Sports Rain" class="header-logo">
+>>>>>>> html
     </header>
 
     <!-- 1. Checkbox - motor del hamburguesa -->
@@ -31,7 +35,6 @@
         <li><a href="HTML/Equipacion.html">EQUIPACIÓN</a></li>
         <li><a href="HTML/Tacos.html">TACOS</a></li>
         <li><a href="HTML/Accesorios.html">ACCESORIOS</a></li>
-        <li><a href="HTML/Velocity.html">VELOCITY</a></li>
         <li><a href="HTML/Contacto.html">CONTACTO</a></li>
     </ul>
     <label class="menu-overlay" for="menu-toggle" aria-label="Cerrar menú"></label>
@@ -47,9 +50,7 @@
             <li><a href="HTML/Equipacion.html">EQUIPACIÓN</a></li>
             <li><a href="HTML/Tacos.html">TACOS</a></li>
             <li><a href="HTML/Accesorios.html">ACCESORIOS</a></li>
-            <li><a href="HTML/Velocity.html">VELOCITY</a></li>
             <li><a href="HTML/Contacto.html">CONTACTO</a></li>
-
         </ul>
     </nav>
 
@@ -76,15 +77,14 @@
     </div>
 
     <main>
+        <!-- HERO SECTION -->
         <section class="hero">
             <div class="hero-copy">
-                <p class="eyebrow">TX Performance</p>
+                <p class="eyebrow">Sports Rain</p>
                 <h1>
-                    <span class="accent-primary">Velocidad</span> y <span class="accent-secondary">control</span> en
-                    cada paso
+                    <span class="accent-primary">Velocidad</span> y <span class="accent-secondary">control</span> en cada paso
                 </h1>
-                <p class="hero-text">Descubre equipación profesional, tacos y accesorios diseñados para llevar tu juego
-                    al siguiente nivel sin perder estilo.</p>
+                <p class="hero-text">Descubre equipación profesional, tacos y accesorios premium diseñados para llevar tu juego al siguiente nivel sin perder el estilo.</p>
                 <div class="hero-actions">
                     <a href="HTML/Equipacion.html" class="btn-agregar-carrito">Ver equipación</a>
                     <a href="HTML/Contacto.html" class="btn-volver-inicio">Contáctanos</a>
@@ -92,27 +92,39 @@
             </div>
         </section>
 
-        <section class="destacados">
-            <div class="destacado-card">
-                <h2>Equipación</h2>
-                <p>Todo lo necesario para jugar con estilo y comodidad.</p>
+        <!-- SECCIÓN DE PRODUCTOS DESTACADOS (MANEJO DE BOXES) -->
+        <section class="destacados-contenedor">
+            <div class="destacado-card-box">
+                <h2>Equipación Premium</h2>
+                <p>Camisolas y uniformes oficiales para jugar con máxima comodidad y estilo en la cancha.</p>
                 <a href="HTML/Equipacion.html" class="btn-ver-producto">Explorar</a>
             </div>
-            <div class="destacado-card">
-                <h2>Tacos</h2>
-                <p>Modelos seleccionados para velocidad, agarre y control.</p>
+            <div class="destacado-card-box">
+                <h2>Tacos Profesionales</h2>
+                <p>Modelos de alta gama seleccionados rigurosamente para mayor velocidad, agarre y control.</p>
                 <a href="HTML/Tacos.html" class="btn-ver-producto">Ver tacos</a>
             </div>
-            <div class="destacado-card">
-                <h2>Accesorios</h2>
-                <p>Complementos funcionales para mejorar tu rutina.</p>
+            <div class="destacado-card-box">
+                <h2>Accesorios de Rendimiento</h2>
+                <p>Complementos deportivos, mochilas y bandas funcionales para mejorar tu rutina diaria.</p>
                 <a href="HTML/Accesorios.html" class="btn-ver-producto">Ver accesorios</a>
             </div>
         </section>
 
+        <!-- NUEVA SECCIÓN DE HISTORIA (PETICIÓN DEL COORDINADOR) -->
+        <section class="historia-section">
+            <div class="historia-contenido">
+                <h2>Nuestra Historia</h2>
+                <p class="historia-texto">
+                    <strong>Sports Rain</strong> nació de la pasión pura por el deporte de alto rendimiento. Fundada con el ideal de proveer a atletas locales y profesionales indumentaria deportiva de la más alta calidad, nuestra marca se ha convertido en sinónimo de resistencia y velocidad bajo cualquier condición climática. Creemos que la lluvia o el sudor no detienen el juego; al contrario, forjan a los verdaderos campeones. Cada diseño y costura está pensado para empoderar tu instinto en la cancha.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SLOGAN -->
         <section class="slogan">
             <div class="slogan-fondo">
-                <img src="images/fondo.png" alt="Logo TX de fondo" class="slogan-logo">
+                <img src="images/fondo.png" alt="Logo de fondo" class="slogan-logo">
             </div>
             <div class="slogan-contenido">
                 <h1>
@@ -123,20 +135,28 @@
                 <p class="slogan-text">No es solo ropa. Es la forma en que te mueves.</p>
             </div>
         </section>
+
+        <!-- SECCIÓN RÁPIDA DE CONTACTO -->
+        <section class="contacto-rapido">
+            <div class="contacto-box">
+                <h3>¿Tienes dudas sobre tu pedido?</h3>
+                <p>Escríbenos directamente o visítanos en nuestras redes oficiales para atención inmediata.</p>
+                <a href="HTML/Contacto.html" class="btn-ver-producto">Ir a Soporte</a>
+            </div>
+        </section>
     </main>
 
     <!-- ========================
-         FOOTER — Pie de página
-         Derechos reservados e íconos de redes sociales
+         FOOTER — Pie de página (Solo con el nombre de la empresa)
     ======================== -->
     <footer class="footer">
         <p class="footer-derechos">
-            &copy; Derechos reservados &mdash; Estudiantes del IPC: Jeferson Ramírez y Carlos Contreras
+            &copy; 2026 Sports Rain. Todos los derechos reservados.
         </p>
         <div class="footer-redes">
-            <a href="https://www.facebook.com/share/1EJJHtxnSB/">Facebook</a>
-            <a href="https://www.instagram.com/tx_studio8?igsh=MTV1dWxja3RocWlxaw==">Instagram</a>
-            <a href="https://wa.me/50236875828">WhatsApp</a>
+            <a href="https://www.facebook.com/share/1EJJHtxnSB/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/tx_studio8?igsh=MTV1dWxja3RocWlxaw==" target="_blank">Instagram</a>
+            <a href="https://wa.me/50236875828" target="_blank">WhatsApp</a>
         </div>
     </footer>
 
