@@ -104,11 +104,15 @@ img {
 /* NAV — estructura */
 .navbar {
     width: 100%;
-    padding: 0 40px;
+    padding: 15px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
+    background: rgba(8, 12, 18, 0.95);
+    border-top: 2px solid rgba(0, 212, 255, 0.3);
+    border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+    min-height: 60px;
 }
 
 .nav-links {
