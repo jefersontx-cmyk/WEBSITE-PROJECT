@@ -2,162 +2,167 @@
 
 .catalogo {
     display: grid;
-    gap: 30px;
-    padding: 20px;
-    max-width: 1200px;
+    gap: 28px;
+    padding: 24px;
+    max-width: 1240px;
     margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-.cata-accesorios {
-    grid-template-columns: repeat(3, 1fr);
+.cata-accesorios,
+.cata-velocity,
+.cata-tacos,
+.cata-equipacion {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
-.cata-velocity{
-    grid-template-columns: 1fr;
-}
+
 .cata-velocity .producto img {
     max-height: 450px;
 }
-.cata-tacos, .cata-equipacion {
-    grid-template-columns: repeat(4, 1fr);
-}
 
 .producto {
-    border-radius: 10px;
+    border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.18);
     display: flex;
     flex-direction: column;
+    background: rgba(10, 18, 34, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 45px 110px rgba(0, 0, 0, 0.22);
 }
 
 .producto img {
     width: 100%;
-    height: auto;
-    max-height: 250px;
+    height: 260px;
     object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
+    transition: transform 0.45s ease;
 }
 
 .producto:hover img {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 .informacion {
-    padding: 20px;
+    padding: 26px 24px 28px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: background-color 0.4s ease;
+    transition: background-color 0.35s ease;
 }
 
 .producto:hover .informacion {
-    background-color: #9aadd1;
+    background-color: rgba(17, 26, 45, 0.96);
 }
 
 .informacion h3 {
-    margin: 0 0 10px 0;
-    font-family: Arial, sans-serif;
-    font-size: 1.4rem;
+    margin: 0 0 14px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
     text-transform: uppercase;
 }
 
 .informacion p {
-    color: #555555;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    font-size: 0.95rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.8;
+    margin-bottom: 18px;
+    font-size: 0.98rem;
 }
 
 .precio .dinero {
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-weight: 700;
+    font-size: 1.25rem;
 }
 
 .btn-ver-producto {
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 0.95rem 1rem;
+    border-radius: 999px;
     cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-top: 10px;
-    width: 100%;
-    transition: background 0.3s;
+    font-size: 0.95rem;
+    font-weight: 800;
+    margin-top: 18px;
+    width: fit-content;
+    align-self: flex-start;
+    transition: all 0.25s ease;
+    background: rgba(0, 212, 255, 0.16);
+    color: inherit;
+    border: 1px solid rgba(0, 212, 255, 0.22);
+}
+
+.btn-ver-producto:hover {
+    background: rgba(0, 212, 255, 0.28);
 }
 
 #intro header {
     text-align: center;
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 48px 24px;
+    max-width: 820px;
+    margin: 0 auto 20px;
 }
 
 #intro h2 {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2rem, 3.2vw, 3.4rem);
+    margin-bottom: 12px;
 }
 
 #intro h2::after {
     content: "";
     display: block;
-    width: 60px;
+    width: 72px;
     height: 4px;
-    margin: 10px auto 0;
-    border-radius: 2px;
+    margin: 14px auto 0;
+    border-radius: 999px;
+    background: rgba(0, 212, 255, 0.9);
 }
 
 #descripcion {
-    font-size: 1.2rem;
+    font-size: 1.06rem;
     font-style: italic;
-    margin-top: 15px;
+    color: rgba(255,255,255,0.78);
+    margin-top: 18px;
 }
 
 @media (max-width: 768px) {
-    .cata-tacos {
-        grid-template-columns: repeat(1, 1fr);
+    .catalogo {
+        gap: 20px;
+        padding: 18px;
     }
-    .cata-accesorios {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .cata-equipacion {
-        grid-template-columns: repeat(2, 1fr);
+    .producto img {
+        height: 280px;
     }
     #intro h2 {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
     #descripcion {
         font-size: 1rem;
     }
+}
+
+@media (max-width: 48000px) {
+    .catalogo {
+        gap: 16px;
+        padding: 16px;
+    }
     .producto img {
-        max-height: 280px;
+        height: auto;
+    }
+    .informacion h3 {
+        font-size: 1.2rem;
+    }
+    .informacion p {
+        font-size: 0.92rem;
+    }
+    #intro h2 {
+        font-size: 1.9rem;
+    }
+    #descripcion {
+        font-size: 0.95rem;
     }
 }
 
-@media (max-width: 480px) {
-    .cata-tacos,
-    .cata-accesorios,
-    .cata-velocity,
-    .cata-equipacion {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .catalogo {
-        gap: 15px;
-        padding: 10px;
-    }
-    .producto img {
-        max-height: 300px;
-    }
-    .informacion h3 {
-        font-size: 1.1rem;
-    }
-    .informacion p {
-        font-size: 0.85rem;
-    }
-    #intro h2 {
-        font-size: 1.6rem;
-    }
-    #descripcion {
-        font-size: 0.9rem;
-    }
-}
