@@ -1,29 +1,28 @@
 /* ESTILOS CONTACTO — MELI (layout, grid y responsive) */
 
 .contacto-section {
-    padding: 40px 20px;
-    max-width: 1200px;
+    padding: 48px 20px;
+    max-width: 1180px;
     margin: 0 auto;
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(0, 212, 255, 0.08);
 }
 
 .contacto-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1.2fr 0.9fr;
+    gap: 36px;
     align-items: start;
 }
 
 .contacto-info h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: clamp(2.4rem, 3.2vw, 3.2rem);
+    margin-bottom: 18px;
 }
 
 .contacto-info p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 32px;
+    color: rgba(234, 247, 255, 0.8);
 }
 
 .info-contacto {
@@ -32,13 +31,15 @@
 }
 
 .info-item {
-    padding: 20px;
-    border-radius: 12px;
+    padding: 26px;
+    border-radius: 24px;
+    background: rgba(10, 18, 34, 0.9);
+    border: 1px solid rgba(255,255,255,0.06);
 }
 
 .contacto-formulario h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: clamp(2rem, 2.4vw, 2.4rem);
+    margin-bottom: 24px;
 }
 
 .form-grupo {
@@ -49,32 +50,44 @@
 .form-grupo select,
 .form-grupo textarea {
     width: 100%;
-    padding: 12px;
-    border-radius: 5px;
+    padding: 16px 18px;
+    border-radius: 18px;
     font-size: 1rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.04);
 }
 
 .form-grupo textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 130px;
 }
 
 .contenedor-boton-volver {
-    max-width: 1200px;
-    margin: 20px auto;
+    max-width: 1180px;
+    margin: 28px auto;
     padding: 0 20px;
     text-align: left;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .contacto-container {
         grid-template-columns: 1fr;
         gap: 30px;
     }
     .contacto-info h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
     }
     .contacto-formulario h2 {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
     }
 }
+
+@media (max-width: 560px) {
+    .contacto-section {
+        padding: 30px 16px;
+    }
+    .info-item {
+        padding: 20px;
+    }
+}
+

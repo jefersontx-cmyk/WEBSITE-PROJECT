@@ -10,31 +10,41 @@
 
 .selector-tallas h3 {
     color: var(--text);
+    margin-bottom: 14px;
 }
 
 .talla {
-    border: 2px solid var(--accent-secondary);
-    color: var(--accent-secondary);
+    border: 1px solid rgba(91, 192, 255, 0.35);
+    color: rgba(234, 247, 255, 0.95);
+    background: rgba(255,255,255,0.04);
 }
 
 .talla:hover,
 .talla.seleccionada {
-    background: var(--accent-secondary);
-    color: white;
+    background: rgba(91, 192, 255, 0.18);
+    color: var(--text);
+    border-color: rgba(91, 192, 255, 0.8);
 }
 
 .btn-agregar-carrito {
-    background: var(--accent-secondary);
-    color: white;
+    background: var(--accent);
+    color: #06070f;
     border: none;
+    box-shadow: 0 18px 40px rgba(0, 212, 255, 0.18);
 }
 
 .btn-agregar-carrito:hover {
-    background: #cc0000; /* fallback mantenido */
+    background: var(--accent-secondary);
 }
 
 .descripcion-detallada h3 {
     color: var(--text);
+    margin-top: 24px;
+}
+
+.descripcion-detallada ul {
+    list-style: disc inside;
+    color: rgba(234, 247, 255, 0.82);
 }
 
 .productos-relacionados h2 {
@@ -46,5 +56,6 @@
 }
 
 .cerrar-modal {
-    color: #E60000;
+    color: var(--accent);
 }
+

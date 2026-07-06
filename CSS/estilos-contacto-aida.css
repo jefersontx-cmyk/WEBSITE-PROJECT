@@ -1,65 +1,72 @@
 /* ESTILOS CONTACTO — AIDA (colores, animaciones, tipografía visual) */
 
 .contacto-info h1 {
-    color: var(--accent); /* color cian desde variables */
-}
-
-.contacto-info p {
-    color: var(--text);
-}
-
-.info-item {
-    background: #101a25;
-    border-left: 4px solid rgba(0, 212, 255, 0.25);
-}
-
-.info-item h3 {
     color: var(--accent);
 }
 
+.contacto-info p {
+    color: rgba(234, 247, 255, 0.87);
+}
+
+.info-item {
+    background: rgba(8, 13, 24, 0.96);
+    border-left: 4px solid rgba(0, 212, 255, 0.35);
+}
+
+.info-item h3 {
+    color: var(--accent-secondary);
+}
+
 .info-item p {
-    color: #CCCCCC;
+    color: rgba(255,255,255,0.78);
 }
 
 .form-grupo label {
     color: var(--text);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
 }
 
 .form-grupo input,
 .form-grupo select,
 .form-grupo textarea {
-    background: #0e1621;
+    background: rgba(255,255,255,0.04);
     color: var(--text);
-    border: 2px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.10);
 }
 
 .form-grupo input:focus,
 .form-grupo select:focus,
 .form-grupo textarea:focus {
-    border-color: rgba(0, 212, 255, 0.6);
+    border-color: rgba(0, 212, 255, 0.75);
+    outline: none;
 }
 
 .btn-volver-inicio {
-    background: transparent;
+    background: rgba(255,255,255,0.05);
     color: var(--text);
-    border: 2px solid rgba(0, 212, 255, 0.35);
+    border: 1px solid rgba(0, 212, 255, 0.25);
+    padding: 0.95rem 1.4rem;
 }
 
 .btn-volver-inicio:hover {
-    background: rgba(0, 212, 255, 0.14);
-    color: var(--text);
+    background: rgba(0, 212, 255, 0.15);
 }
 
 .btn-enviar {
-    background: var(--accent-secondary);
-    color: #FFFFFF;
+    background: var(--accent);
+    color: #06070f;
 }
 
 .btn-enviar:hover {
-    background: #0088a8;
+    background: var(--accent-secondary);
 }
 
 .mensaje-exito {
-    background: #4CAF50;
+    background: #28a745;
     color: white;
+    padding: 14px 18px;
+    border-radius: 14px;
 }
+

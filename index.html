@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,7 @@
          Es lo primero que se ve, forma de rectángulo largo
     ======================== -->
     <header class="header">
-        <img src="images/logo2.png" alt="Logo TX" class="header-logo" height="350%">
+        <img src="images/logo2.png" alt="Logo TX" class="header-logo">
     </header>
 
     <!-- 1. Checkbox - motor del hamburguesa -->
@@ -74,25 +75,55 @@
         </div>
     </div>
 
-    <!-- ========================
-         SLOGAN — Sección principal de contenido
-         Aquí va el texto de inspiración y el logo de fondo
-    ======================== -->
-    <section class="slogan">
-        <!-- Este div es el logo TX que se ve de fondo, casi invisible -->
-        <div class="slogan-fondo">
-            <img src="images/fondo.png" alt="Logo TX de fondo" class="slogan-logo">
-        </div>
-        <!-- Este div es el texto principal que el usuario lee -->
-        <div class="slogan-contenido">
-            <h1>
-                <span class="accent-primary">Velocidad.</span>
-                <span class="accent-secondary">Control.</span>
-                <span>Instinto.</span>
-            </h1>
-            <p class="slogan-text">No es solo ropa. Es la forma en que te mueves.</p>
-        </div>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">TX Performance</p>
+                <h1>
+                    <span class="accent-primary">Velocidad</span> y <span class="accent-secondary">control</span> en
+                    cada paso
+                </h1>
+                <p class="hero-text">Descubre equipación profesional, tacos y accesorios diseñados para llevar tu juego
+                    al siguiente nivel sin perder estilo.</p>
+                <div class="hero-actions">
+                    <a href="HTML/Equipacion.html" class="btn-agregar-carrito">Ver equipación</a>
+                    <a href="HTML/Contacto.html" class="btn-volver-inicio">Contáctanos</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="destacados">
+            <div class="destacado-card">
+                <h2>Equipación</h2>
+                <p>Todo lo necesario para jugar con estilo y comodidad.</p>
+                <a href="HTML/Equipacion.html" class="btn-ver-producto">Explorar</a>
+            </div>
+            <div class="destacado-card">
+                <h2>Tacos</h2>
+                <p>Modelos seleccionados para velocidad, agarre y control.</p>
+                <a href="HTML/Tacos.html" class="btn-ver-producto">Ver tacos</a>
+            </div>
+            <div class="destacado-card">
+                <h2>Accesorios</h2>
+                <p>Complementos funcionales para mejorar tu rutina.</p>
+                <a href="HTML/Accesorios.html" class="btn-ver-producto">Ver accesorios</a>
+            </div>
+        </section>
+
+        <section class="slogan">
+            <div class="slogan-fondo">
+                <img src="images/fondo.png" alt="Logo TX de fondo" class="slogan-logo">
+            </div>
+            <div class="slogan-contenido">
+                <h1>
+                    <span class="accent-primary">Velocidad.</span>
+                    <span class="accent-secondary">Control.</span>
+                    <span>Instinto.</span>
+                </h1>
+                <p class="slogan-text">No es solo ropa. Es la forma en que te mueves.</p>
+            </div>
+        </section>
+    </main>
 
     <!-- ========================
          FOOTER — Pie de página
@@ -110,4 +141,5 @@
     </footer>
 
 </body>
+
 </html>

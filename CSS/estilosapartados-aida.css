@@ -1,35 +1,54 @@
 /* ESTILOS APARTADOS — AIDA (colores y visual) */
 
 .producto {
-    background-color: #ffffff; /* si prefieres usar variables, ajusta en AIDA principal */
+    background: linear-gradient(180deg, rgba(9, 18, 34, 0.96), rgba(8, 14, 24, 0.98));
 }
 
 .informacion {
-    background-color: #90a9b8;
+    background-color: rgba(9, 15, 27, 0.88);
 }
 
 .informacion h3 {
-    color: #222222;
+    color: var(--text);
 }
 
 .precio .dinero {
-    color: #e63946;
+    color: var(--accent-secondary);
 }
 
 .btn-ver-producto {
-    background: #0057A8;
-    color: white;
-    border: 2px solid #0057A8;
+    background: rgba(0, 212, 255, 0.18);
+    color: var(--text);
+    border: 1px solid rgba(0, 212, 255, 0.24);
 }
 
 .btn-ver-producto:hover {
-    background: #0011ff;
+    background: rgba(0, 212, 255, 0.32);
 }
 
 #intro h2 {
-    color: #bbd2e7;
+    color: var(--text);
 }
 
 #intro h2::after {
-    background-color: #006eff;
+    background-color: var(--accent);
 }
+
+.informacion p {
+    color: rgba(234, 247, 255, 0.8);
+}
+
+.btn-ver-producto {
+    color: var(--text);
+}
+
+.informacion {
+    border-radius: 20px;
+}
+
+#intro {
+    background: rgba(5, 8, 18, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 28px;
+}
+
