@@ -65,7 +65,7 @@
 .form-grupo input:focus,
 .form-grupo select:focus,
 .form-grupo textarea:focus {
-    border-color: rgba(0, 212, 255, 0.4); 
+    border-color: rgba(124, 58, 237, 0.4); 
 }
 
 .form-grupo textarea {
