@@ -20,7 +20,6 @@ body {
     overflow-x: hidden;
 }
 
-
 .navbar-tx {
     width: min(1280px, 100%);
     margin: 0 auto;
@@ -105,7 +104,7 @@ body {
 
 @media (max-width: 768px) {
     .navbar-tx {
-        padding: 18px 20px; 
+        padding: 18px 20px;
     }
     .navbar-menu {
         gap: 1rem;

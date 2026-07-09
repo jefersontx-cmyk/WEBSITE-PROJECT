@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TX-ACCESORIOS</title>
+    <link rel="stylesheet" href="../CSS/estiloprincipal-aida.css">
+    <link rel="stylesheet" href="../CSS/estiloprincipal-meli.css">
+    <link rel="stylesheet" href="../CSS/estilosapartados-aida.css">
+    <link rel="stylesheet" href="../CSS/estilosapartados-meli.css">
+    <!-- Scripts para funcionalidad del carrito -->
+    <script src="../JS/productos.js"></script>
+    <script src="../JS/carrito.js"></script>
+</head>
+<body>
+    
+    <!-- ========================
+         HEADER — La barra superior con el nombre TX
+         Es lo primero que se ve, forma de rectángulo largo
+    ======================== -->
+    <header class="header">
+        <img src="../images/logo2.png" alt="Logo TX" class="header-logo">
+    </header>
+
+    <!-- 1. Checkbox - motor del hamburguesa -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- 2. Panel lateral - solo celular -->
+    <ul class="menu-panel">
+        <li><a href="../index.html">INICIO</a></li>
+        <li><a href="Equipacion.html">EQUIPACIÓN</a></li>
+        <li><a href="Tacos.html">TACOS</a></li>
+        <li><a href="Accesorios.html">ACCESORIOS</a></li>
+        <li><a href="Velocity.html">VELOCITY</a></li>
+        <li><a href="Contacto.html">CONTACTO</a></li>
+    </ul>
+    <label class="menu-overlay" for="menu-toggle" aria-label="Cerrar menú"></label>
+
+    <!-- ========================
+         NAV — Barra de navegación
+         Links para moverse entre secciones
+    ======================== -->
+    <nav class="navbar">
+        <label class="menu-btn" for="menu-toggle">☰</label>
+        <ul class="nav-links">
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="Equipacion.html">EQUIPACIÓN</a></li>
+            <li><a href="Tacos.html">TACOS</a></li>
+            <li><a href="Accesorios.html">ACCESORIOS</a></li>
+            <li><a href="Velocity.html">VELOCITY</a></li>
+            <li><a href="Contacto.html">CONTACTO</a></li>
+
+        </ul>
+    </nav>
+    <!-- Una seccion que engloba todo el apartado de accesorios-->
+    <section id="intro">
+        <!--Una breve introduccion al apartado de accesorios-->
+        <header>
+        <h2>Accesorios</h2>
+        <p id="descripcion">
+            Deseas tener todo para ser un TX, aquí tienes lo mejor para que puedas lograrlo
+        </p>
+        </header>
+
+        <!-- La parte del menu para las imagenes y descripciones-->
+         <div class="catalogo cata-accesorios">
+
+            <article class="producto">
+                <div>
+                    <img src="../images/accesorios1.png" alt="rodillera">
+                </div>
+                <div class="informacion">
+                    <h3>Rodilleras</h3>
+                    <p>Protegen tus rodillas y te dan ese flow que te falta</p>
+                    <div class="precio">
+                        <p class="dinero">A solo: Q.99.00</p>
+                    </div>
+                    <button class="btn-ver-producto" onclick="window.location.href='producto.html?id=rodilleras'">Ver Producto</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <div>
+                    <img src="../images/accesorios2.png" alt="Pachon">
+                </div>
+                <div class="informacion">
+                    <h3>Pachon</h3>
+                    <p>Todo el flow ideal para que te mantengas hidatrado</p>
+                    <div class="precio">
+                        <p class="dinero">A solo: Q.50.00</p>
+                    </div>
+                    <button class="btn-ver-producto" onclick="window.location.href='producto.html?id=pachon'">Ver Producto</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <div>
+                    <img src="../images/accesorios3.png" alt="Mochila Deportiva">
+                </div>
+                <div class="informacion">
+                    <h3>Mochila Deportiva</h3>
+                    <p>Para que el almacenamiento no sea un estorbo</p>
+                    <div class="precio">
+                        <p class="dinero">A solo: Q.150.00</p>
+                    </div>
+                    <button class="btn-ver-producto" onclick="window.location.href='producto.html?id=mochila-deportiva'">Ver Producto</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <div>
+                    <img src="../images/accesorios4.png" alt="Mochila No Deportiva">
+                </div>
+                <div class="informacion">
+                    <h3>Mochila No-Deportiva</h3>
+                    <p>Para cualquier lugar que lo necesites</p>
+                    <div class="precio">
+                        <p class="dinero">A solo: Q.180.00</p>
+                    </div>
+                    <button class="btn-ver-producto" onclick="window.location.href='producto.html?id=mochila-no-deportiva'">Ver Producto</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <div>
+                    <img src="../images/accesorios5.png" alt="Muñequera">
+                </div>
+                <div class="informacion">
+                    <h3>Muñequeras</h3>
+                    <p>Lo que tus nudillos necesitan</p>
+                    <div class="precio">
+                        <p class="dinero">A solo: Q.80.00</p>
+                    </div>
+                    <button class="btn-ver-producto" onclick="window.location.href='producto.html?id=muñequera'">Ver Producto</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <div>
+                    <img src="../images/Proximamente.png" alt="reloj">
+                </div>
+                <div class="informacion">
+                    <h3>Proximamente</h3>
+                </div>
+            </article>
+         </div>
+    </section>
+
+    <!-- Botón para volver atrás -->
+    <div class="contenedor-boton-volver">
+        <a href="../index.html" class="btn-volver-inicio">
+            ← Volver Atrás
+        </a>
+    </div>
+
+    <!-- Solucionando el bug insano de el carrito /AC/ -->
+ <div class="carrito-flotante" onclick="mostrarCarrito()">
+        🛒 <span class="carrito-contador" id="carrito-contador">0</span>
+    </div>
+    <div class="modal-carrito" id="modal-carrito">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarCarrito()">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="items-carrito"></div>
+            <div class="total-carrito" id="total-carrito">Total: Q.0.00</div>
+            <button class="btn-agregar-carrito" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class="footer-derechos">
+            &copy; Derechos reservados &mdash; Estudiantes del IPC: Jeferson Ramírez y Carlos Contreras
+        </p>
+        <div class="footer-redes">
+            <a href="https://www.facebook.com/share/1EJJHtxnSB/">Facebook</a>
+            <a href="https://www.instagram.com/tx_studio8?igsh=MTV1dWxja3RocWlxaw==">Instagram</a>
+            <a href="https://wa.me/50236875828">WhatsApp</a>
+        </div>
+    </footer>
+</body>
+</html>

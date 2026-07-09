@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TX Performance</title>
+    <link rel="stylesheet" href="CSS/estiloprincipal-aida.css">
+    <link rel="stylesheet" href="CSS/estiloprincipal-meli.css">
+    <!-- Scripts para funcionalidad del carrito -->
+    <script src="JS/productos.js"></script>
+    <script src="JS/carrito.js"></script>
+</head>
+
+<body>
+
+    <!-- ========================
+         HEADER — La barra superior con el nombre TX
+         Es lo primero que se ve, forma de rectángulo largo
+    ======================== -->
+    <header class="header">
+        <img src="images/logo2.png" alt="Logo TX" class="header-logo">
+    </header>
+
+    <!-- 1. Checkbox - motor del hamburguesa -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- 2. Panel lateral - solo celular -->
+    <ul class="menu-panel">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="HTML/Equipacion.html">EQUIPACIÓN</a></li>
+        <li><a href="HTML/Tacos.html">TACOS</a></li>
+        <li><a href="HTML/Accesorios.html">ACCESORIOS</a></li>
+        <li><a href="HTML/Velocity.html">VELOCITY</a></li>
+        <li><a href="HTML/Contacto.html">CONTACTO</a></li>
+    </ul>
+    <label class="menu-overlay" for="menu-toggle" aria-label="Cerrar menú"></label>
+
+    <!-- ========================
+         NAV — Barra de navegación
+         Links para moverse entre secciones
+    ======================== -->
+    <nav class="navbar">
+        <label class="menu-btn" for="menu-toggle">☰</label>
+        <ul class="nav-links">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="HTML/Equipacion.html">EQUIPACIÓN</a></li>
+            <li><a href="HTML/Tacos.html">TACOS</a></li>
+            <li><a href="HTML/Accesorios.html">ACCESORIOS</a></li>
+            <li><a href="HTML/Velocity.html">VELOCITY</a></li>
+            <li><a href="HTML/Contacto.html">CONTACTO</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- Carrito flotante - aparece en todas las páginas -->
+    <div class="carrito-flotante" onclick="mostrarCarrito()">
+        🛒 <span class="carrito-contador" id="carrito-contador">0</span>
+    </div>
+
+    <!-- Modal del carrito -->
+    <div class="modal-carrito" id="modal-carrito">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarCarrito()">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="items-carrito">
+                <!-- Los items del carrito se agregarán aquí con JavaScript -->
+            </div>
+            <div class="total-carrito" id="total-carrito">
+                Total: Q.0.00
+            </div>
+            <button class="btn-agregar-carrito" onclick="finalizarCompra()">
+                Finalizar Compra
+            </button>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">TX Performance</p>
+                <h1>
+                    <span class="accent-primary">Velocidad</span> y <span class="accent-secondary">control</span> en
+                    cada paso
+                </h1>
+                <p class="hero-text">Descubre equipación profesional, tacos y accesorios diseñados para llevar tu juego
+                    al siguiente nivel sin perder estilo.</p>
+                <div class="hero-actions">
+                    <a href="HTML/Equipacion.html" class="btn-agregar-carrito">Ver equipación</a>
+                    <a href="HTML/Contacto.html" class="btn-volver-inicio">Contáctanos</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="destacados">
+            <div class="destacado-card">
+                <h2>Equipación</h2>
+                <p>Todo lo necesario para jugar con estilo y comodidad.</p>
+                <a href="HTML/Equipacion.html" class="btn-ver-producto">Explorar</a>
+            </div>
+            <div class="destacado-card">
+                <h2>Tacos</h2>
+                <p>Modelos seleccionados para velocidad, agarre y control.</p>
+                <a href="HTML/Tacos.html" class="btn-ver-producto">Ver tacos</a>
+            </div>
+            <div class="destacado-card">
+                <h2>Accesorios</h2>
+                <p>Complementos funcionales para mejorar tu rutina.</p>
+                <a href="HTML/Accesorios.html" class="btn-ver-producto">Ver accesorios</a>
+            </div>
+        </section>
+
+        <section class="slogan">
+            <div class="slogan-fondo">
+                <img src="images/fondo.png" alt="Logo TX de fondo" class="slogan-logo">
+            </div>
+            <div class="slogan-contenido">
+                <h1>
+                    <span class="accent-primary">Velocidad.</span>
+                    <span class="accent-secondary">Control.</span>
+                    <span>Instinto.</span>
+                </h1>
+                <p class="slogan-text">No es solo ropa. Es la forma en que te mueves.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================
+         FOOTER — Pie de página
+         Derechos reservados e íconos de redes sociales
+    ======================== -->
+    <footer class="footer">
+        <p class="footer-derechos">
+            &copy; Derechos reservados &mdash; Estudiantes del IPC: Jeferson Ramírez y Carlos Contreras
+        </p>
+        <div class="footer-redes">
+            <a href="https://www.facebook.com/share/1EJJHtxnSB/">Facebook</a>
+            <a href="https://www.instagram.com/tx_studio8?igsh=MTV1dWxja3RocWlxaw==">Instagram</a>
+            <a href="https://wa.me/50236875828">WhatsApp</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
