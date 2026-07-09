@@ -1,0 +1,113 @@
+/* yo este archivo contiene estilos CSS con comentarios simples para aprender */
+
+.contacto-section { /* yo inicio un bloque de estilo */
+    padding: 48px 20px; /* yo ajusto espacios o tamaños */
+    max-width: 1180px; /* yo ajusto espacios o tamaños */
+    margin: 0 auto; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
+
+.contacto-container { /* yo inicio un bloque de estilo */
+    display: grid; /* yo controlo cómo se coloca el elemento */
+    grid-template-columns: 1.2fr 0.9fr; /* yo controlo cómo se coloca el elemento */
+    gap: 36px; /* yo ajusto espacios o tamaños */
+    align-items: start; /* yo controlo cómo se coloca el elemento */
+} /* yo cierro el bloque de estilo */
+
+.contacto-info h1 { /* yo inicio un bloque de estilo */
+    font-size: clamp(2.4rem, 3.2vw, 3.2rem); /* yo defino el estilo del texto */
+    margin-bottom: 18px; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.contacto-info p { /* yo inicio un bloque de estilo */
+    font-size: 1.05rem; /* yo defino el estilo del texto */
+    line-height: 1.8; /* yo defino el estilo del texto */
+    margin-bottom: 32px; /* yo aplico una propiedad de estilo */
+    color: rgba(234, 247, 255, 0.8); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.info-contacto { /* yo inicio un bloque de estilo */
+    display: grid; /* yo controlo cómo se coloca el elemento */
+    gap: 20px; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
+
+.info-item { /* yo inicio un bloque de estilo */
+    padding: 26px; /* yo ajusto espacios o tamaños */
+    border-radius: 24px; /* yo defino cómo se ve el elemento */
+    background: rgba(10, 18, 34, 0.9); /* yo defino cómo se ve el elemento */
+    border: 1px solid rgba(255,255,255,0.06); /* yo defino cómo se ve el elemento */
+    display: flex; /* yo controlo cómo se coloca el elemento */
+    flex-direction: column; /* yo aplico una propiedad de estilo */
+    gap: 8px; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
+
+.contacto-formulario h2 { /* yo inicio un bloque de estilo */
+    font-size: clamp(2rem, 2.4vw, 2.4rem); /* yo defino el estilo del texto */
+    margin-bottom: 24px; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.form-grupo { /* yo inicio un bloque de estilo */
+    margin-bottom: 20px; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea { /* yo inicio un bloque de estilo */
+    width: 100%; /* yo ajusto espacios o tamaños */
+    padding: 16px 18px; /* yo ajusto espacios o tamaños */
+    border-radius: 18px; /* yo defino cómo se ve el elemento */
+    font-size: 1rem; /* yo defino el estilo del texto */
+    border: 1px solid rgba(255,255,255,0.08); /* yo defino cómo se ve el elemento */
+    background: rgba(255,255,255,0.04); /* yo defino cómo se ve el elemento */
+    color: inherit; /* yo defino el estilo del texto */
+    outline: none;  /* yo aplico una propiedad de estilo */
+    transition: border-color 0.25s ease; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus { /* yo inicio un bloque de estilo */
+    border-color: rgba(124, 58, 237, 0.4);  /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.form-grupo textarea { /* yo inicio un bloque de estilo */
+    resize: vertical; /* yo aplico una propiedad de estilo */
+    min-height: 130px; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
+
+.contenedor-boton-volver { /* yo inicio un bloque de estilo */
+    max-width: 1180px; /* yo ajusto espacios o tamaños */
+    margin: 28px auto; /* yo ajusto espacios o tamaños */
+    padding: 0 20px; /* yo ajusto espacios o tamaños */
+    text-align: left; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+@media (max-width: 900px) { /* yo inicio un bloque de estilo */
+    .contacto-container { /* yo inicio un bloque de estilo */
+        grid-template-columns: 1fr;  /* yo controlo cómo se coloca el elemento */
+        gap: 30px; /* yo ajusto espacios o tamaños */
+    } /* yo cierro el bloque de estilo */
+    .contacto-info h1 { /* yo inicio un bloque de estilo */
+        font-size: 2.1rem; /* yo defino el estilo del texto */
+    } /* yo cierro el bloque de estilo */
+    .contacto-formulario h2 { /* yo inicio un bloque de estilo */
+        font-size: 1.9rem; /* yo defino el estilo del texto */
+    } /* yo cierro el bloque de estilo */
+    .contenedor-boton-volver { /* yo inicio un bloque de estilo */
+        margin: 18px auto; /* yo ajusto espacios o tamaños */
+    } /* yo cierro el bloque de estilo */
+} /* yo cierro el bloque de estilo */
+
+@media (max-width: 560px) { /* yo inicio un bloque de estilo */
+    .contacto-section { /* yo inicio un bloque de estilo */
+        padding: 30px 16px; /* yo ajusto espacios o tamaños */
+    } /* yo cierro el bloque de estilo */
+    .info-item { /* yo inicio un bloque de estilo */
+        padding: 20px; /* yo ajusto espacios o tamaños */
+    } /* yo cierro el bloque de estilo */
+    .form-grupo input,
+    .form-grupo select,
+    .form-grupo textarea { /* yo inicio un bloque de estilo */
+        padding: 14px 16px; /* yo ajusto espacios o tamaños */
+        font-size: 0.95rem; /* yo defino el estilo del texto */
+    } /* yo cierro el bloque de estilo */
+} /* yo cierro el bloque de estilo */

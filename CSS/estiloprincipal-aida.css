@@ -1,0 +1,506 @@
+/* yo este archivo contiene estilos CSS con comentarios simples para aprender */
+/* ========================
+   ESTILOS PRINCIPAL — AIDA
+   (Colores, tipografía, botones y estilo visual)
+   ======================= */
+
+:root { /* yo inicio un bloque de estilo */
+    --bg: #07060c; /* yo defino una variable de estilo */
+    --bg-alt: #0f0c1d; /* yo defino una variable de estilo */
+    --bg-surface: #14121d; /* yo defino una variable de estilo */
+    --bg-surface-soft: #1f1a2d; /* yo defino una variable de estilo */
+    --bg-surface-strong: #09070f; /* yo defino una variable de estilo */
+    --bg-glow: rgba(139, 92, 246, 0.16); /* yo defino una variable de estilo */
+    --accent: #8b5cf6; /* yo defino una variable de estilo */
+    --accent-secondary: #c084fc; /* yo defino una variable de estilo */
+    --text: #f4f1ff; /* yo defino una variable de estilo */
+    --text-strong: #ffffff; /* yo defino una variable de estilo */
+    --text-muted: #aca6c9; /* yo defino una variable de estilo */
+    --border-soft: rgba(139, 92, 246, 0.22); /* yo defino una variable de estilo */
+    --shadow-soft: 0 30px 70px rgba(0, 0, 0, 0.45); /* yo defino una variable de estilo */
+    --shadow-strong: 0 38px 100px rgba(0, 0, 0, 0.38); /* yo defino una variable de estilo */
+} /* yo cierro el bloque de estilo */
+
+html { /* yo inicio un bloque de estilo */
+    scroll-behavior: smooth; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+body { /* yo inicio un bloque de estilo */
+    color: var(--text); /* yo defino el estilo del texto */
+    font-family: 'Segoe UI', 'Inter', system-ui, sans-serif; /* yo aplico una propiedad de estilo */
+    background: radial-gradient(circle at top left, rgba(139, 92, 246, 0.16) 0%, transparent 22%),
+                radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.08) 0%, transparent 18%),
+                linear-gradient(180deg, #0b0815 0%, #050408 100%);
+    background-attachment: fixed; /* yo aplico una propiedad de estilo */
+    min-height: 100vh; /* yo ajusto espacios o tamaños */
+    letter-spacing: 0.01em; /* yo defino el estilo del texto */
+    -webkit-font-smoothing: antialiased; /* yo aplico una propiedad de estilo */
+    -moz-osx-font-smoothing: grayscale; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+::selection { /* yo inicio un bloque de estilo */
+    background: rgba(139, 92, 246, 0.35); /* yo defino cómo se ve el elemento */
+    color: #fff; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+img { /* yo inicio un bloque de estilo */
+    display: block; /* yo controlo cómo se coloca el elemento */
+    max-width: 100%; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
+
+input,
+select,
+textarea { /* yo inicio un bloque de estilo */
+    font: inherit; /* yo aplico una propiedad de estilo */
+    width: 100%; /* yo ajusto espacios o tamaños */
+    min-height: 48px; /* yo ajusto espacios o tamaños */
+    padding: 0.95rem 1rem; /* yo ajusto espacios o tamaños */
+    color: var(--text); /* yo defino el estilo del texto */
+    background: rgba(255, 255, 255, 0.06); /* yo defino cómo se ve el elemento */
+    border: 1px solid rgba(139, 92, 246, 0.18); /* yo defino cómo se ve el elemento */
+    border-radius: 16px; /* yo defino cómo se ve el elemento */
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+select { /* yo inicio un bloque de estilo */
+    appearance: none; /* yo aplico una propiedad de estilo */
+    background-image: linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.95) 50%),
+                      linear-gradient(135deg, rgba(255,255,255,0.95) 50%, transparent 50%);
+    background-position: calc(100% - 1rem) center; /* yo aplico una propiedad de estilo */
+    background-size: 8px 8px; /* yo aplico una propiedad de estilo */
+    background-repeat: no-repeat; /* yo aplico una propiedad de estilo */
+    padding-right: 2.75rem; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+option { /* yo inicio un bloque de estilo */
+    color: var(--text); /* yo defino el estilo del texto */
+    background: #09080f; /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+input:focus,
+select:focus,
+textarea:focus { /* yo inicio un bloque de estilo */
+    border-color: rgba(139, 92, 246, 0.55); /* yo aplico una propiedad de estilo */
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.12); /* yo defino cómo se ve el elemento */
+    outline: none; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+a { /* yo inicio un bloque de estilo */
+    color: var(--accent); /* yo defino el estilo del texto */
+    text-decoration: none; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+a:hover { /* yo inicio un bloque de estilo */
+    color: var(--accent-secondary); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+button,
+.btn-ver-producto,
+.btn-agregar-carrito,
+.btn-enviar,
+.btn-volver-inicio { /* yo inicio un bloque de estilo */
+    font-family: inherit; /* yo aplico una propiedad de estilo */
+    border-radius: 999px; /* yo defino cómo se ve el elemento */
+    border: none; /* yo defino cómo se ve el elemento */
+    cursor: pointer; /* yo aplico una propiedad de estilo */
+    transition: transform 0.2s ease, background-color 0.25s ease, box-shadow 0.25s ease; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+button:hover,
+.btn-ver-producto:hover,
+.btn-agregar-carrito:hover,
+.btn-enviar:hover,
+.btn-volver-inicio:hover { /* yo inicio un bloque de estilo */
+    transform: translateY(-1px); /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+button:focus,
+.btn-ver-producto:focus,
+.btn-agregar-carrito:focus,
+.btn-enviar:focus,
+.btn-volver-inicio:focus { /* yo inicio un bloque de estilo */
+    outline: 2px solid rgba(124, 58, 237, 0.55); /* yo aplico una propiedad de estilo */
+    outline-offset: 3px; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.btn-ver-producto,
+.btn-volver-inicio { /* yo inicio un bloque de estilo */
+    background: rgba(124, 58, 237, 0.12); /* yo defino cómo se ve el elemento */
+    color: var(--text); /* yo defino el estilo del texto */
+    border: 1px solid rgba(124, 58, 237, 0.25); /* yo defino cómo se ve el elemento */
+    padding: 0.95rem 1.4rem; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
+
+.btn-agregar-carrito,
+.btn-enviar { /* yo inicio un bloque de estilo */
+    background: linear-gradient(135deg, var(--accent), var(--accent-secondary)); /* yo defino cómo se ve el elemento */
+    color: #06070f; /* yo defino el estilo del texto */
+    padding: 0.95rem 1.6rem; /* yo ajusto espacios o tamaños */
+    box-shadow: 0 18px 40px rgba(139, 92, 246, 0.22); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+.btn-agregar-carrito:hover,
+.btn-enviar:hover { /* yo inicio un bloque de estilo */
+    background: linear-gradient(135deg, #a174f6, #d3b7ff); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+
+.menu-btn { /* yo inicio un bloque de estilo */
+    color: var(--text); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.hero-copy,
+.destacado-card,
+.slogan-contenido { /* yo inicio un bloque de estilo */
+    animation: fadeInUp 0.85s ease both; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.destacado-card { /* yo inicio un bloque de estilo */
+    animation-delay: 0.18s; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+@keyframes fadeInUp { /* yo inicio un bloque de estilo */
+    from { /* yo inicio un bloque de estilo */
+        opacity: 0; /* yo defino cómo se ve el elemento */
+        transform: translateY(18px); /* yo aplico una propiedad de estilo */
+    } /* yo cierro el bloque de estilo */
+    to { /* yo inicio un bloque de estilo */
+        opacity: 1; /* yo defino cómo se ve el elemento */
+        transform: translateY(0); /* yo aplico una propiedad de estilo */
+    } /* yo cierro el bloque de estilo */
+} /* yo cierro el bloque de estilo */
+
+@keyframes pulseGlow { /* yo inicio un bloque de estilo */
+    0%, 100% { /* yo inicio un bloque de estilo */
+        box-shadow: 0 18px 40px rgba(124, 58, 237, 0.12); /* yo defino cómo se ve el elemento */
+    } /* yo cierro el bloque de estilo */
+    50% { /* yo inicio un bloque de estilo */
+        box-shadow: 0 24px 70px rgba(124, 58, 237, 0.22); /* yo defino cómo se ve el elemento */
+    } /* yo cierro el bloque de estilo */
+} /* yo cierro el bloque de estilo */
+
+.btn-agregar-carrito,
+.btn-enviar,
+.carrito-flotante { /* yo inicio un bloque de estilo */
+    animation: pulseGlow 3.2s ease-in-out infinite alternate; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.btn-ver-producto { /* yo inicio un bloque de estilo */
+    transition: transform 0.2s ease, background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.btn-ver-producto:hover { /* yo inicio un bloque de estilo */
+    transform: translateY(-1px); /* yo aplico una propiedad de estilo */
+    color: var(--text); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.menu-panel li a { /* yo inicio un bloque de estilo */
+    border-bottom: 1px solid rgba(124, 58, 237, 0.12); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+.nav-links a { /* yo inicio un bloque de estilo */
+    color: var(--text); /* yo defino el estilo del texto */
+    transition: color 0.3s; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.nav-links a:hover,
+.nav-links a.active { /* yo inicio un bloque de estilo */
+    color: var(--accent); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.slogan-contenido h1 { /* yo inicio un bloque de estilo */
+    color: var(--text); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.slogan-contenido h1 .accent-primary { /* yo inicio un bloque de estilo */
+    color: var(--accent); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.slogan-contenido h1 .accent-secondary { /* yo inicio un bloque de estilo */
+    color: var(--accent-secondary); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.slogan-text { /* yo inicio un bloque de estilo */
+    color: var(--text-muted); /* yo defino el estilo del texto */
+    font-style: italic; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.historia-pagina { /* yo inicio un bloque de estilo */
+    max-width: 1120px; /* yo ajusto espacios o tamaños */
+    margin: 3rem auto 4rem; /* yo ajusto espacios o tamaños */
+    padding: 2.5rem; /* yo ajusto espacios o tamaños */
+    border-radius: 32px; /* yo defino cómo se ve el elemento */
+    background: linear-gradient(145deg, rgba(11, 8, 20, 0.97), rgba(20, 16, 34, 0.95)); /* yo defino cómo se ve el elemento */
+    border: 1px solid rgba(139, 92, 246, 0.2); /* yo defino cómo se ve el elemento */
+    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.32); /* yo defino cómo se ve el elemento */
+    position: relative; /* yo controlo cómo se coloca el elemento */
+    overflow: hidden; /* yo controlo cómo se coloca el elemento */
+} /* yo cierro el bloque de estilo */
+
+.historia-pagina::before { /* yo inicio un bloque de estilo */
+    content: ""; /* yo aplico una propiedad de estilo */
+    position: absolute; /* yo controlo cómo se coloca el elemento */
+    inset: 0; /* yo aplico una propiedad de estilo */
+    background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.18), transparent 38%); /* yo defino cómo se ve el elemento */
+    pointer-events: none; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.historia-encabezado { /* yo inicio un bloque de estilo */
+    text-align: center; /* yo defino el estilo del texto */
+    margin-bottom: 2rem; /* yo aplico una propiedad de estilo */
+    position: relative; /* yo controlo cómo se coloca el elemento */
+    z-index: 1; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.historia-encabezado h1 { /* yo inicio un bloque de estilo */
+    font-size: clamp(2.2rem, 3.4vw, 3.2rem); /* yo defino el estilo del texto */
+    margin-bottom: 0.75rem; /* yo aplico una propiedad de estilo */
+    letter-spacing: 0.08em; /* yo defino el estilo del texto */
+    text-transform: uppercase; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.historia-encabezado .eyebrow { /* yo inicio un bloque de estilo */
+    display: inline-flex; /* yo controlo cómo se coloca el elemento */
+    color: var(--accent-secondary); /* yo defino el estilo del texto */
+    font-size: 0.9rem; /* yo defino el estilo del texto */
+    letter-spacing: 0.24em; /* yo defino el estilo del texto */
+    text-transform: uppercase; /* yo defino el estilo del texto */
+    font-weight: 700; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.historia-cuerpo { /* yo inicio un bloque de estilo */
+    display: grid; /* yo controlo cómo se coloca el elemento */
+    gap: 1.15rem; /* yo ajusto espacios o tamaños */
+    position: relative; /* yo controlo cómo se coloca el elemento */
+    z-index: 1; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.historia-cuerpo p { /* yo inicio un bloque de estilo */
+    color: var(--text-muted); /* yo defino el estilo del texto */
+    line-height: 1.9; /* yo defino el estilo del texto */
+    font-size: 1rem; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.historia-frase { /* yo inicio un bloque de estilo */
+    margin: 0.8rem 0; /* yo ajusto espacios o tamaños */
+    padding: 1.2rem 1.4rem; /* yo ajusto espacios o tamaños */
+    border-left: 4px solid var(--accent); /* yo defino cómo se ve el elemento */
+    border-radius: 16px; /* yo defino cómo se ve el elemento */
+    background: rgba(139, 92, 246, 0.1); /* yo defino cómo se ve el elemento */
+    color: var(--text-strong); /* yo defino el estilo del texto */
+    font-style: italic; /* yo defino el estilo del texto */
+    font-size: 1.08rem; /* yo defino el estilo del texto */
+    line-height: 1.7; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.historia-pilares { /* yo inicio un bloque de estilo */
+    display: grid; /* yo controlo cómo se coloca el elemento */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* yo controlo cómo se coloca el elemento */
+    gap: 1rem; /* yo ajusto espacios o tamaños */
+    margin-top: 2rem; /* yo aplico una propiedad de estilo */
+    position: relative; /* yo controlo cómo se coloca el elemento */
+    z-index: 1; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.historia-logros { /* yo inicio un bloque de estilo */
+    margin-top: 4.5rem; /* yo aplico una propiedad de estilo */
+    margin-bottom: 4rem; /* yo aplico una propiedad de estilo */
+    padding-top: 2.5rem; /* yo aplico una propiedad de estilo */
+    padding-bottom: 1.5rem; /* yo aplico una propiedad de estilo */
+    border-top: 1px solid rgba(255, 255, 255, 0.08); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+.historia-logros .historia-encabezado { /* yo inicio un bloque de estilo */
+    margin-bottom: 1.8rem; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+section.destacados { /* yo inicio un bloque de estilo */
+    margin-top: 3rem; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.historia-logros .historia-encabezado h2 { /* yo inicio un bloque de estilo */
+    font-size: clamp(2rem, 2.4vw, 2.4rem); /* yo defino el estilo del texto */
+    margin-top: 0.5rem; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.historia-logros .historia-cuerpo { /* yo inicio un bloque de estilo */
+    gap: 1rem; /* yo ajusto espacios o tamaños */
+    margin-bottom: 1.8rem; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.historia-logros .historia-cuerpo p { /* yo inicio un bloque de estilo */
+    max-width: 820px; /* yo ajusto espacios o tamaños */
+    margin: 0 auto; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
+
+.historia-logros .historia-pilares { /* yo inicio un bloque de estilo */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* yo controlo cómo se coloca el elemento */
+    gap: 1rem; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
+
+.pilar-card { /* yo inicio un bloque de estilo */
+    padding: 1.25rem; /* yo ajusto espacios o tamaños */
+    border-radius: 20px; /* yo defino cómo se ve el elemento */
+    background: rgba(255, 255, 255, 0.04); /* yo defino cómo se ve el elemento */
+    border: 1px solid rgba(139, 92, 246, 0.16); /* yo defino cómo se ve el elemento */
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+.pilar-card h3 { /* yo inicio un bloque de estilo */
+    color: var(--accent-secondary); /* yo defino el estilo del texto */
+    margin-bottom: 0.6rem; /* yo aplico una propiedad de estilo */
+    font-size: 1.05rem; /* yo defino el estilo del texto */
+    text-transform: uppercase; /* yo defino el estilo del texto */
+    letter-spacing: 0.12em; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.pilar-card p { /* yo inicio un bloque de estilo */
+    color: var(--text-muted); /* yo defino el estilo del texto */
+    line-height: 1.75; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+@media (max-width: 900px) { /* yo inicio un bloque de estilo */
+    .historia-pilares { /* yo inicio un bloque de estilo */
+        grid-template-columns: 1fr; /* yo controlo cómo se coloca el elemento */
+    } /* yo cierro el bloque de estilo */
+} /* yo cierro el bloque de estilo */
+
+@media (max-width: 600px) { /* yo inicio un bloque de estilo */
+    .historia-pagina { /* yo inicio un bloque de estilo */
+        padding: 1.5rem; /* yo ajusto espacios o tamaños */
+        margin: 1.5rem 1rem 2rem; /* yo ajusto espacios o tamaños */
+        border-radius: 24px; /* yo defino cómo se ve el elemento */
+    } /* yo cierro el bloque de estilo */
+} /* yo cierro el bloque de estilo */
+
+.footer { /* yo inicio un bloque de estilo */
+    background: linear-gradient(180deg, rgba(9, 9, 13, 0.95), rgba(9, 9, 13, 1)); /* yo defino cómo se ve el elemento */
+    border-top: 1px solid rgba(124, 58, 237, 0.18); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+.footer-derechos { /* yo inicio un bloque de estilo */
+    color: var(--text-muted); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.footer-redes a { /* yo inicio un bloque de estilo */
+    color: var(--text); /* yo defino el estilo del texto */
+    transition: color 0.3s; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.footer-redes a:hover { /* yo inicio un bloque de estilo */
+    color: var(--accent); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.carrito-flotante { /* yo inicio un bloque de estilo */
+    background: var(--accent); /* yo defino cómo se ve el elemento */
+    color: #06070f; /* yo defino el estilo del texto */
+    border-radius: 999px; /* yo defino cómo se ve el elemento */
+    padding: 0.85rem 1.15rem; /* yo ajusto espacios o tamaños */
+    box-shadow: 0 18px 40px rgba(124, 58, 237, 0.14); /* yo defino cómo se ve el elemento */
+    display: inline-flex; /* yo controlo cómo se coloca el elemento */
+    align-items: center; /* yo controlo cómo se coloca el elemento */
+    gap: 0.75rem; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
+
+.carrito-contador { /* yo inicio un bloque de estilo */
+    display: inline-flex; /* yo controlo cómo se coloca el elemento */
+    min-width: 28px; /* yo ajusto espacios o tamaños */
+    height: 28px; /* yo ajusto espacios o tamaños */
+    align-items: center; /* yo controlo cómo se coloca el elemento */
+    justify-content: center; /* yo controlo cómo se coloca el elemento */
+    border-radius: 999px; /* yo defino cómo se ve el elemento */
+    background: rgba(255,255,255,0.95); /* yo defino cómo se ve el elemento */
+    color: #06070f; /* yo defino el estilo del texto */
+    font-weight: 700; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.modal-carrito { /* yo inicio un bloque de estilo */
+    background: rgba(0,0,0,0.82); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+.modal-contenido { /* yo inicio un bloque de estilo */
+    background: var(--bg-surface-strong); /* yo defino cómo se ve el elemento */
+    border: 1px solid rgba(124, 58, 237, 0.18); /* yo defino cómo se ve el elemento */
+    box-shadow: var(--shadow-soft); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+.cerrar-modal { /* yo inicio un bloque de estilo */
+    color: var(--accent); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.slogan-fondo img { /* yo inicio un bloque de estilo */
+    filter: grayscale(0.95) brightness(1.1) contrast(0.85) saturate(1.12); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+.slogan-contenido { /* yo inicio un bloque de estilo */
+    border: 1px solid rgba(124, 58, 237, 0.12); /* yo defino cómo se ve el elemento */
+    background: rgba(9, 9, 13, 0.82); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+.producto { /* yo inicio un bloque de estilo */
+    background-color: #0e0d12; /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+.informacion { /* yo inicio un bloque de estilo */
+    background-color: rgba(18, 16, 23, 0.9); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+.informacion h3 { /* yo inicio un bloque de estilo */
+    color: var(--text); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.precio .dinero { /* yo inicio un bloque de estilo */
+    color: var(--accent-secondary); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+#intro h2 { /* yo inicio un bloque de estilo */
+    color: var(--text); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+#intro h2::after { /* yo inicio un bloque de estilo */
+    background-color: var(--accent); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+/* Controles del catálogo (inyectados por JS) */
+.catalog-controls { /* yo inicio un bloque de estilo */
+    display: flex; /* yo controlo cómo se coloca el elemento */
+    gap: 12px; /* yo ajusto espacios o tamaños */
+    align-items: center; /* yo controlo cómo se coloca el elemento */
+    margin-bottom: 16px; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.catalog-search,
+.catalog-filter { /* yo inicio un bloque de estilo */
+    padding: 0.85rem 1rem; /* yo ajusto espacios o tamaños */
+    border-radius: 12px; /* yo defino cómo se ve el elemento */
+    border: 1px solid rgba(139, 92, 246, 0.12); /* yo defino cómo se ve el elemento */
+    background: rgba(255,255,255,0.02); /* yo defino cómo se ve el elemento */
+    color: var(--text); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.catalog-search { /* yo inicio un bloque de estilo */
+    flex: 1 1 220px; /* yo aplico una propiedad de estilo */
+    min-width: 140px; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
+
+.catalog-filter { /* yo inicio un bloque de estilo */
+    width: 220px; /* yo ajusto espacios o tamaños */
+    appearance: none; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.catalog-search::placeholder { /* yo inicio un bloque de estilo */
+    color: rgba(245,234,255,0.42); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.catalog-search:focus,
+.catalog-filter:focus { /* yo inicio un bloque de estilo */
+    border-color: var(--bg-glow); /* yo aplico una propiedad de estilo */
+    box-shadow: 0 8px 40px rgba(139,92,246,0.08); /* yo defino cómo se ve el elemento */
+    outline: none; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+@media (max-width: 720px) { /* yo inicio un bloque de estilo */
+    .catalog-controls { flex-direction: column; align-items: stretch; }
+    .catalog-filter { width: 100%; }
+} /* yo cierro el bloque de estilo */
+
