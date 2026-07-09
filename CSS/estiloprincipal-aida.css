@@ -1,0 +1,261 @@
+/* ========================
+   ESTILOS PRINCIPAL — AIDA
+   (Colores, tipografía, botones y estilo visual)
+   ======================= */
+
+:root {
+    --bg: #09090d;
+    --bg-surface: #121017;
+    --bg-surface-soft: #1a1620;
+    --bg-surface-strong: #0e0d12;
+    --accent: #7c3aed;
+    --accent-secondary: #9d7bf0 !important;
+    --text: #f2f1f7;
+    --text-muted: #7d7a8c !important;
+    --border-soft: rgba(124, 58, 237, 0.2);
+    --shadow-soft: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    background: radial-gradient(circle at top left, rgba(124, 58, 237, 0.12), transparent 22%), linear-gradient(180deg, var(--bg-surface-strong) 0%, var(--bg) 100%);
+    min-height: 100vh;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-secondary);
+}
+
+button,
+.btn-ver-producto,
+.btn-agregar-carrito,
+.btn-enviar,
+.btn-volver-inicio {
+    font-family: inherit;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover,
+.btn-ver-producto:hover,
+.btn-agregar-carrito:hover,
+.btn-enviar:hover,
+.btn-volver-inicio:hover {
+    transform: translateY(-1px);
+}
+
+button:focus,
+.btn-ver-producto:focus,
+.btn-agregar-carrito:focus,
+.btn-enviar:focus,
+.btn-volver-inicio:focus {
+    outline: 2px solid rgba(124, 58, 237, 0.55);
+    outline-offset: 3px;
+}
+
+.btn-ver-producto,
+.btn-volver-inicio {
+    background: rgba(124, 58, 237, 0.12);
+    color: var(--text);
+    border: 1px solid rgba(124, 58, 237, 0.25);
+    padding: 0.95rem 1.4rem;
+}
+
+.btn-agregar-carrito,
+.btn-enviar {
+    background: var(--accent);
+    color: #06070f;
+    padding: 0.95rem 1.6rem;
+    box-shadow: 0 18px 40px rgba(124, 58, 237, 0.18);
+}
+
+.btn-agregar-carrito:hover,
+.btn-enviar:hover {
+    background: var(--accent-secondary);
+}
+
+.menu-btn {
+    color: var(--text);
+}
+
+.hero-copy,
+.destacado-card,
+.slogan-contenido {
+    animation: fadeInUp 0.85s ease both;
+}
+
+.destacado-card {
+    animation-delay: 0.18s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 18px 40px rgba(124, 58, 237, 0.12);
+    }
+    50% {
+        box-shadow: 0 24px 70px rgba(124, 58, 237, 0.22);
+    }
+}
+
+.btn-agregar-carrito,
+.btn-enviar,
+.carrito-flotante {
+    animation: pulseGlow 3.2s ease-in-out infinite alternate;
+}
+
+.btn-ver-producto {
+    transition: transform 0.2s ease, background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.btn-ver-producto:hover {
+    transform: translateY(-1px);
+    color: var(--text);
+}
+
+.menu-panel li a {
+    border-bottom: 1px solid rgba(124, 58, 237, 0.12);
+}
+
+.nav-links a {
+    color: var(--text);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+.slogan-contenido h1 {
+    color: var(--text);
+}
+
+.slogan-contenido h1 .accent-primary {
+    color: var(--accent);
+}
+
+.slogan-contenido h1 .accent-secondary {
+    color: var(--accent-secondary);
+}
+
+.slogan-text {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.footer {
+    background: linear-gradient(180deg, rgba(9, 9, 13, 0.95), rgba(9, 9, 13, 1));
+    border-top: 1px solid rgba(124, 58, 237, 0.18);
+}
+
+.footer-derechos {
+    color: var(--text-muted);
+}
+
+.footer-redes a {
+    color: var(--text);
+    transition: color 0.3s;
+}
+
+.footer-redes a:hover {
+    color: var(--accent);
+}
+
+.carrito-flotante {
+    background: var(--accent);
+    color: #06070f;
+    border-radius: 999px;
+    padding: 0.85rem 1.15rem;
+    box-shadow: 0 18px 40px rgba(124, 58, 237, 0.14);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.carrito-contador {
+    display: inline-flex;
+    min-width: 28px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.95);
+    color: #06070f;
+    font-weight: 700;
+}
+
+.modal-carrito {
+    background: rgba(0,0,0,0.82);
+}
+
+.modal-contenido {
+    background: var(--bg-surface-strong);
+    border: 1px solid rgba(124, 58, 237, 0.18);
+    box-shadow: var(--shadow-soft);
+}
+
+.cerrar-modal {
+    color: var(--accent);
+}
+
+.slogan-fondo img {
+    filter: grayscale(0.95) brightness(1.1) contrast(0.85) saturate(1.12);
+}
+
+.slogan-contenido {
+    border: 1px solid rgba(124, 58, 237, 0.12);
+    background: rgba(9, 9, 13, 0.82);
+}
+
+.producto {
+    background-color: #0e0d12;
+}
+
+.informacion {
+    background-color: rgba(18, 16, 23, 0.9);
+}
+
+.informacion h3 {
+    color: var(--text);
+}
+
+.precio .dinero {
+    color: var(--accent-secondary);
+}
+
+#intro h2 {
+    color: var(--text);
+}
+
+#intro h2::after {
+    background-color: var(--accent);
+}
+

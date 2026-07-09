@@ -1,0 +1,67 @@
+/* ESTILOS APARTADOS — AIDA (colores y visual) */
+
+.producto {
+    background: linear-gradient(180deg, rgba(18, 16, 23, 0.96), rgba(14, 13, 18, 0.98));
+}
+
+.informacion {
+    background-color: rgba(18, 16, 23, 0.88);
+}
+
+.btn-ver-producto {
+    background: rgba(124, 58, 237, 0.18);
+    border: 1px solid rgba(124, 58, 237, 0.24);
+}
+
+.btn-ver-producto:hover {
+    background: rgba(124, 58, 237, 0.32);
+}
+
+#intro h2::after {
+    background-color: rgba(124, 58, 237, 0.9);
+}
+
+.informacion h3 {
+    color: var(--text);
+}
+
+.precio .dinero {
+    color: var(--accent-secondary);
+}
+
+.btn-ver-producto {
+    background: rgba(124, 58, 237, 0.18);
+    color: var(--text);
+    border: 1px solid rgba(124, 58, 237, 0.24);
+}
+
+.btn-ver-producto:hover {
+    background: rgba(124, 58, 237, 0.32);
+}
+
+#intro h2 {
+    color: var(--text);
+}
+
+#intro h2::after {
+    background-color: var(--accent);
+}
+
+.informacion p {
+    color: rgba(245, 234, 255, 0.8);
+}
+
+.btn-ver-producto {
+    color: var(--text);
+}
+
+.informacion {
+    border-radius: 20px;
+}
+
+#intro {
+    background: rgba(9, 9, 13, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 28px;
+}
+
