@@ -312,3 +312,46 @@ button:focus,
     background-color: var(--accent);
 }
 
+/* Controles del catálogo (inyectados por JS) */
+.catalog-controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.catalog-search,
+.catalog-filter {
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(139, 92, 246, 0.12);
+    background: rgba(255,255,255,0.02);
+    color: var(--text);
+}
+
+.catalog-search {
+    flex: 1 1 220px;
+    min-width: 140px;
+}
+
+.catalog-filter {
+    width: 220px;
+    appearance: none;
+}
+
+.catalog-search::placeholder {
+    color: rgba(245,234,255,0.42);
+}
+
+.catalog-search:focus,
+.catalog-filter:focus {
+    border-color: var(--bg-glow);
+    box-shadow: 0 8px 40px rgba(139,92,246,0.08);
+    outline: none;
+}
+
+@media (max-width: 720px) {
+    .catalog-controls { flex-direction: column; align-items: stretch; }
+    .catalog-filter { width: 100%; }
+}
+

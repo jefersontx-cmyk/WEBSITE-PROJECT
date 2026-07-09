@@ -430,3 +430,158 @@ function obtenerProductosPorCategoria(categoria) {
 function obtenerTodosLosProductos() {
     return Object.values(productos); // Retornar todos los productos en un arreglo
 }
+
+// Filtrar productos por categoría y/o término de búsqueda
+function filtrarProductos({ categoria = null, q = '' } = {}) {
+    const todos = obtenerTodosLosProductos();
+    return todos.filter(p => {
+        const matchCategoria = categoria ? p.categoria === categoria : true;
+        const texto = `${p.nombre} ${p.descripcion} ${(p.caracteristicas||[]).join(' ')}`.toLowerCase();
+        const matchQ = q ? texto.includes(q.toLowerCase()) : true;
+        return matchCategoria && matchQ;
+    });
+}
+
+// Renderizar un conjunto de productos dentro de un contenedor
+function renderizarProductos(lista, container) {
+    if (!container) return;
+    container.innerHTML = '';
+    lista.forEach(p => {
+        const article = document.createElement('article');
+        article.className = 'producto';
+        article.innerHTML = `
+            <div>
+                <img src="${p.imagenes && p.imagenes[0] ? p.imagenes[0] : '../images/placeholder.png'}" alt="${p.nombre}">
+            </div>
+            <div class="informacion">
+                <h3>${p.nombre}</h3>
+                <p>${p.descripcion || ''}</p>
+                <div class="precio">
+                    <p class="dinero">A solo: Q.${p.precio.toFixed(2)}</p>
+                </div>
+                <button class="btn-ver-producto" onclick="window.location.href='producto.html?id=${encodeURIComponent(getProductoId(p))}'">Ver Producto</button>
+            </div>
+        `;
+        container.appendChild(article);
+    });
+}
+
+// Obtener el ID de producto (clave) dado el objeto producto (busca en el map)
+function getProductoId(productoObj) {
+    for (const key in productos) {
+        if (productos[key] === productoObj) return key;
+    }
+    // fallback: usar nombre slug
+    return productoObj.nombre.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+}
+
+// Renderizar productos por categoría dentro del primer contenedor .catalogo
+function renderizarPorCategoria(categoria, selector = '.catalogo') {
+    const cont = document.querySelector(selector);
+    if (!cont) return;
+    const lista = filtrarProductos({ categoria });
+    renderizarProductos(lista, cont);
+}
+
+// Detectar contenedores .catalogo y auto-renderizar según clase cata-<categoria>
+function autoRenderCatalogos() {
+    document.querySelectorAll('.catalogo').forEach(cont => {
+        // buscar clase como cata-equipacion -> categoria 'equipacion'
+        const claseCat = Array.from(cont.classList).find(c => c.startsWith('cata-'));
+        let categoria = null;
+        if (claseCat) categoria = claseCat.replace('cata-', '');
+        // Si dataset tiene categoria, usarla
+        if (cont.dataset && cont.dataset.categoria) categoria = cont.dataset.categoria;
+        const lista = categoria ? filtrarProductos({ categoria }) : obtenerTodosLosProductos();
+        renderizarProductos(lista, cont);
+    });
+}
+
+// Debounce helper
+function debounce(fn, wait) {
+    let t;
+    return function(...args) {
+        clearTimeout(t);
+        t = setTimeout(() => fn.apply(this, args), wait);
+    };
+}
+
+// Obtener categorías únicas desde los datos
+function obtenerCategorias() {
+    const s = new Set();
+    Object.values(productos).forEach(p => s.add(p.categoria));
+    return Array.from(s).sort();
+}
+
+// Inyectar controles de búsqueda y filtro en un contenedor .catalogo
+function injectCatalogControls(container) {
+    if (!container || container.querySelector('.catalog-controls')) return;
+    const controls = document.createElement('div');
+    controls.className = 'catalog-controls';
+    controls.style.cssText = 'display:flex;gap:12px;align-items:center;margin-bottom:16px;';
+
+    const input = document.createElement('input');
+    input.type = 'search';
+    input.placeholder = 'Buscar productos...';
+    input.className = 'catalog-search';
+    input.style.cssText = 'flex:1;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:inherit;';
+
+    const select = document.createElement('select');
+    select.className = 'catalog-filter';
+    select.style.cssText = 'padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:inherit;';
+
+    const optAll = document.createElement('option');
+    optAll.value = 'all';
+    optAll.textContent = 'Todas las categorías';
+    select.appendChild(optAll);
+
+    obtenerCategorias().forEach(cat => {
+        const o = document.createElement('option');
+        o.value = cat;
+        o.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+        select.appendChild(o);
+    });
+
+    controls.appendChild(input);
+    controls.appendChild(select);
+    container.prepend(controls);
+
+    const perform = () => {
+        const q = input.value.trim();
+        const cat = select.value === 'all' ? null : select.value;
+        const lista = filtrarProductos({ categoria: cat, q });
+        renderizarProductos(lista, container);
+    };
+
+    const deb = debounce(perform, 250);
+    input.addEventListener('input', deb);
+    select.addEventListener('change', perform);
+}
+
+// Auto-inject controls then render catalogs
+function autoRenderCatalogosWithControls() {
+    document.querySelectorAll('.catalogo').forEach(cont => {
+        injectCatalogControls(cont);
+        // render initial
+        const claseCat = Array.from(cont.classList).find(c => c.startsWith('cata-'));
+        let categoria = null;
+        if (claseCat) categoria = claseCat.replace('cata-', '');
+        if (cont.dataset && cont.dataset.categoria) categoria = cont.dataset.categoria;
+        const lista = categoria ? filtrarProductos({ categoria }) : obtenerTodosLosProductos();
+        renderizarProductos(lista, cont);
+    });
+}
+
+// Re-run auto-render with controls on DOM ready
+document.addEventListener('DOMContentLoaded', autoRenderCatalogosWithControls);
+
+// Exponer funciones útiles
+window.obtenerProducto = obtenerProducto;
+window.obtenerProductosPorCategoria = obtenerProductosPorCategoria;
+window.obtenerTodosLosProductos = obtenerTodosLosProductos;
+window.filtrarProductos = filtrarProductos;
+window.renderizarPorCategoria = renderizarPorCategoria;
+window.renderizarProductos = renderizarProductos;
+
+// Ejecutar auto-render si hay catalogos en la página
+document.addEventListener('DOMContentLoaded', autoRenderCatalogos);

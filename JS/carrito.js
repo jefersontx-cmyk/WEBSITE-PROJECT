@@ -17,6 +17,13 @@ function actualizarContadorCarrito() {
     }
 }
 
+// Vaciar el carrito por completo
+function vaciarCarrito() {
+    carrito = [];
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarContadorCarrito();
+}
+
 // Función para agregar producto al carrito
 function agregarAlCarrito(nombre, precio, imagen, talla) {
     if (!talla) { // Validar que exista talla seleccionada
@@ -43,7 +50,16 @@ function agregarAlCarrito(nombre, precio, imagen, talla) {
     localStorage.setItem('carrito', JSON.stringify(carrito)); // Guardar carrito actualizado
     actualizarContadorCarrito(); // Actualizar contador en pantalla
 
-    alert(`¡${nombre} (Talla ${talla}) agregado al carrito!`); // Notificar al usuario
+    // Notificación no intrusiva: crear un toast pequeño si es posible
+    try {
+        const toast = document.createElement('div');
+        toast.textContent = `${nombre} (Talla ${talla}) agregado al carrito`;
+        toast.style.cssText = 'position:fixed;right:20px;bottom:20px;background:rgba(0,0,0,0.7);color:#fff;padding:8px 12px;border-radius:8px;z-index:9999;backdrop-filter:blur(6px)';
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 2200);
+    } catch (e) {
+        console.log(`${nombre} (Talla ${talla}) agregado al carrito`);
+    }
 }
 
 // Función para mostrar el modal del carrito
@@ -67,15 +83,27 @@ function mostrarCarrito() {
             const itemDiv = document.createElement('div'); // Crear contenedor del item
             itemDiv.className = 'item-carrito'; // Clase CSS
             itemDiv.innerHTML = `
-                <div>
-                    <img src="${item.imagen}" alt="${item.nombre}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px; margin-right: 15px;">
-                    <strong>${item.nombre}</strong> (Talla ${item.talla})<br>
-                    Cantidad: ${item.cantidad} x Q.${item.precio.toFixed(2)}
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <img src="${item.imagen}" alt="${item.nombre}" style="width: 56px; height: 56px; object-fit: cover; border-radius: 6px;">
+                    <div>
+                        <strong>${item.nombre}</strong> <br>
+                        <small>Talla ${item.talla}</small>
+                    </div>
                 </div>
-                <div>
-                    <button onclick="eliminarDelCarrito(${index})" style="background: #E60000; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">Eliminar</button>
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;">
+                    <div style="display:flex;gap:8px;align-items:center;">
+                        <button data-action="decrease" data-index="${index}" style="background:#2b2b2b;color:#fff;border:none;padding:6px 8px;border-radius:6px;cursor:pointer;">−</button>
+                        <span id="cantidad-${index}">${item.cantidad}</span>
+                        <button data-action="increase" data-index="${index}" style="background:#2b2b2b;color:#fff;border:none;padding:6px 8px;border-radius:6px;cursor:pointer;">+</button>
+                    </div>
+                    <div>
+                        <span>Cant: ${item.cantidad} x Q.${item.precio.toFixed(2)}</span>
+                    </div>
+                    <div>
+                        <button data-action="remove" data-index="${index}" style="background: #E60000; color: white; border: none; padding: 6px 10px; border-radius: 6px; cursor: pointer;">Eliminar</button>
+                    </div>
                 </div>
-            `; // HTML del item
+            `;
             itemsCarrito.appendChild(itemDiv); // Agregar item al contenedor
         });
 
@@ -84,6 +112,17 @@ function mostrarCarrito() {
     }
 
     modal.style.display = 'flex'; // Mostrar modal
+
+    // Agregar delegación de eventos para botones de cantidad / eliminar
+    itemsCarrito.querySelectorAll('button[data-action]').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const action = this.getAttribute('data-action');
+            const idx = parseInt(this.getAttribute('data-index'));
+            if (action === 'remove') eliminarDelCarrito(idx);
+            if (action === 'increase') cambiarCantidad(idx, (carrito[idx].cantidad || 0) + 1);
+            if (action === 'decrease') cambiarCantidad(idx, (carrito[idx].cantidad || 0) - 1);
+        });
+    });
 }
 
 // Función para cerrar el modal del carrito
@@ -101,6 +140,33 @@ function eliminarDelCarrito(index) {
         localStorage.setItem('carrito', JSON.stringify(carrito)); // Guardar cambios
         actualizarContadorCarrito(); // Actualizar contador
         mostrarCarrito(); // Actualizar vista del modal
+    }
+}
+
+// Eliminar producto por nombre y talla (más seguro que usar índice en listas dinámicas)
+function eliminarPorProducto(nombre, talla) {
+    const idx = carrito.findIndex(item => item.nombre === nombre && item.talla === talla);
+    if (idx !== -1) eliminarDelCarrito(idx);
+}
+
+// Cambiar la cantidad de un item dado su índice; si queda en 0 se elimina
+function cambiarCantidad(index, nuevaCantidad) {
+    if (index < 0 || index >= carrito.length) return;
+    if (nuevaCantidad <= 0) {
+        eliminarDelCarrito(index);
+        return;
+    }
+    carrito[index].cantidad = parseInt(nuevaCantidad, 10);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarContadorCarrito();
+    // Actualizar contador visual en modal si existe
+    const span = document.getElementById(`cantidad-${index}`);
+    if (span) span.textContent = carrito[index].cantidad;
+    // Actualizar total mostrado
+    const totalCarrito = document.getElementById('total-carrito');
+    if (totalCarrito) {
+        const total = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
+        totalCarrito.textContent = `Total: Q.${total.toFixed(2)}`;
     }
 }
 
@@ -154,4 +220,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    // Cerrar modal con Esc
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') cerrarCarrito();
+    });
+    // Exponer funciones útiles para otros scripts o consola
+    window.vaciarCarrito = vaciarCarrito;
+    window.eliminarPorProducto = eliminarPorProducto;
+    window.cambiarCantidad = cambiarCantidad;
 });
