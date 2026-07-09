@@ -5,12 +5,12 @@
 }
 
 .contacto-info p {
-    color: rgba(7, 71, 110, 0.87);
+    color: rgba(180, 155, 214, 0.87);
 }
 
 .info-item {
-    background: rgba(8, 13, 24, 0.96);
-    border-left: 4px solid rgba(0, 212, 255, 0.35);
+    background: rgba(16, 10, 25, 0.96);
+    border-left: 4px solid rgba(124, 58, 237, 0.35);
 }
 
 .info-item h3 {
@@ -18,7 +18,7 @@
 }
 
 .info-item p {
-    color: rgba(255, 255, 255, 0.61);
+    color: rgba(245, 234, 255, 0.61);
 }
 
 .form-grupo label {
@@ -33,25 +33,25 @@
 .form-grupo textarea {
     background: rgba(255, 255, 255, 0.04);
     color: var(--text);
-    border: 1px solid rgba(160, 64, 64, 0.774);
+    border: 1px solid rgba(124, 58, 237, 0.35);
 }
 
 .form-grupo input:focus,
 .form-grupo select:focus,
 .form-grupo textarea:focus {
-    border-color: rgba(225, 241, 245, 0.75);
+    border-color: rgba(157, 123, 240, 0.75);
     outline: none;
 }
 
 .btn-volver-inicio {
-    background: rgba(218, 134, 134, 0.623);
+    background: rgba(124, 58, 237, 0.18);
     color: var(--text);
-    border: 1px solid rgba(44, 150, 172, 0.555);
+    border: 1px solid rgba(157, 123, 240, 0.35);
     padding: 0.95rem 1.4rem;
 }
 
 .btn-volver-inicio:hover {
-    background: rgba(0, 255, 255, 0.404);
+    background: rgba(124, 58, 237, 0.3);
 }
 
 .btn-enviar {

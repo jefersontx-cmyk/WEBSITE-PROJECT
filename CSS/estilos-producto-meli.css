@@ -81,8 +81,8 @@
 
 .talla:hover,
 .talla.seleccionada {
-    background: rgba(0, 212, 255, 0.18);
-    border-color: rgba(0, 212, 255, 0.3);
+    background: rgba(124, 58, 237, 0.18);
+    border-color: rgba(124, 58, 237, 0.3);
 }
 
 .descripcion-detallada {
@@ -107,7 +107,7 @@
 .productos-relacionados {
     margin-top: 50px;
     padding-top: 30px;
-    border-top: 1px solid rgba(0, 212, 255, 0.18);
+    border-top: 1px solid rgba(124, 58, 237, 0.18);
 }
 
 @media (max-width: 768px) {
