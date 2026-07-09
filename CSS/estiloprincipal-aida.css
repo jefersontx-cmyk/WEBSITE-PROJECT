@@ -4,16 +4,20 @@
    ======================= */
 
 :root {
-    --bg: #09090d;
-    --bg-surface: #121017;
-    --bg-surface-soft: #1a1620;
-    --bg-surface-strong: #0e0d12;
-    --accent: #7c3aed;
-    --accent-secondary: #9d7bf0 !important;
-    --text: #f2f1f7;
-    --text-muted: #7d7a8c !important;
-    --border-soft: rgba(124, 58, 237, 0.2);
-    --shadow-soft: 0 30px 60px rgba(0, 0, 0, 0.45);
+    --bg: #07060c;
+    --bg-alt: #0f0c1d;
+    --bg-surface: #14121d;
+    --bg-surface-soft: #1f1a2d;
+    --bg-surface-strong: #09070f;
+    --bg-glow: rgba(139, 92, 246, 0.16);
+    --accent: #8b5cf6;
+    --accent-secondary: #c084fc;
+    --text: #f4f1ff;
+    --text-strong: #ffffff;
+    --text-muted: #aca6c9;
+    --border-soft: rgba(139, 92, 246, 0.22);
+    --shadow-soft: 0 30px 70px rgba(0, 0, 0, 0.45);
+    --shadow-strong: 0 38px 100px rgba(0, 0, 0, 0.38);
 }
 
 html {
@@ -22,14 +26,62 @@ html {
 
 body {
     color: var(--text);
-    font-family: 'Inter', system-ui, sans-serif;
-    background: radial-gradient(circle at top left, rgba(124, 58, 237, 0.12), transparent 22%), linear-gradient(180deg, var(--bg-surface-strong) 0%, var(--bg) 100%);
+    font-family: 'Segoe UI', 'Inter', system-ui, sans-serif;
+    background: radial-gradient(circle at top left, rgba(139, 92, 246, 0.16) 0%, transparent 22%),
+                radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.08) 0%, transparent 18%),
+                linear-gradient(180deg, #0b0815 0%, #050408 100%);
+    background-attachment: fixed;
     min-height: 100vh;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background: rgba(139, 92, 246, 0.35);
+    color: #fff;
 }
 
 img {
     display: block;
     max-width: 100%;
+}
+
+input,
+select,
+textarea {
+    font: inherit;
+    width: 100%;
+    min-height: 48px;
+    padding: 0.95rem 1rem;
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(139, 92, 246, 0.18);
+    border-radius: 16px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+select {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.95) 50%),
+                      linear-gradient(135deg, rgba(255,255,255,0.95) 50%, transparent 50%);
+    background-position: calc(100% - 1rem) center;
+    background-size: 8px 8px;
+    background-repeat: no-repeat;
+    padding-right: 2.75rem;
+}
+
+option {
+    color: var(--text);
+    background: #09080f;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: rgba(139, 92, 246, 0.55);
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.12);
+    outline: none;
 }
 
 a {
@@ -80,16 +132,17 @@ button:focus,
 
 .btn-agregar-carrito,
 .btn-enviar {
-    background: var(--accent);
+    background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
     color: #06070f;
     padding: 0.95rem 1.6rem;
-    box-shadow: 0 18px 40px rgba(124, 58, 237, 0.18);
+    box-shadow: 0 18px 40px rgba(139, 92, 246, 0.22);
 }
 
 .btn-agregar-carrito:hover,
 .btn-enviar:hover {
-    background: var(--accent-secondary);
+    background: linear-gradient(135deg, #a174f6, #d3b7ff);
 }
+
 
 .menu-btn {
     color: var(--text);

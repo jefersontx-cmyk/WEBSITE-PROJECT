@@ -1,42 +1,31 @@
 /* ESTILOS APARTADOS — AIDA (colores y visual) */
 
 .producto {
-    background: linear-gradient(180deg, rgba(18, 16, 23, 0.96), rgba(14, 13, 18, 0.98));
+    background: linear-gradient(180deg, rgba(18, 16, 23, 0.96), rgba(10, 9, 16, 0.98));
+    border-radius: 28px;
+    border: 1px solid rgba(139, 92, 246, 0.12);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
 }
 
 .informacion {
     background-color: rgba(18, 16, 23, 0.88);
+    border-radius: 20px;
+    padding: 1.4rem;
+    border: 1px solid rgba(139, 92, 246, 0.14);
 }
 
 .btn-ver-producto {
-    background: rgba(124, 58, 237, 0.18);
-    border: 1px solid rgba(124, 58, 237, 0.24);
+    background: rgba(139, 92, 246, 0.18);
+    border: 1px solid rgba(139, 92, 246, 0.24);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 0.95rem 1.4rem;
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
 }
 
 .btn-ver-producto:hover {
-    background: rgba(124, 58, 237, 0.32);
-}
-
-#intro h2::after {
-    background-color: rgba(124, 58, 237, 0.9);
-}
-
-.informacion h3 {
-    color: var(--text);
-}
-
-.precio .dinero {
-    color: var(--accent-secondary);
-}
-
-.btn-ver-producto {
-    background: rgba(124, 58, 237, 0.18);
-    color: var(--text);
-    border: 1px solid rgba(124, 58, 237, 0.24);
-}
-
-.btn-ver-producto:hover {
-    background: rgba(124, 58, 237, 0.32);
+    background: rgba(139, 92, 246, 0.32);
+    transform: translateY(-1px);
 }
 
 #intro h2 {
@@ -47,21 +36,23 @@
     background-color: var(--accent);
 }
 
-.informacion p {
-    color: rgba(245, 234, 255, 0.8);
-}
-
-.btn-ver-producto {
+.informacion h3 {
     color: var(--text);
 }
 
-.informacion {
-    border-radius: 20px;
+.informacion p {
+    color: rgba(245, 234, 255, 0.82);
+}
+
+.precio .dinero {
+    color: var(--accent-secondary);
 }
 
 #intro {
-    background: rgba(9, 9, 13, 0.6);
-    backdrop-filter: blur(10px);
+    background: rgba(9, 9, 13, 0.64);
+    backdrop-filter: blur(12px);
     border-radius: 28px;
+    border: 1px solid rgba(139, 92, 246, 0.08);
+    padding: 2rem;
 }
 
