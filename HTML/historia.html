@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Historia - Sports rain</title>
+    <link rel="stylesheet" href="../CSS/estiloprincipal-aida.css">
+    <link rel="stylesheet" href="../CSS/estiloprincipal-meli.css">
+    <script src="../JS/productos.js"></script>
+    <script src="../JS/carrito.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <img src="../images/logoooooo.png" alt="Logo SR" class="header-logo">
+    </header>
+
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- PANEL LATERAL -->
+    <ul class="menu-panel">
+        <li><a href="../index.html">INICIO</a></li>
+        <li><a href="historia.html">HISTORIA</a></li>
+        <li><a href="Equipacion.html">EQUIPACIÓN</a></li>
+        <li><a href="Tacos.html">TACOS</a></li>
+        <li><a href="Accesorios.html">ACCESORIOS</a></li>
+        <li><a href="Contacto.html">CONTACTO</a></li>
+    </ul>
+    <label class="menu-overlay" for="menu-toggle" aria-label="Cerrar menú"></label>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <label class="menu-btn" for="menu-toggle">☰</label>
+        <ul class="nav-links">
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="historia.html">HISTORIA</a></li>
+            <li><a href="Equipacion.html">EQUIPACIÓN</a></li>
+            <li><a href="Tacos.html">TACOS</a></li>
+            <li><a href="Accesorios.html">ACCESORIOS</a></li>
+            <li><a href="Contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+
+    <!-- Carrito flotante -->
+    <div class="carrito-flotante" onclick="mostrarCarrito()">
+        🛒 <span class="carrito-contador" id="carrito-contador">0</span>
+    </div>
+
+    <!-- Modal del carrito -->
+    <div class="modal-carrito" id="modal-carrito">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarCarrito()">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="items-carrito"></div>
+            <div class="total-carrito" id="total-carrito">Total: Q.0.00</div>
+            <button class="btn-agregar-carrito" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <section class="historia-pagina">
+            <div class="historia-encabezado">
+                <h1>Nuestra <span class="accent-primary">Historia</span></h1>
+                <p class="eyebrow">Conoce las raíces de Sports Rain</p>
+            </div>
+            
+            <div class="historia-cuerpo">
+                <p>
+                    Sports Rain nació de la pasión absoluta por el deporte y la convicción de que las grandes metas se alcanzan sin importar los desafíos. Nos propusimos crear un concepto diferente: una marca que impulse a cada atleta a dar el máximo rendimiento en la cancha, proporcionando equipación de alta gama que combine tecnología, resistencia y diseño moderno.
+                </p>
+
+                <p>
+                    Empezamos como un equipo pequeño de deportistas y diseñadores que buscaban soluciones funcionales para el entrenamiento y la competencia. En cada etapa del desarrollo nos guiamos por la experiencia real de quienes pisan la cancha: materiales que respiren, cortes que acompañen el movimiento y detalles pensados para soportar el ritmo intenso del juego.
+                </p>
+
+                <!-- Frase llamativa en medio del texto -->
+                <blockquote class="historia-frase">
+                    "No es solo la meta, es la disciplina que demuestras bajo cualquier tormenta."
+                </blockquote>
+
+                <p>
+                    Creemos firmemente que la disciplina se demuestra en cada jugada. Por eso, seleccionamos minuciosamente cada par de tacos, accesorio y prenda deportiva para asegurar velocidad, control e instinto en tu juego. No somos solo una tienda de ropa; somos el motor que te acompaña en cada paso hacia la victoria.
+                </p>
+
+                <p>
+                    Nuestra historia también está hecha de comunidad. Trabajamos con jugadores locales, entrenadores y aficionados para escuchar sus necesidades y mejorar constantemente cada colección. Así convertimos la experiencia de uso en el mejor termómetro de calidad para nuestros productos.
+                </p>
+            </div>
+
+            <!-- ========================
+                 NUEVO BLOQUE — Misión, Visión y Valores
+                 Esto le dará mucho más volumen y contenido a la página
+            ======================== -->
+            <div class="historia-pilares">
+                <div class="pilar-card">
+                    <h3>Nuestra Misión</h3>
+                    <p>Equipar a los apasionados del deporte con artículos de la más alta calidad, garantizando comodidad, rendimiento y durabilidad en cada partido.</p>
+                </div>
+
+                <div class="pilar-card">
+                    <h3>Nuestra Visión</h3>
+                    <p>Convertirnos en la tienda de referencia para los futbolistas y atletas de la región, destacando por nuestra innovación, estilo y compromiso con la cultura deportiva.</p>
+                </div>
+
+                <div class="pilar-card">
+                    <h3>Valores</h3>
+                    <p>Nos movemos bajo la disciplina, la superación constante, la pasión competitiva y el juego limpio dentro y fuera del terreno de juego.</p>
+                </div>
+
+                <div class="pilar-card">
+                    <h3>Calidad</h3>
+                    <p>Cada producto se diseña y prueba en escenarios reales para asegurar resistencia, comodidad y rendimiento desde el primer minuto de uso.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="historia-logros">
+            <div class="historia-encabezado">
+                <p class="eyebrow">Nuestros logros</p>
+                <h2>Resultados que hablan por nosotros</h2>
+            </div>
+            <div class="historia-cuerpo">
+                <p>En poco tiempo, Sports Rain se ha convertido en la elección de cientos de deportistas que valoran la calidad y el diseño. Cada logro es un paso más hacia un equipo más fuerte y una comunidad más comprometida con el deporte.</p>
+                <p>Hemos apoyado equipos locales, patrocinado torneos juveniles y equipado a atletas de distintas disciplinas, siempre con la idea de que el deporte une y potencia el talento.</p>
+            </div>
+            <div class="historia-pilares">
+                <div class="pilar-card">
+                    <h3>15 campeonatos locales</h3>
+                    <p>Marca presente en las canchas donde se disputa la pasión y la competencia.</p>
+                </div>
+                <div class="pilar-card">
+                    <h3>8.000 atletas equipados</h3>
+                    <p>Más de ocho mil jugadores confían en nuestro rendimiento, desde entrenamientos hasta partidos decisivos.</p>
+                </div>
+                <div class="pilar-card">
+                    <h3>4 colecciones especiales</h3>
+                    <p>Diseños exclusivos creados para selecciones, clubes y atletas con estilo propio.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="destacados">
+            <div class="destacado-card">
+                <h2>Equipación</h2>
+                <p>Todo lo necesario para jugar con estilo, comodidad y rendimiento en cada partido.</p>
+                <a href="HTML/Equipacion.html" class="btn-ver-producto">Explorar</a>
+            </div>
+            <div class="destacado-card">
+                <h2>Tacos</h2>
+                <p>Modelos seleccionados para velocidad, agarre y control en superficies exigentes.</p>
+                <a href="HTML/Tacos.html" class="btn-ver-producto">Ver tacos</a>
+            </div>
+            <div class="destacado-card">
+                <h2>Accesorios</h2>
+                <p>Complementos funcionales y modernos para completar tu preparación y tu look.</p>
+                <a href="HTML/Accesorios.html" class="btn-ver-producto">Ver accesorios</a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="footer-derechos">
+            &copy; Derechos reservados &mdash; Sports rain
+        </p>
+        <div class="footer-redes">
+            <a href="https://www.facebook.com/share/1EJJHtxnSB/">Facebook</a>
+            <a href="https://www.instagram.com/tx_studio8?igsh=MTV1dWxja3RocWlxaw==">Instagram</a>
+            <a href="https://wa.me/50236875828">WhatsApp</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+/* yo este archivo contiene estilos CSS con comentarios simples para aprender */
+/* ESTILOS PRODUCTO — AIDA (colores, efectos visuales, tipografía) */
+
+.info-producto h1 { /* yo inicio un bloque de estilo */
+    color: var(--accent-secondary); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.precio-producto { /* yo inicio un bloque de estilo */
+    color: var(--accent-secondary); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.selector-tallas h3 { /* yo inicio un bloque de estilo */
+    color: var(--text); /* yo defino el estilo del texto */
+    margin-bottom: 14px; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.talla { /* yo inicio un bloque de estilo */
+    border: 1px solid rgba(139, 92, 246, 0.2); /* yo defino cómo se ve el elemento */
+    color: rgba(245, 234, 255, 0.95); /* yo defino el estilo del texto */
+    background: rgba(255, 255, 255, 0.04); /* yo defino cómo se ve el elemento */
+    border-radius: 16px; /* yo defino cómo se ve el elemento */
+    padding: 0.85rem 1rem; /* yo ajusto espacios o tamaños */
+    transition: transform 0.2s ease, border-color 0.25s ease, background 0.25s ease; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.talla:hover,
+.talla.seleccionada { /* yo inicio un bloque de estilo */
+    background: rgba(139, 92, 246, 0.18); /* yo defino cómo se ve el elemento */
+    color: var(--text); /* yo defino el estilo del texto */
+    border-color: rgba(139, 92, 246, 0.55); /* yo aplico una propiedad de estilo */
+    transform: translateY(-1px); /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.btn-agregar-carrito { /* yo inicio un bloque de estilo */
+    background: linear-gradient(135deg, var(--accent), var(--accent-secondary)); /* yo defino cómo se ve el elemento */
+    color: #06070f; /* yo defino el estilo del texto */
+    border: none; /* yo defino cómo se ve el elemento */
+    box-shadow: 0 18px 40px rgba(139, 92, 246, 0.2); /* yo defino cómo se ve el elemento */
+    border-radius: 999px; /* yo defino cómo se ve el elemento */
+    padding: 0.95rem 1.6rem; /* yo ajusto espacios o tamaños */
+    transition: transform 0.2s ease, box-shadow 0.25s ease, background 0.25s ease; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.btn-agregar-carrito:hover { /* yo inicio un bloque de estilo */
+    background: linear-gradient(135deg, #a174f6, #d3b7ff); /* yo defino cómo se ve el elemento */
+    transform: translateY(-1px); /* yo aplico una propiedad de estilo */
+    box-shadow: 0 24px 55px rgba(139, 92, 246, 0.26); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+.descripcion-detallada h3 { /* yo inicio un bloque de estilo */
+    color: var(--text); /* yo defino el estilo del texto */
+    margin-top: 24px; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
+
+.descripcion-detallada ul { /* yo inicio un bloque de estilo */
+    list-style: disc inside; /* yo aplico una propiedad de estilo */
+    color: rgba(245, 234, 255, 0.82); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.productos-relacionados h2 { /* yo inicio un bloque de estilo */
+    color: var(--accent-secondary); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.total-carrito { /* yo inicio un bloque de estilo */
+    color: var(--accent-secondary); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
+.cerrar-modal { /* yo inicio un bloque de estilo */
+    color: var(--accent); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
+
