@@ -1,176 +1,177 @@
+/* yo este archivo contiene estilos CSS con comentarios simples para aprender */
 
-.producto-detalle {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 42px;
-}
+.producto-detalle { /* yo inicio un bloque de estilo */
+    max-width: 1200px; /* yo ajusto espacios o tamaños */
+    margin: 0 auto; /* yo ajusto espacios o tamaños */
+    padding: 40px 20px; /* yo ajusto espacios o tamaños */
+    display: grid; /* yo controlo cómo se coloca el elemento */
+    grid-template-columns: 1.1fr 0.9fr; /* yo controlo cómo se coloca el elemento */
+    gap: 42px; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
 
-.galeria-imagenes {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
+.galeria-imagenes { /* yo inicio un bloque de estilo */
+    display: grid; /* yo controlo cómo se coloca el elemento */
+    grid-template-columns: 1fr; /* yo controlo cómo se coloca el elemento */
+    gap: 20px; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
 
-.imagen-principal {
-    width: 100%;
-}
+.imagen-principal { /* yo inicio un bloque de estilo */
+    width: 100%; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
 
-.imagen-principal img {
-    width: 100%;
-    height: 480px; 
-    object-fit: cover;
-    border-radius: 24px;
-    box-shadow: 0 35px 80px rgba(0,0,0,0.2);
-}
+.imagen-principal img { /* yo inicio un bloque de estilo */
+    width: 100%; /* yo ajusto espacios o tamaños */
+    height: 480px;  /* yo ajusto espacios o tamaños */
+    object-fit: cover; /* yo aplico una propiedad de estilo */
+    border-radius: 24px; /* yo defino cómo se ve el elemento */
+    box-shadow: 0 35px 80px rgba(0,0,0,0.2); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
 
-.imagenes-secundarias {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-}
+.imagenes-secundarias { /* yo inicio un bloque de estilo */
+    display: flex; /* yo controlo cómo se coloca el elemento */
+    gap: 12px; /* yo ajusto espacios o tamaños */
+    flex-wrap: wrap; /* yo controlo cómo se coloca el elemento */
+} /* yo cierro el bloque de estilo */
 
-.imagenes-secundarias img {
-    flex: 1;
-    min-width: 100px;
-    height: 110px; 
-    object-fit: cover;
-    border-radius: 18px;
-    cursor: pointer;
-    transition: transform 0.35s ease, opacity 0.35s ease;
-    opacity: 0.92;
-}
+.imagenes-secundarias img { /* yo inicio un bloque de estilo */
+    flex: 1; /* yo aplico una propiedad de estilo */
+    min-width: 100px; /* yo ajusto espacios o tamaños */
+    height: 110px;  /* yo ajusto espacios o tamaños */
+    object-fit: cover; /* yo aplico una propiedad de estilo */
+    border-radius: 18px; /* yo defino cómo se ve el elemento */
+    cursor: pointer; /* yo aplico una propiedad de estilo */
+    transition: transform 0.35s ease, opacity 0.35s ease; /* yo aplico una propiedad de estilo */
+    opacity: 0.92; /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
 
-.imagenes-secundarias img:hover {
-    transform: translateY(-4px) scale(1.04);
-    opacity: 1;
-}
+.imagenes-secundarias img:hover { /* yo inicio un bloque de estilo */
+    transform: translateY(-4px) scale(1.04); /* yo aplico una propiedad de estilo */
+    opacity: 1; /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
 
-.info-producto h1 {
-    font-size: clamp(2rem, 3vw, 2.8rem);
-    margin-bottom: 18px;
-    font-family: 'Inter', sans-serif;
-}
+.info-producto h1 { /* yo inicio un bloque de estilo */
+    font-size: clamp(2rem, 3vw, 2.8rem); /* yo defino el estilo del texto */
+    margin-bottom: 18px; /* yo aplico una propiedad de estilo */
+    font-family: 'Inter', sans-serif; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
 
-.precio-producto {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 24px;
-    color: #00d4ff;
-}
+.precio-producto { /* yo inicio un bloque de estilo */
+    font-size: 2rem; /* yo defino el estilo del texto */
+    font-weight: 700; /* yo defino el estilo del texto */
+    margin-bottom: 24px; /* yo aplico una propiedad de estilo */
+    color: #00d4ff; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
 
-.selector-tallas {
-    margin: 32px 0;
-}
+.selector-tallas { /* yo inicio un bloque de estilo */
+    margin: 32px 0; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
 
-.tallas {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-}
+.tallas { /* yo inicio un bloque de estilo */
+    display: flex; /* yo controlo cómo se coloca el elemento */
+    gap: 12px; /* yo ajusto espacios o tamaños */
+    flex-wrap: wrap; /* yo controlo cómo se coloca el elemento */
+} /* yo cierro el bloque de estilo */
 
-.talla {
-    padding: 12px 18px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.05);
-    color: rgba(234, 247, 255, 0.9);
-    border: 1px solid rgba(255,255,255,0.1);
-    cursor: pointer;
-    transition: all 0.25s ease;
-}
+.talla { /* yo inicio un bloque de estilo */
+    padding: 12px 18px; /* yo ajusto espacios o tamaños */
+    border-radius: 999px; /* yo defino cómo se ve el elemento */
+    background: rgba(255,255,255,0.05); /* yo defino cómo se ve el elemento */
+    color: rgba(234, 247, 255, 0.9); /* yo defino el estilo del texto */
+    border: 1px solid rgba(255,255,255,0.1); /* yo defino cómo se ve el elemento */
+    cursor: pointer; /* yo aplico una propiedad de estilo */
+    transition: all 0.25s ease; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
 
 .talla:hover,
-.talla.seleccionada {
-    background: rgba(124, 58, 237, 0.18);
-    border-color: rgba(124, 58, 237, 0.3);
-}
+.talla.seleccionada { /* yo inicio un bloque de estilo */
+    background: rgba(124, 58, 237, 0.18); /* yo defino cómo se ve el elemento */
+    border-color: rgba(124, 58, 237, 0.3); /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
 
-.descripcion-detallada {
-    margin: 30px 0;
-}
+.descripcion-detallada { /* yo inicio un bloque de estilo */
+    margin: 30px 0; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
 
-.descripcion-detallada h3 {
-    margin-bottom: 14px;
-    text-transform: uppercase;
-}
+.descripcion-detallada h3 { /* yo inicio un bloque de estilo */
+    margin-bottom: 14px; /* yo aplico una propiedad de estilo */
+    text-transform: uppercase; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
 
 .descripcion-detallada p,
-.descripcion-detallada ul {
-    line-height: 1.8;
-    color: rgba(234, 247, 255, 0.86);
-}
+.descripcion-detallada ul { /* yo inicio un bloque de estilo */
+    line-height: 1.8; /* yo defino el estilo del texto */
+    color: rgba(234, 247, 255, 0.86); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
 
-.descripcion-detallada ul {
-    list-style: disc;
-    padding-left: 20px;
-}
+.descripcion-detallada ul { /* yo inicio un bloque de estilo */
+    list-style: disc; /* yo aplico una propiedad de estilo */
+    padding-left: 20px; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
 
-.productos-relacionados {
-    margin-top: 50px;
-    padding-top: 30px;
-    border-top: 1px solid rgba(124, 58, 237, 0.18);
-}
+.productos-relacionados { /* yo inicio un bloque de estilo */
+    margin-top: 50px; /* yo aplico una propiedad de estilo */
+    padding-top: 30px; /* yo aplico una propiedad de estilo */
+    border-top: 1px solid rgba(124, 58, 237, 0.18); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
 
-.contenedor-boton-volver {
-    display: flex !important;
-    justify-content: flex-start; 
-    align-items: center;
-    max-width: 1200px;
-    margin: 100px auto 20px !important; 
-    padding: 0 20px;
-    width: 100%;
-    clear: both !important;
-    position: relative !important;
-}
+.contenedor-boton-volver { /* yo inicio un bloque de estilo */
+    display: flex !important; /* yo controlo cómo se coloca el elemento */
+    justify-content: flex-start;  /* yo controlo cómo se coloca el elemento */
+    align-items: center; /* yo controlo cómo se coloca el elemento */
+    max-width: 1200px; /* yo ajusto espacios o tamaños */
+    margin: 100px auto 20px !important;  /* yo ajusto espacios o tamaños */
+    padding: 0 20px; /* yo ajusto espacios o tamaños */
+    width: 100%; /* yo ajusto espacios o tamaños */
+    clear: both !important; /* yo aplico una propiedad de estilo */
+    position: relative !important; /* yo controlo cómo se coloca el elemento */
+} /* yo cierro el bloque de estilo */
 
-.btn-regresar-catalogo {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    border-radius: 999px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08rem;
-    transition: all 0.25s ease;
-    background: rgba(0, 212, 255, 0.12);
-    color: #ffffff; 
-    border: 1px solid rgba(0, 212, 255, 0.3);
-    text-decoration: none;
-}
+.btn-regresar-catalogo { /* yo inicio un bloque de estilo */
+    display: inline-flex; /* yo controlo cómo se coloca el elemento */
+    align-items: center; /* yo controlo cómo se coloca el elemento */
+    justify-content: center; /* yo controlo cómo se coloca el elemento */
+    padding: 12px 24px; /* yo ajusto espacios o tamaños */
+    border-radius: 999px; /* yo defino cómo se ve el elemento */
+    cursor: pointer; /* yo aplico una propiedad de estilo */
+    font-size: 0.9rem; /* yo defino el estilo del texto */
+    font-weight: 700; /* yo defino el estilo del texto */
+    text-transform: uppercase; /* yo defino el estilo del texto */
+    letter-spacing: 0.08rem; /* yo defino el estilo del texto */
+    transition: all 0.25s ease; /* yo aplico una propiedad de estilo */
+    background: rgba(0, 212, 255, 0.12); /* yo defino cómo se ve el elemento */
+    color: #ffffff;  /* yo defino el estilo del texto */
+    border: 1px solid rgba(0, 212, 255, 0.3); /* yo defino cómo se ve el elemento */
+    text-decoration: none; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
 
-.btn-regresar-catalogo:hover {
-    background: rgba(0, 212, 255, 0.24);
-    transform: translateX(-4px); 
-    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.15);
-}
+.btn-regresar-catalogo:hover { /* yo inicio un bloque de estilo */
+    background: rgba(0, 212, 255, 0.24); /* yo defino cómo se ve el elemento */
+    transform: translateX(-4px);  /* yo aplico una propiedad de estilo */
+    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.15); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
 
-@media (max-width: 768px) {
-    .producto-detalle {
-        grid-template-columns: 1fr; 
-        gap: 28px;
-    }
-    .imagen-principal img {
-        max-height: 320px;
-    }
-    .imagenes-secundarias img {
-        height: 80px;
-    }
-    .info-producto h1 {
-        font-size: 2.2rem;
-    }
-    .contenedor-boton-volver {
-        margin: 60px auto 30px !important;
-    }
-}
+@media (max-width: 768px) { /* yo inicio un bloque de estilo */
+    .producto-detalle { /* yo inicio un bloque de estilo */
+        grid-template-columns: 1fr;  /* yo controlo cómo se coloca el elemento */
+        gap: 28px; /* yo ajusto espacios o tamaños */
+    } /* yo cierro el bloque de estilo */
+    .imagen-principal img { /* yo inicio un bloque de estilo */
+        max-height: 320px; /* yo aplico una propiedad de estilo */
+    } /* yo cierro el bloque de estilo */
+    .imagenes-secundarias img { /* yo inicio un bloque de estilo */
+        height: 80px; /* yo ajusto espacios o tamaños */
+    } /* yo cierro el bloque de estilo */
+    .info-producto h1 { /* yo inicio un bloque de estilo */
+        font-size: 2.2rem; /* yo defino el estilo del texto */
+    } /* yo cierro el bloque de estilo */
+    .contenedor-boton-volver { /* yo inicio un bloque de estilo */
+        margin: 60px auto 30px !important; /* yo ajusto espacios o tamaños */
+    } /* yo cierro el bloque de estilo */
+} /* yo cierro el bloque de estilo */
 
-@media (max-width: 480px) {
-    .contenedor-boton-volver {
-        justify-content: center;
-        margin: 40px auto 15px !important;
-    }
-}
+@media (max-width: 480px) { /* yo inicio un bloque de estilo */
+    .contenedor-boton-volver { /* yo inicio un bloque de estilo */
+        justify-content: center; /* yo controlo cómo se coloca el elemento */
+        margin: 40px auto 15px !important; /* yo ajusto espacios o tamaños */
+    } /* yo cierro el bloque de estilo */
+} /* yo cierro el bloque de estilo */

@@ -1,553 +1,711 @@
 
-:root {
-    --accent-secondary: #9d7bf0;
-    --text-muted: #7d7a8c;
-}
+:root { /* yo abro un bloque de reglas */
+    --accent-secondary: #9d7bf0; /* yo defino una variable de estilo global */
+    --text-muted: #7d7a8c; /* yo defino una variable de estilo global */
+} /* yo cierro un bloque de reglas */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { /* yo abro un bloque de reglas */
+    margin: 0; /* yo ajusto el tamaño o el espacio del elemento */
+    padding: 0; /* yo ajusto el tamaño o el espacio del elemento */
+    box-sizing: border-box; /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
 
-html {
-    scroll-behavior: smooth;
-}
+html { /* yo abro un bloque de reglas */
+    scroll-behavior: smooth; /* yo controlo el comportamiento o la animación */
+} /* yo cierro un bloque de reglas */
 
-body {
-    min-height: 100vh;
-    overflow-x: hidden;
-}
+body { /* yo abro un bloque de reglas */
+    min-height: 100vh; /* yo ajusto el tamaño o el espacio del elemento */
+    overflow-x: hidden; /* yo controlo el comportamiento o la animación */
+    background: linear-gradient(135deg, #05070f 0%, #0a101f 100%); /* yo defino la apariencia visual del fondo o los bordes */
+    color: #f3f5ff; /* yo establezco propiedades de texto */
+} /* yo cierro un bloque de reglas */
 
-main {
-    position: relative;
-    z-index: 1;
-}
+main { /* yo abro un bloque de reglas */
+    position: relative; /* yo controlo la disposición del elemento */
+    z-index: 1; /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
 
-img {
-    max-width: 100%;
-    display: block;
-}
+img { /* yo abro un bloque de reglas */
+    max-width: 100%; /* yo ajusto el tamaño o el espacio del elemento */
+    display: block; /* yo controlo la disposición del elemento */
+} /* yo cierro un bloque de reglas */
 
-section:nth-of-type(1) .contenedor-productos img,
-section:nth-of-type(1) [class*="producto"] img {
-    height: auto !important;
-    object-fit: contain !important;
-}
+section:nth-of-type(1) .contenedor-productos img, /* yo defino una regla o selector */
+section:nth-of-type(1) [class*="producto"] img { /* yo abro un bloque de reglas */
+    height: auto !important; /* yo ajusto el tamaño o el espacio del elemento */
+    object-fit: contain !important; /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
 
-section:nth-of-type(2) .contenedor-productos img,
-section:nth-of-type(2) [class*="producto"] img {
-    height: auto !important;
-    object-fit: contain !important;
-}
+section:nth-of-type(2) .contenedor-productos img, /* yo defino una regla o selector */
+section:nth-of-type(2) [class*="producto"] img { /* yo abro un bloque de reglas */
+    height: auto !important; /* yo ajusto el tamaño o el espacio del elemento */
+    object-fit: contain !important; /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
 
-section:nth-of-type(3) .contenedor-productos img,
-section:nth-of-type(3) [class*="producto"] img {
-    height: auto !important;
-    object-fit: contain !important;
-}
+section:nth-of-type(3) .contenedor-productos img, /* yo defino una regla o selector */
+section:nth-of-type(3) [class*="producto"] img { /* yo abro un bloque de reglas */
+    height: auto !important; /* yo ajusto el tamaño o el espacio del elemento */
+    object-fit: contain !important; /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
 
-section:nth-of-type(4) .contenedor-productos img,
-section:nth-of-type(4) [class*="producto"] img {
-    height: 175px !important;
-    object-fit: cover !important;
-    object-position: 50% 14% !important;
-    margin-bottom: -5px !important;
-}
+section:nth-of-type(4) .contenedor-productos img, /* yo defino una regla o selector */
+section:nth-of-type(4) [class*="producto"] img { /* yo abro un bloque de reglas */
+    height: 175px !important; /* yo ajusto el tamaño o el espacio del elemento */
+    object-fit: cover !important; /* yo ajusto esta propiedad de estilo */
+    object-position: 50% 14% !important; /* yo ajusto esta propiedad de estilo */
+    margin-bottom: -5px !important; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-button,
-.btn-ver-producto,
-.btn-agregar-carrito,
-.btn-enviar,
-.btn-volver-inicio {
-    outline: none;
-}
+button, /* yo defino una regla o selector */
+.btn-ver-producto, /* yo defino una regla o selector */
+.btn-agregar-carrito, /* yo defino una regla o selector */
+.btn-enviar, /* yo defino una regla o selector */
+.btn-volver-inicio { /* yo abro un bloque de reglas */
+    outline: none; /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
 
-.header {
-    width: 100%;
-    min-height: 95px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    background: linear-gradient(180deg, rgba(8, 12, 18, 0.95), rgba(8, 12, 18, 0.9));
-}
+.header { /* yo abro un bloque de reglas */
+    width: 100%; /* yo ajusto el tamaño o el espacio del elemento */
+    min-height: 95px; /* yo ajusto el tamaño o el espacio del elemento */
+    display: flex; /* yo controlo la disposición del elemento */
+    align-items: center; /* yo controlo la disposición del elemento */
+    justify-content: center; /* yo controlo la disposición del elemento */
+    padding: 0 20px; /* yo ajusto el tamaño o el espacio del elemento */
+    background: transparent; /* yo defino la apariencia visual del fondo o los bordes */
+} /* yo cierro un bloque de reglas */
 
-.header-logo,
-.header-logo-img {
-    width: auto;
-    max-height: 75px;
-    object-fit: contain;
-}
+.header-logo, /* yo defino una regla o selector */
+.header-logo-img { /* yo abro un bloque de reglas */
+    width: auto; /* yo ajusto el tamaño o el espacio del elemento */
+    max-height: 150px; /* yo ajusto esta propiedad de estilo */
+    object-fit: contain; /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
 
-.navbar-tx {
-    width: min(1280px, 100%);
-    margin: 0 auto;
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    padding: 18px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    background: rgba(5, 7, 15, 0.92);
-    backdrop-filter: blur(28px);
-    border-bottom: 1px solid rgba(255,255,255,0.09);
-}
+.navbar, /* yo defino una regla o selector */
+.navbar-tx { /* yo abro un bloque de reglas */
+    width: min(1280px, 100%); /* yo ajusto el tamaño o el espacio del elemento */
+    margin: 0 auto; /* yo ajusto el tamaño o el espacio del elemento */
+    top: 0; /* yo ajusto el tamaño o el espacio del elemento */
+    z-index: 50; /* yo ajusto esta propiedad de estilo */
+    padding: 24px 40px; /* yo ajusto el tamaño o el espacio del elemento */
+    display: flex; /* yo controlo la disposición del elemento */
+    align-items: center; /* yo controlo la disposición del elemento */
+    justify-content: space-between; /* yo controlo la disposición del elemento */
+    gap: 1rem; /* yo ajusto el tamaño o el espacio del elemento */
+    background: rgba(5, 7, 15, 0.95); /* yo defino la apariencia visual del fondo o los bordes */
+    backdrop-filter: blur(28px); /* yo defino la apariencia visual del fondo o los bordes */
+    border-bottom: 1px solid rgba(255,255,255,0.10); /* yo ajusto esta propiedad de estilo */
+    min-height: 100px; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-.navbar-tx::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255,255,255,0.02);
-    pointer-events: none;
-}
+.navbar::before, /* yo defino una regla o selector */
+.navbar-tx::before { /* yo abro un bloque de reglas */
+    content: ""; /* yo ajusto esta propiedad de estilo */
+    position: absolute; /* yo controlo la disposición del elemento */
+    inset: 0; /* yo ajusto esta propiedad de estilo */
+    background: rgba(255,255,255,0.02); /* yo defino la apariencia visual del fondo o los bordes */
+    pointer-events: none; /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.75rem;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    flex: 1;
-}
+.nav-links { /* yo abro un bloque de reglas */
+    list-style: none; /* yo ajusto esta propiedad de estilo */
+    display: flex; /* yo controlo la disposición del elemento */
+    gap: 1.75rem; /* yo ajusto el tamaño o el espacio del elemento */
+    justify-content: center; /* yo controlo la disposición del elemento */
+    align-items: center; /* yo controlo la disposición del elemento */
+    margin: 0; /* yo ajusto el tamaño o el espacio del elemento */
+    padding: 0; /* yo ajusto el tamaño o el espacio del elemento */
+    flex: 1; /* yo controlo la disposición del elemento */
+} /* yo cierro un bloque de reglas */
 
-.nav-links a {
-    text-decoration: none;
-    font-size: 0.95rem;
-    letter-spacing: 0.18rem;
-    text-transform: uppercase;
-    font-weight: 800;
-    color: inherit;
-    padding: 0.5rem 0;
-}
+.nav-links a { /* yo abro un bloque de reglas */
+    text-decoration: none; /* yo establezco propiedades de texto */
+    font-size: 0.95rem; /* yo establezco propiedades de texto */
+    letter-spacing: 0.18rem; /* yo establezco propiedades de texto */
+    text-transform: uppercase; /* yo establezco propiedades de texto */
+    font-weight: 800; /* yo establezco propiedades de texto */
+    color: inherit; /* yo establezco propiedades de texto */
+    padding: 0.5rem 0; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-#menu-toggle {
-    display: none;
-}
+#menu-toggle { /* yo abro un bloque de reglas */
+    display: none; /* yo controlo la disposición del elemento */
+} /* yo cierro un bloque de reglas */
 
-.menu-btn {
-    display: none;
-    cursor: pointer;
-    font-size: 1.8rem;
-    padding: 0.6rem 1rem;
-    user-select: none;
-    background: rgba(255,255,255,0.05);
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,0.12);
-}
+.menu-btn { /* yo abro un bloque de reglas */
+    display: none; /* yo controlo la disposición del elemento */
+    cursor: pointer; /* yo ajusto esta propiedad de estilo */
+    font-size: 1.8rem; /* yo establezco propiedades de texto */
+    padding: 0.6rem 1rem; /* yo ajusto el tamaño o el espacio del elemento */
+    user-select: none; /* yo ajusto esta propiedad de estilo */
+    background: rgba(255,255,255,0.05); /* yo defino la apariencia visual del fondo o los bordes */
+    border-radius: 999px; /* yo defino la apariencia visual del fondo o los bordes */
+    border: 1px solid rgba(255,255,255,0.12); /* yo defino la apariencia visual del fondo o los bordes */
+} /* yo cierro un bloque de reglas */
 
-.menu-panel {
-    display: none;
-    list-style: none;
-    flex-direction: column;
-    width: min(320px, 90vw);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    z-index: 9999;
-    padding-top: 4rem;
-    padding-bottom: 2rem;
-    box-shadow: 4px 0 25px rgba(0,0,0,0.45);
-    border-right: 1px solid rgba(255,255,255,0.08);
-    background: rgba(7, 12, 23, 0.98);
-    backdrop-filter: blur(12px);
-}
+.menu-panel { /* yo abro un bloque de reglas */
+    display: none; /* yo controlo la disposición del elemento */
+    list-style: none; /* yo ajusto esta propiedad de estilo */
+    flex-direction: column; /* yo ajusto esta propiedad de estilo */
+    width: min(320px, 90vw); /* yo ajusto el tamaño o el espacio del elemento */
+    position: fixed; /* yo controlo la disposición del elemento */
+    top: 0; /* yo ajusto el tamaño o el espacio del elemento */
+    left: 0; /* yo ajusto el tamaño o el espacio del elemento */
+    height: 100vh; /* yo ajusto el tamaño o el espacio del elemento */
+    z-index: 9999; /* yo ajusto esta propiedad de estilo */
+    padding-top: 4rem; /* yo ajusto el tamaño o el espacio del elemento */
+    padding-bottom: 2rem; /* yo ajusto el tamaño o el espacio del elemento */
+    box-shadow: 4px 0 25px rgba(0,0,0,0.45); /* yo defino la apariencia visual del fondo o los bordes */
+    border-right: 1px solid rgba(255,255,255,0.08); /* yo ajusto esta propiedad de estilo */
+    background: rgba(7, 12, 23, 0.98); /* yo defino la apariencia visual del fondo o los bordes */
+    backdrop-filter: blur(12px); /* yo defino la apariencia visual del fondo o los bordes */
+} /* yo cierro un bloque de reglas */
 
-#menu-toggle:checked ~ .menu-panel {
-    display: flex;
-}
+#menu-toggle:checked ~ .menu-panel { /* yo abro un bloque de reglas */
+    display: flex; /* yo controlo la disposición del elemento */
+} /* yo cierro un bloque de reglas */
 
-.menu-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 900;
-    cursor: pointer;
-    background: rgba(0,0,0,0.45);
-}
+.menu-overlay { /* yo abro un bloque de reglas */
+    display: none; /* yo controlo la disposición del elemento */
+    position: fixed; /* yo controlo la disposición del elemento */
+    inset: 0; /* yo ajusto esta propiedad de estilo */
+    z-index: 900; /* yo ajusto esta propiedad de estilo */
+    cursor: pointer; /* yo ajusto esta propiedad de estilo */
+    background: rgba(0,0,0,0.45); /* yo defino la apariencia visual del fondo o los bordes */
+} /* yo cierro un bloque de reglas */
 
-#menu-toggle:checked ~ .menu-overlay {
-    display: block;
-}
+#menu-toggle:checked ~ .menu-overlay { /* yo abro un bloque de reglas */
+    display: block; /* yo controlo la disposición del elemento */
+} /* yo cierro un bloque de reglas */
 
-.menu-panel li a {
-    display: block;
-    text-decoration: none;
-    padding: 1.1rem 1.8rem;
-    font-size: 0.98rem;
-    font-weight: 700;
-    letter-spacing: 0.14rem;
-    text-transform: uppercase;
-    color: inherit;
-}
+.menu-panel li a { /* yo abro un bloque de reglas */
+    display: block; /* yo controlo la disposición del elemento */
+    text-decoration: none; /* yo establezco propiedades de texto */
+    padding: 1.1rem 1.8rem; /* yo ajusto el tamaño o el espacio del elemento */
+    font-size: 0.98rem; /* yo establezco propiedades de texto */
+    font-weight: 700; /* yo establezco propiedades de texto */
+    letter-spacing: 0.14rem; /* yo establezco propiedades de texto */
+    text-transform: uppercase; /* yo establezco propiedades de texto */
+    color: inherit; /* yo establezco propiedades de texto */
+} /* yo cierro un bloque de reglas */
 
-.slogan {
-    position: relative;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 100px 40px 80px;
-    overflow: hidden;
-    background: linear-gradient(180deg, rgba(5, 7, 15, 0.96), rgba(8, 12, 20, 0.95)), url("../images/fondo.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+.slogan { /* yo abro un bloque de reglas */
+    position: relative; /* yo controlo la disposición del elemento */
+    min-height: 0px; /* yo ajusto el tamaño o el espacio del elemento */
+    display: flex; /* yo controlo la disposición del elemento */
+    align-items: center; /* yo controlo la disposición del elemento */
+    justify-content: center; /* yo controlo la disposición del elemento */
+    padding: 100px 40px 80px; /* yo ajusto el tamaño o el espacio del elemento */
+    overflow: hidden; /* yo controlo el comportamiento o la animación */
+    background: linear-gradient(180deg, rgba(5, 7, 15, 0.96), rgba(8, 12, 20, 0.95)); /* yo defino la apariencia visual del fondo o los bordes */
+        background-image: none !important; /* yo defino la apariencia visual del fondo o los bordes */
+    } /* yo cierro un bloque de reglas */
 
-.slogan-fondo {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-}
+    .slogan-fondo { /* yo abro un bloque de reglas */
+        display: none !important; /* yo controlo la disposición del elemento */
+    } /* yo cierro un bloque de reglas */
 
-.slogan-fondo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.25;
-}
+    .slogan-fondo img { /* yo abro un bloque de reglas */
+        display: none !important; /* yo controlo la disposición del elemento */
+    background: rgba(7, 12, 20, 0.72); /* yo defino la apariencia visual del fondo o los bordes */
+    box-shadow: 0 32px 90px rgba(0, 0, 0, 0.34); /* yo defino la apariencia visual del fondo o los bordes */
+    border: 1px solid rgba(124, 58, 237, 0.14); /* yo defino la apariencia visual del fondo o los bordes */
+} /* yo cierro un bloque de reglas */
 
-.slogan-contenido {
-    position: relative;
-    text-align: center;
-    z-index: 1;
-    max-width: 960px;
-    padding: 2rem 1.25rem;
-    border-radius: 26px;
-    background: rgba(7, 12, 20, 0.72);
-    box-shadow: 0 32px 90px rgba(0, 0, 0, 0.34);
-    border: 1px solid rgba(124, 58, 237, 0.14);
-}
+.slogan-contenido h1 { /* yo abro un bloque de reglas */
+    font-size: clamp(2.7rem, 4.4vw, 4.8rem); /* yo establezco propiedades de texto */
+    font-weight: 900; /* yo establezco propiedades de texto */
+    letter-spacing: 0.26rem; /* yo establezco propiedades de texto */
+    text-transform: uppercase; /* yo establezco propiedades de texto */
+    line-height: 1.05; /* yo establezco propiedades de texto */
+    margin-bottom: 1rem; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-.slogan-contenido h1 {
-    font-size: clamp(2.7rem, 4.4vw, 4.8rem);
-    font-weight: 900;
-    letter-spacing: 0.26rem;
-    text-transform: uppercase;
-    line-height: 1.05;
-    margin-bottom: 1rem;
-}
+.slogan-contenido h1 span { /* yo abro un bloque de reglas */
+    display: inline-block; /* yo controlo la disposición del elemento */
+} /* yo cierro un bloque de reglas */
 
-.slogan-contenido h1 span {
-    display: inline-block;
-}
+.slogan-text { /* yo abro un bloque de reglas */
+    font-size: 1.05rem; /* yo establezco propiedades de texto */
+    letter-spacing: 0.16rem; /* yo establezco propiedades de texto */
+    line-height: 1.85; /* yo establezco propiedades de texto */
+    margin-top: 1rem; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-.slogan-text {
-    font-size: 1.05rem;
-    letter-spacing: 0.16rem;
-    line-height: 1.85;
-    margin-top: 1rem;
-}
+.hero { /* yo abro un bloque de reglas */
+    padding: 95px 40px 60px; /* yo ajusto el tamaño o el espacio del elemento */
+    display: flex; /* yo controlo la disposición del elemento */
+    align-items: center; /* yo controlo la disposición del elemento */
+    justify-content: center; /* yo controlo la disposición del elemento */
+    min-height: 68vh; /* yo ajusto el tamaño o el espacio del elemento */
+    background: linear-gradient(180deg, rgba(8, 12, 18, 0.96), rgba(8, 12, 18, 0.92)); /* yo defino la apariencia visual del fondo o los bordes */
+} /* yo cierro un bloque de reglas */
 
-.hero {
-    padding: 95px 40px 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 68vh;
-    background: linear-gradient(180deg, rgba(8, 12, 18, 0.96), rgba(8, 12, 18, 0.92));
-}
+.hero-copy { /* yo abro un bloque de reglas */
+    max-width: 830px; /* yo ajusto el tamaño o el espacio del elemento */
+    text-align: center; /* yo ajusto esta propiedad de estilo */
+    padding: 3rem 2rem; /* yo ajusto el tamaño o el espacio del elemento */
+    border-radius: 30px; /* yo defino la apariencia visual del fondo o los bordes */
+    background: rgba(5, 8, 18, 0.96); /* yo defino la apariencia visual del fondo o los bordes */
+    box-shadow: 0 38px 100px rgba(0, 0, 0, 0.32); /* yo defino la apariencia visual del fondo o los bordes */
+    border: 1px solid rgba(124, 58, 237, 0.16); /* yo defino la apariencia visual del fondo o los bordes */
+    backdrop-filter: blur(18px); /* yo defino la apariencia visual del fondo o los bordes */
+    position: relative; /* yo controlo la disposición del elemento */
+} /* yo cierro un bloque de reglas */
 
-.hero-copy {
-    max-width: 830px;
-    text-align: center;
-    padding: 3rem 2rem;
-    border-radius: 30px;
-    background: rgba(5, 8, 18, 0.96);
-    box-shadow: 0 38px 100px rgba(0, 0, 0, 0.32);
-    border: 1px solid rgba(124, 58, 237, 0.16);
-    backdrop-filter: blur(18px);
-    position: relative;
-}
+.hero-copy::before { /* yo abro un bloque de reglas */
+    content: ""; /* yo ajusto esta propiedad de estilo */
+    position: absolute; /* yo controlo la disposición del elemento */
+    inset: 0; /* yo ajusto esta propiedad de estilo */
+    border-radius: 30px; /* yo defino la apariencia visual del fondo o los bordes */
+    background: linear-gradient(180deg, rgba(124, 58, 237, 0.05), transparent 55%); /* yo defino la apariencia visual del fondo o los bordes */
+    pointer-events: none; /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
 
-.hero-copy::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 30px;
-    background: linear-gradient(180deg, rgba(124, 58, 237, 0.05), transparent 55%);
-    pointer-events: none;
-}
+.hero-copy .eyebrow { /* yo abro un bloque de reglas */
+    display: inline-flex; /* yo controlo la disposición del elemento */
+    color: var(--accent-secondary); /* yo establezco propiedades de texto */
+    font-weight: 700; /* yo establezco propiedades de texto */
+    letter-spacing: 0.3rem; /* yo establezco propiedades de texto */
+    text-transform: uppercase; /* yo establezco propiedades de texto */
+    margin-bottom: 1.2rem; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-.hero-copy .eyebrow {
-    display: inline-flex;
-    color: var(--accent-secondary);
-    font-weight: 700;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-    margin-bottom: 1.2rem;
-}
+.hero-copy h1 { /* yo abro un bloque de reglas */
+    font-size: clamp(2.8rem, 4vw, 4.6rem); /* yo establezco propiedades de texto */
+    line-height: 1.05; /* yo establezco propiedades de texto */
+    margin-bottom: 1.2rem; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-.hero-copy h1 {
-    font-size: clamp(2.8rem, 4vw, 4.6rem);
-    line-height: 1.05;
-    margin-bottom: 1.2rem;
-}
+.hero-text { /* yo abro un bloque de reglas */
+    color: var(--text-muted); /* yo establezco propiedades de texto */
+    font-size: 1.05rem; /* yo establezco propiedades de texto */
+    line-height: 1.85; /* yo establezco propiedades de texto */
+    margin-bottom: 2rem; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-.hero-text {
-    color: var(--text-muted);
-    font-size: 1.05rem;
-    line-height: 1.85;
-    margin-bottom: 2rem;
-}
+.hero-actions { /* yo abro un bloque de reglas */
+    display: flex; /* yo controlo la disposición del elemento */
+    flex-wrap: wrap; /* yo controlo la disposición del elemento */
+    justify-content: center; /* yo controlo la disposición del elemento */
+    gap: 1rem; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-}
+.hero-actions .btn-ver-producto, /* yo defino una regla o selector */
+.hero-actions .btn-agregar-carrito, /* yo defino una regla o selector */
+.hero-actions .btn-volver-inicio { /* yo abro un bloque de reglas */
+    min-width: 165px; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-.hero-actions .btn-ver-producto,
-.hero-actions .btn-agregar-carrito,
-.hero-actions .btn-volver-inicio {
-    min-width: 165px;
-}
+.buscador-seccion { /* yo abro un bloque de reglas */
+    max-width: 1180px; /* yo ajusto el tamaño o el espacio del elemento */
+    margin: 20px auto 40px; /* yo ajusto el tamaño o el espacio del elemento */
+    padding: 0 20px; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-.destacados {
-    max-width: 1200px;
-    margin: -60px auto 60px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-    padding: 0 20px;
-    position: relative;
-    z-index: 1;
-}
+.buscador-wrap { /* yo abro un bloque de reglas */
+    padding: 32px; /* yo ajusto el tamaño o el espacio del elemento */
+    border-radius: 30px; /* yo defino la apariencia visual del fondo o los bordes */
+    background: rgba(5, 8, 18, 0.92); /* yo defino la apariencia visual del fondo o los bordes */
+    border: 1px solid rgba(157, 123, 240, 0.18); /* yo defino la apariencia visual del fondo o los bordes */
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28); /* yo defino la apariencia visual del fondo o los bordes */
+    backdrop-filter: blur(16px); /* yo defino la apariencia visual del fondo o los bordes */
+} /* yo cierro un bloque de reglas */
 
-.destacado-card {
-    display: grid;
-    gap: 1.4rem;
-    padding: 36px 32px;
-    border-radius: 28px;
-    background: linear-gradient(180deg, rgba(10, 18, 33, 0.98), rgba(4, 10, 20, 0.9));
-    box-shadow: 0 34px 90px rgba(0, 0, 0, 0.28);
-    border: 1px solid rgba(255,255,255,0.1);
-    min-height: 270px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
+.buscador-header { /* yo abro un bloque de reglas */
+    display: grid; /* yo controlo la disposición del elemento */
+    gap: 10px; /* yo ajusto el tamaño o el espacio del elemento */
+    margin-bottom: 20px; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-.destacado-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 34px 80px rgba(0, 0, 0, 0.28);
-    border-color: rgba(124, 58, 237, 0.18);
-}
+.buscador-header h2 { /* yo abro un bloque de reglas */
+    font-size: clamp(1.5rem, 2.2vw, 2.1rem); /* yo establezco propiedades de texto */
+} /* yo cierro un bloque de reglas */
 
-.destacado-card h2 {
-    font-size: 1.75rem;
-    letter-spacing: 0.08rem;
-}
+.buscador-header p { /* yo abro un bloque de reglas */
+    color: var(--text-muted); /* yo establezco propiedades de texto */
+    line-height: 1.7; /* yo establezco propiedades de texto */
+} /* yo cierro un bloque de reglas */
 
-.destacado-card p {
-    color: var(--text-muted);
-    line-height: 1.8;
-}
+.buscador-form { /* yo abro un bloque de reglas */
+    display: flex; /* yo controlo la disposición del elemento */
+    gap: 12px; /* yo ajusto el tamaño o el espacio del elemento */
+    flex-wrap: wrap; /* yo controlo la disposición del elemento */
+    margin-bottom: 18px; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-.destacado-card .btn-ver-producto {
-    justify-self: start;
-}
+.buscador-form input { /* yo abro un bloque de reglas */
+    flex: 1; /* yo controlo la disposición del elemento */
+    min-width: 240px; /* yo ajusto el tamaño o el espacio del elemento */
+    padding: 14px 16px; /* yo ajusto el tamaño o el espacio del elemento */
+    border-radius: 999px; /* yo defino la apariencia visual del fondo o los bordes */
+    border: 1px solid rgba(255,255,255,0.12); /* yo defino la apariencia visual del fondo o los bordes */
+    background: rgba(255,255,255,0.06); /* yo defino la apariencia visual del fondo o los bordes */
+    color: #fff; /* yo establezco propiedades de texto */
+    outline: none; /* yo ajusto esta propiedad de estilo */
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease; /* yo controlo el comportamiento o la animación */
+} /* yo cierro un bloque de reglas */
 
-.carrito-flotante {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 14px 18px;
-    border-radius: 999px;
-    cursor: pointer;
-    box-shadow: 0 26px 72px rgba(0, 0, 0, 0.28);
-    z-index: 999;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.85rem;
-    background: linear-gradient(135deg, rgba(124, 58, 237, 0.92), rgba(157, 123, 240, 0.94));
-    color: #06070f;
-    min-width: 76px;
-    transition: transform 0.25s ease, filter 0.25s ease;
-}
+.buscador-form input:focus { /* yo abro un bloque de reglas */
+    border-color: rgba(157, 123, 240, 0.8); /* yo ajusto esta propiedad de estilo */
+    box-shadow: 0 0 0 4px rgba(157, 123, 240, 0.18); /* yo defino la apariencia visual del fondo o los bordes */
+    transform: translateY(-1px); /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
 
-.carrito-flotante:hover {
-    transform: translateY(-2px) scale(1.03);
-    filter: brightness(1.05);
-}
+.buscador-form button { /* yo abro un bloque de reglas */
+    border: none; /* yo defino la apariencia visual del fondo o los bordes */
+    cursor: pointer; /* yo ajusto esta propiedad de estilo */
+    padding: 14px 22px; /* yo ajusto el tamaño o el espacio del elemento */
+    border-radius: 999px; /* yo defino la apariencia visual del fondo o los bordes */
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.95), rgba(157, 123, 240, 0.95)); /* yo defino la apariencia visual del fondo o los bordes */
+    color: #06070f; /* yo establezco propiedades de texto */
+    font-weight: 800; /* yo establezco propiedades de texto */
+    transition: transform 0.25s ease, box-shadow 0.25s ease; /* yo controlo el comportamiento o la animación */
+} /* yo cierro un bloque de reglas */
 
-.carrito-contador {
-    display: inline-flex;
-    min-width: 30px;
-    height: 30px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 999px;
-    background: #ffffff;
-    color: #06070f;
-    font-weight: 700;
-}
+.buscador-form button:hover { /* yo abro un bloque de reglas */
+    transform: translateY(-2px); /* yo ajusto esta propiedad de estilo */
+    box-shadow: 0 12px 24px rgba(124, 58, 237, 0.3); /* yo defino la apariencia visual del fondo o los bordes */
+} /* yo cierro un bloque de reglas */
 
-.modal-carrito {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-}
+.resultados-busqueda { /* yo abro un bloque de reglas */
+    display: grid; /* yo controlo la disposición del elemento */
+    gap: 12px; /* yo ajusto el tamaño o el espacio del elemento */
+    max-height: 0; /* yo ajusto esta propiedad de estilo */
+    overflow: hidden; /* yo controlo el comportamiento o la animación */
+    opacity: 0; /* yo controlo el comportamiento o la animación */
+    transition: max-height 0.35s ease, opacity 0.35s ease; /* yo controlo el comportamiento o la animación */
+} /* yo cierro un bloque de reglas */
 
-.modal-contenido {
-    width: min(540px, 100%);
-}
+.resultados-busqueda.is-active { /* yo abro un bloque de reglas */
+    max-height: 1000px; /* yo ajusto esta propiedad de estilo */
+    opacity: 1; /* yo controlo el comportamiento o la animación */
+} /* yo cierro un bloque de reglas */
 
-.cerrar-modal {
-    float: right;
-    font-size: 2rem;
-    cursor: pointer;
-}
+.resultado-item { /* yo abro un bloque de reglas */
+    display: flex; /* yo controlo la disposición del elemento */
+    justify-content: space-between; /* yo controlo la disposición del elemento */
+    align-items: center; /* yo controlo la disposición del elemento */
+    gap: 16px; /* yo ajusto el tamaño o el espacio del elemento */
+    padding: 16px 18px; /* yo ajusto el tamaño o el espacio del elemento */
+    border-radius: 18px; /* yo defino la apariencia visual del fondo o los bordes */
+    background: rgba(255,255,255,0.05); /* yo defino la apariencia visual del fondo o los bordes */
+    border: 1px solid rgba(255,255,255,0.08); /* yo defino la apariencia visual del fondo o los bordes */
+    animation: fadeUp 0.35s ease both; /* yo controlo el comportamiento o la animación */
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease; /* yo controlo el comportamiento o la animación */
+} /* yo cierro un bloque de reglas */
 
-.item-carrito {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(124, 58, 237, 0.15);
-}
+.resultado-item:hover { /* yo abro un bloque de reglas */
+    transform: translateY(-3px); /* yo ajusto esta propiedad de estilo */
+    border-color: rgba(157, 123, 240, 0.35); /* yo ajusto esta propiedad de estilo */
+    background: rgba(255,255,255,0.08); /* yo defino la apariencia visual del fondo o los bordes */
+} /* yo cierro un bloque de reglas */
 
-.total-carrito {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px 0;
-}
+.resultado-item h3 { /* yo abro un bloque de reglas */
+    margin-bottom: 6px; /* yo ajusto el tamaño o el espacio del elemento */
+    font-size: 1rem; /* yo establezco propiedades de texto */
+} /* yo cierro un bloque de reglas */
 
-.footer {
-    width: 100%;
-    padding: 40px 20px;
-    max-width: 1280px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
+.resultado-item p { /* yo abro un bloque de reglas */
+    color: var(--text-muted); /* yo establezco propiedades de texto */
+    font-size: 0.95rem; /* yo establezco propiedades de texto */
+    margin-bottom: 6px; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-.footer-derechos {
-    font-size: 0.95rem;
-    letter-spacing: 0.16rem;
-}
+.resultado-meta { /* yo abro un bloque de reglas */
+    display: inline-block; /* yo controlo la disposición del elemento */
+    font-size: 0.8rem; /* yo establezco propiedades de texto */
+    text-transform: uppercase; /* yo establezco propiedades de texto */
+    letter-spacing: 0.14rem; /* yo establezco propiedades de texto */
+    color: var(--accent-secondary); /* yo establezco propiedades de texto */
+} /* yo cierro un bloque de reglas */
 
-.footer-redes {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    flex-wrap: wrap;
-}
+.resultado-actions { /* yo abro un bloque de reglas */
+    display: flex; /* yo controlo la disposición del elemento */
+    align-items: center; /* yo controlo la disposición del elemento */
+    gap: 12px; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
 
-.footer-redes a {
-    text-decoration: none;
-    font-size: 0.95rem;
-    letter-spacing: 0.16rem;
-    text-transform: uppercase;
-}
+.resultado-vacio { /* yo abro un bloque de reglas */
+    padding: 18px; /* yo ajusto el tamaño o el espacio del elemento */
+    border-radius: 16px; /* yo defino la apariencia visual del fondo o los bordes */
+    background: rgba(255,255,255,0.04); /* yo defino la apariencia visual del fondo o los bordes */
+    color: var(--text-muted); /* yo establezco propiedades de texto */
+} /* yo cierro un bloque de reglas */
 
-@media (max-width: 1024px) {
-    .navbar-tx {
-        padding: 18px 24px;
-    }
-    .nav-links {
-        gap: 1rem;
-    }
-    .destacados {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        margin-top: 0;
-    }
-}
+.destacados { /* yo abro un bloque de reglas */
+    max-width: 1200px; /* yo ajusto el tamaño o el espacio del elemento */
+    margin: -50px auto 30px; /* yo ajusto el tamaño o el espacio del elemento */
+    display: grid; /* yo controlo la disposición del elemento */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* yo ajusto esta propiedad de estilo */
+    gap: 24px; /* yo ajusto el tamaño o el espacio del elemento */
+    padding: 0 20px; /* yo ajusto el tamaño o el espacio del elemento */
+    position: relative; /* yo controlo la disposición del elemento */
+    z-index: 1; /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
 
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-    }
-    .nav-links {
-        display: none;
-    }
-    .header {
-        min-height: 95px;
-    }
-    .header-logo,
-    .header-logo-img {
-        max-height: 72px;
-    }
-    .slogan {
-        padding: 80px 24px 60px;
-    }
-    .slogan-contenido {
-        padding: 1.8rem 1.2rem;
-    }
-    .slogan-contenido h1 {
-        font-size: 2.4rem;
-    }
-    .slogan-text {
-        font-size: 0.98rem;
-    }
-    .hero {
-        padding: 80px 20px 50px;
-    }
-    .hero-copy {
-        padding: 2.5rem 1.5rem;
-    }
-    .hero-copy h1 {
-        font-size: 2.35rem;
-    }
-    .destacados {
-        grid-template-columns: 1fr;
-        margin: 0 auto 40px;
-    }
-}
+.destacado-card { /* yo abro un bloque de reglas */
+    display: grid; /* yo controlo la disposición del elemento */
+    gap: 1.4rem; /* yo ajusto el tamaño o el espacio del elemento */
+    padding: 36px 32px; /* yo ajusto el tamaño o el espacio del elemento */
+    border-radius: 28px; /* yo defino la apariencia visual del fondo o los bordes */
+    background: linear-gradient(180deg, rgba(10, 18, 33, 0.98), rgba(4, 10, 20, 0.9)); /* yo defino la apariencia visual del fondo o los bordes */
+    box-shadow: 0 34px 90px rgba(0, 0, 0, 0.28); /* yo defino la apariencia visual del fondo o los bordes */
+    border: 1px solid rgba(255,255,255,0.1); /* yo defino la apariencia visual del fondo o los bordes */
+    min-height: 270px; /* yo ajusto el tamaño o el espacio del elemento */
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease, filter 0.28s ease; /* yo controlo el comportamiento o la animación */
+} /* yo cierro un bloque de reglas */
 
-@media (max-width: 480px) {
-    .menu-btn {
-        padding: 0.5rem 0.9rem;
-    }
-    .slogan {
-        padding: 60px 18px 40px;
-    }
-    .slogan-contenido {
-        padding: 1.4rem 1rem;
-    }
-    .slogan-contenido h1 {
-        font-size: 2rem;
-        letter-spacing: 0.2rem;
-    }
-    .slogan-text {
-        font-size: 0.95rem;
-    }
-    .hero {
-        padding: 70px 16px 40px;
-    }
-    .hero-copy {
-        padding: 1.8rem 1.2rem;
-    }
-    .hero-copy h1 {
-        font-size: 2rem;
-    }
-    .hero-text {
-        font-size: 0.98rem;
-    }
-    .modal-contenido {
-        width: 95%;
-        padding: 20px;
-    }
-    .item-carrito {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    .modal-carrito {
-        align-items: flex-start;
-        justify-content: center;
-        padding-top: 40px;
-    }
-}
+.destacado-card:hover { /* yo abro un bloque de reglas */
+    transform: translateY(-8px) scale(1.01); /* yo ajusto esta propiedad de estilo */
+    box-shadow: 0 42px 100px rgba(0, 0, 0, 0.34); /* yo defino la apariencia visual del fondo o los bordes */
+    border-color: rgba(124, 58, 237, 0.22); /* yo ajusto esta propiedad de estilo */
+    filter: brightness(1.03); /* yo defino la apariencia visual del fondo o los bordes */
+} /* yo cierro un bloque de reglas */
+
+.destacado-card h2 { /* yo abro un bloque de reglas */
+    font-size: 1.75rem; /* yo establezco propiedades de texto */
+    letter-spacing: 0.08rem; /* yo establezco propiedades de texto */
+} /* yo cierro un bloque de reglas */
+
+.destacado-card p { /* yo abro un bloque de reglas */
+    color: var(--text-muted); /* yo establezco propiedades de texto */
+    line-height: 1.8; /* yo establezco propiedades de texto */
+} /* yo cierro un bloque de reglas */
+
+.destacado-card .btn-ver-producto { /* yo abro un bloque de reglas */
+    justify-self: start; /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
+
+.carrito-flotante { /* yo abro un bloque de reglas */
+    position: fixed; /* yo controlo la disposición del elemento */
+    top: 20px; /* yo ajusto el tamaño o el espacio del elemento */
+    right: 20px; /* yo ajusto el tamaño o el espacio del elemento */
+    padding: 14px 18px; /* yo ajusto el tamaño o el espacio del elemento */
+    border-radius: 999px; /* yo defino la apariencia visual del fondo o los bordes */
+    cursor: pointer; /* yo ajusto esta propiedad de estilo */
+    box-shadow: 0 26px 72px rgba(0, 0, 0, 0.28); /* yo defino la apariencia visual del fondo o los bordes */
+    z-index: 999; /* yo ajusto esta propiedad de estilo */
+    display: inline-flex; /* yo controlo la disposición del elemento */
+    align-items: center; /* yo controlo la disposición del elemento */
+    gap: 0.85rem; /* yo ajusto el tamaño o el espacio del elemento */
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.92), rgba(157, 123, 240, 0.94)); /* yo defino la apariencia visual del fondo o los bordes */
+    color: #06070f; /* yo establezco propiedades de texto */
+    min-width: 76px; /* yo ajusto el tamaño o el espacio del elemento */
+    transition: transform 0.25s ease, filter 0.25s ease; /* yo controlo el comportamiento o la animación */
+} /* yo cierro un bloque de reglas */
+
+.carrito-flotante:hover { /* yo abro un bloque de reglas */
+    transform: translateY(-2px) scale(1.03); /* yo ajusto esta propiedad de estilo */
+    filter: brightness(1.05); /* yo defino la apariencia visual del fondo o los bordes */
+} /* yo cierro un bloque de reglas */
+
+.carrito-contador { /* yo abro un bloque de reglas */
+    display: inline-flex; /* yo controlo la disposición del elemento */
+    min-width: 30px; /* yo ajusto el tamaño o el espacio del elemento */
+    height: 30px; /* yo ajusto el tamaño o el espacio del elemento */
+    align-items: center; /* yo controlo la disposición del elemento */
+    justify-content: center; /* yo controlo la disposición del elemento */
+    border-radius: 999px; /* yo defino la apariencia visual del fondo o los bordes */
+    background: #ffffff; /* yo defino la apariencia visual del fondo o los bordes */
+    color: #06070f; /* yo establezco propiedades de texto */
+    font-weight: 700; /* yo establezco propiedades de texto */
+} /* yo cierro un bloque de reglas */
+
+.modal-carrito { /* yo abro un bloque de reglas */
+    display: none; /* yo controlo la disposición del elemento */
+    position: fixed; /* yo controlo la disposición del elemento */
+    inset: 0; /* yo ajusto esta propiedad de estilo */
+    z-index: 9999; /* yo ajusto esta propiedad de estilo */
+    align-items: center; /* yo controlo la disposición del elemento */
+    justify-content: center; /* yo controlo la disposición del elemento */
+    padding: 2rem; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
+
+.modal-contenido { /* yo abro un bloque de reglas */
+    width: min(540px, 100%); /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
+
+.cerrar-modal { /* yo abro un bloque de reglas */
+    float: right; /* yo ajusto esta propiedad de estilo */
+    font-size: 2rem; /* yo establezco propiedades de texto */
+    cursor: pointer; /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
+
+.item-carrito { /* yo abro un bloque de reglas */
+    display: flex; /* yo controlo la disposición del elemento */
+    justify-content: space-between; /* yo controlo la disposición del elemento */
+    align-items: center; /* yo controlo la disposición del elemento */
+    padding: 15px 0; /* yo ajusto el tamaño o el espacio del elemento */
+    border-bottom: 1px solid rgba(124, 58, 237, 0.15); /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
+
+.total-carrito { /* yo abro un bloque de reglas */
+    font-size: 1.5rem; /* yo establezco propiedades de texto */
+    font-weight: bold; /* yo establezco propiedades de texto */
+    text-align: center; /* yo ajusto esta propiedad de estilo */
+    margin: 20px 0; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
+
+.footer { /* yo abro un bloque de reglas */
+    width: 100%; /* yo ajusto el tamaño o el espacio del elemento */
+    padding: 40px 20px; /* yo ajusto el tamaño o el espacio del elemento */
+    max-width: 1280px; /* yo ajusto el tamaño o el espacio del elemento */
+    margin: 0 auto; /* yo ajusto el tamaño o el espacio del elemento */
+    text-align: center; /* yo ajusto esta propiedad de estilo */
+    display: flex; /* yo controlo la disposición del elemento */
+    flex-direction: column; /* yo ajusto esta propiedad de estilo */
+    gap: 16px; /* yo ajusto el tamaño o el espacio del elemento */
+} /* yo cierro un bloque de reglas */
+
+.footer-derechos { /* yo abro un bloque de reglas */
+    font-size: 0.95rem; /* yo establezco propiedades de texto */
+    letter-spacing: 0.16rem; /* yo establezco propiedades de texto */
+} /* yo cierro un bloque de reglas */
+
+.footer-redes { /* yo abro un bloque de reglas */
+    display: flex; /* yo controlo la disposición del elemento */
+    justify-content: center; /* yo controlo la disposición del elemento */
+    gap: 24px; /* yo ajusto el tamaño o el espacio del elemento */
+    flex-wrap: wrap; /* yo controlo la disposición del elemento */
+} /* yo cierro un bloque de reglas */
+
+.footer-redes a { /* yo abro un bloque de reglas */
+    text-decoration: none; /* yo establezco propiedades de texto */
+    font-size: 0.95rem; /* yo establezco propiedades de texto */
+    letter-spacing: 0.16rem; /* yo establezco propiedades de texto */
+    text-transform: uppercase; /* yo establezco propiedades de texto */
+} /* yo cierro un bloque de reglas */
+
+@media (max-width: 1024px) { /* yo abro un bloque de reglas */
+    .navbar-tx { /* yo abro un bloque de reglas */
+        padding: 18px 24px; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .nav-links { /* yo abro un bloque de reglas */
+        gap: 1rem; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .destacados { /* yo abro un bloque de reglas */
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* yo ajusto esta propiedad de estilo */
+        margin-top: 0; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+} /* yo cierro un bloque de reglas */
+
+[data-animate] { /* yo abro un bloque de reglas */
+    opacity: 0; /* yo controlo el comportamiento o la animación */
+    transform: translateY(24px) scale(0.98); /* yo ajusto esta propiedad de estilo */
+    transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.9, 0.2, 1); /* yo controlo el comportamiento o la animación */
+} /* yo cierro un bloque de reglas */
+
+[data-animate].is-visible { /* yo abro un bloque de reglas */
+    opacity: 1; /* yo controlo el comportamiento o la animación */
+    transform: translateY(0) scale(1); /* yo ajusto esta propiedad de estilo */
+} /* yo cierro un bloque de reglas */
+
+@keyframes fadeUp { /* yo abro un bloque de reglas */
+    from { /* yo abro un bloque de reglas */
+        opacity: 0; /* yo controlo el comportamiento o la animación */
+        transform: translateY(10px); /* yo ajusto esta propiedad de estilo */
+    } /* yo cierro un bloque de reglas */
+    to { /* yo abro un bloque de reglas */
+        opacity: 1; /* yo controlo el comportamiento o la animación */
+        transform: translateY(0); /* yo ajusto esta propiedad de estilo */
+    } /* yo cierro un bloque de reglas */
+} /* yo cierro un bloque de reglas */
+
+@media (max-width: 768px) { /* yo abro un bloque de reglas */
+    .menu-btn { /* yo abro un bloque de reglas */
+        display: block; /* yo controlo la disposición del elemento */
+    } /* yo cierro un bloque de reglas */
+    .nav-links { /* yo abro un bloque de reglas */
+        display: none; /* yo controlo la disposición del elemento */
+    } /* yo cierro un bloque de reglas */
+    .header { /* yo abro un bloque de reglas */
+        min-height: 95px; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .header-logo, /* yo defino una regla o selector */
+    .header-logo-img { /* yo abro un bloque de reglas */
+        max-height: 72px; /* yo ajusto esta propiedad de estilo */
+    } /* yo cierro un bloque de reglas */
+    .slogan { /* yo abro un bloque de reglas */
+        padding: 80px 24px 60px; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .slogan-contenido { /* yo abro un bloque de reglas */
+        padding: 1.8rem 1.2rem; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .slogan-contenido h1 { /* yo abro un bloque de reglas */
+        font-size: 2.4rem; /* yo establezco propiedades de texto */
+    } /* yo cierro un bloque de reglas */
+    .slogan-text { /* yo abro un bloque de reglas */
+        font-size: 0.98rem; /* yo establezco propiedades de texto */
+    } /* yo cierro un bloque de reglas */
+    .hero { /* yo abro un bloque de reglas */
+        padding: 80px 20px 50px; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .hero-copy { /* yo abro un bloque de reglas */
+        padding: 2.5rem 1.5rem; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .hero-copy h1 { /* yo abro un bloque de reglas */
+        font-size: 2.35rem; /* yo establezco propiedades de texto */
+    } /* yo cierro un bloque de reglas */
+    .destacados { /* yo abro un bloque de reglas */
+        grid-template-columns: 1fr; /* yo ajusto esta propiedad de estilo */
+        margin: 0 auto 40px; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .buscador-wrap { /* yo abro un bloque de reglas */
+        padding: 24px; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .resultado-item { /* yo abro un bloque de reglas */
+        flex-direction: column; /* yo ajusto esta propiedad de estilo */
+        align-items: flex-start; /* yo controlo la disposición del elemento */
+    } /* yo cierro un bloque de reglas */
+    .resultado-actions { /* yo abro un bloque de reglas */
+        width: 100%; /* yo ajusto el tamaño o el espacio del elemento */
+        justify-content: space-between; /* yo controlo la disposición del elemento */
+    } /* yo cierro un bloque de reglas */
+} /* yo cierro un bloque de reglas */
+
+@media (max-width: 480px) { /* yo abro un bloque de reglas */
+    .menu-btn { /* yo abro un bloque de reglas */
+        padding: 0.5rem 0.9rem; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .slogan { /* yo abro un bloque de reglas */
+        padding: 60px 18px 40px; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .slogan-contenido { /* yo abro un bloque de reglas */
+        padding: 1.4rem 1rem; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .slogan-contenido h1 { /* yo abro un bloque de reglas */
+        font-size: 2rem; /* yo establezco propiedades de texto */
+        letter-spacing: 0.2rem; /* yo establezco propiedades de texto */
+    } /* yo cierro un bloque de reglas */
+    .slogan-text { /* yo abro un bloque de reglas */
+        font-size: 0.95rem; /* yo establezco propiedades de texto */
+    } /* yo cierro un bloque de reglas */
+    .hero { /* yo abro un bloque de reglas */
+        padding: 70px 16px 40px; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .hero-copy { /* yo abro un bloque de reglas */
+        padding: 1.8rem 1.2rem; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .hero-copy h1 { /* yo abro un bloque de reglas */
+        font-size: 2rem; /* yo establezco propiedades de texto */
+    } /* yo cierro un bloque de reglas */
+    .hero-text { /* yo abro un bloque de reglas */
+        font-size: 0.98rem; /* yo establezco propiedades de texto */
+    } /* yo cierro un bloque de reglas */
+    .modal-contenido { /* yo abro un bloque de reglas */
+        width: 95%; /* yo ajusto el tamaño o el espacio del elemento */
+        padding: 20px; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .item-carrito { /* yo abro un bloque de reglas */
+        flex-direction: column; /* yo ajusto esta propiedad de estilo */
+        align-items: flex-start; /* yo controlo la disposición del elemento */
+        gap: 10px; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+    .modal-carrito { /* yo abro un bloque de reglas */
+        align-items: flex-start; /* yo controlo la disposición del elemento */
+        justify-content: center; /* yo controlo la disposición del elemento */
+        padding-top: 40px; /* yo ajusto el tamaño o el espacio del elemento */
+    } /* yo cierro un bloque de reglas */
+} /* yo cierro un bloque de reglas */

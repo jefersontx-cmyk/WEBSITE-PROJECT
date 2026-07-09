@@ -1,58 +1,59 @@
+/* yo este archivo contiene estilos CSS con comentarios simples para aprender */
 /* ESTILOS APARTADOS — AIDA (colores y visual) */
 
-.producto {
-    background: linear-gradient(180deg, rgba(18, 16, 23, 0.96), rgba(10, 9, 16, 0.98));
-    border-radius: 28px;
-    border: 1px solid rgba(139, 92, 246, 0.12);
-    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
-}
+.producto { /* yo inicio un bloque de estilo */
+    background: linear-gradient(180deg, rgba(18, 16, 23, 0.96), rgba(10, 9, 16, 0.98)); /* yo defino cómo se ve el elemento */
+    border-radius: 28px; /* yo defino cómo se ve el elemento */
+    border: 1px solid rgba(139, 92, 246, 0.12); /* yo defino cómo se ve el elemento */
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
 
-.informacion {
-    background-color: rgba(18, 16, 23, 0.88);
-    border-radius: 20px;
-    padding: 1.4rem;
-    border: 1px solid rgba(139, 92, 246, 0.14);
-}
+.informacion { /* yo inicio un bloque de estilo */
+    background-color: rgba(18, 16, 23, 0.88); /* yo defino cómo se ve el elemento */
+    border-radius: 20px; /* yo defino cómo se ve el elemento */
+    padding: 1.4rem; /* yo ajusto espacios o tamaños */
+    border: 1px solid rgba(139, 92, 246, 0.14); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
 
-.btn-ver-producto {
-    background: rgba(139, 92, 246, 0.18);
-    border: 1px solid rgba(139, 92, 246, 0.24);
-    color: var(--text);
-    border-radius: 999px;
-    padding: 0.95rem 1.4rem;
-    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
-}
+.btn-ver-producto { /* yo inicio un bloque de estilo */
+    background: rgba(139, 92, 246, 0.18); /* yo defino cómo se ve el elemento */
+    border: 1px solid rgba(139, 92, 246, 0.24); /* yo defino cómo se ve el elemento */
+    color: var(--text); /* yo defino el estilo del texto */
+    border-radius: 999px; /* yo defino cómo se ve el elemento */
+    padding: 0.95rem 1.4rem; /* yo ajusto espacios o tamaños */
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
 
-.btn-ver-producto:hover {
-    background: rgba(139, 92, 246, 0.32);
-    transform: translateY(-1px);
-}
+.btn-ver-producto:hover { /* yo inicio un bloque de estilo */
+    background: rgba(139, 92, 246, 0.32); /* yo defino cómo se ve el elemento */
+    transform: translateY(-1px); /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
 
-#intro h2 {
-    color: var(--text);
-}
+#intro h2 { /* yo inicio un bloque de estilo */
+    color: var(--text); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
 
-#intro h2::after {
-    background-color: var(--accent);
-}
+#intro h2::after { /* yo inicio un bloque de estilo */
+    background-color: var(--accent); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
 
-.informacion h3 {
-    color: var(--text);
-}
+.informacion h3 { /* yo inicio un bloque de estilo */
+    color: var(--text); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
 
-.informacion p {
-    color: rgba(245, 234, 255, 0.82);
-}
+.informacion p { /* yo inicio un bloque de estilo */
+    color: rgba(245, 234, 255, 0.82); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
 
-.precio .dinero {
-    color: var(--accent-secondary);
-}
+.precio .dinero { /* yo inicio un bloque de estilo */
+    color: var(--accent-secondary); /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
 
-#intro {
-    background: rgba(9, 9, 13, 0.64);
-    backdrop-filter: blur(12px);
-    border-radius: 28px;
-    border: 1px solid rgba(139, 92, 246, 0.08);
-    padding: 2rem;
-}
+#intro { /* yo inicio un bloque de estilo */
+    background: rgba(9, 9, 13, 0.64); /* yo defino cómo se ve el elemento */
+    backdrop-filter: blur(12px); /* yo defino cómo se ve el elemento */
+    border-radius: 28px; /* yo defino cómo se ve el elemento */
+    border: 1px solid rgba(139, 92, 246, 0.08); /* yo defino cómo se ve el elemento */
+    padding: 2rem; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
 

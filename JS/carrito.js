@@ -1,3 +1,4 @@
+// yo este archivo contiene código JavaScript con comentarios simples para aprender
 /* ===========================================
    CARRITO DE COMPRAS - JAVASCRIPT COMPARTIDO
    - Gestión del carrito con localStorage
@@ -9,35 +10,35 @@
 let carrito = JSON.parse(localStorage.getItem('carrito')) || []; // Cargar carrito guardado o iniciar vacío
 
 // Función para actualizar el contador del carrito flotante
-function actualizarContadorCarrito() {
+function actualizarContadorCarrito() { // yo defino una función que hace una acción específica
     const totalItems = carrito.reduce((total, item) => total + item.cantidad, 0); // Sumar todas las cantidades
     const contador = document.getElementById('carrito-contador'); // Obtener elemento contador
-    if (contador) {
+    if (contador) { // yo verifico algo antes de continuar
         contador.textContent = totalItems; // Actualizar texto del contador
     }
 }
 
 // Vaciar el carrito por completo
-function vaciarCarrito() {
+function vaciarCarrito() { // yo defino una función que hace una acción específica
     carrito = [];
     localStorage.setItem('carrito', JSON.stringify(carrito));
     actualizarContadorCarrito();
 }
 
 // Función para agregar producto al carrito
-function agregarAlCarrito(nombre, precio, imagen, talla) {
-    if (!talla) { // Validar que exista talla seleccionada
+function agregarAlCarrito(nombre, precio, imagen, talla) { // yo defino una función que hace una acción específica
+    if (!talla) { // Validar que exista talla seleccionada // yo verifico algo antes de continuar
         alert('Por favor selecciona una talla antes de agregar al carrito.');
-        return; // Detener si no hay talla
+        return; // Detener si no hay talla // yo devuelvo este resultado
     }
 
     const productoExistente = carrito.find(item =>
         item.nombre === nombre && item.talla === talla // Buscar el mismo producto con misma talla
     );
 
-    if (productoExistente) {
+    if (productoExistente) { // yo verifico algo antes de continuar
         productoExistente.cantidad += 1; // Sumar cantidad si ya existe
-    } else {
+    } else { // yo verifico algo antes de continuar
         carrito.push({
             nombre: nombre, // Nombre del producto
             precio: parseFloat(precio), // Precio convertido a número
@@ -52,7 +53,7 @@ function agregarAlCarrito(nombre, precio, imagen, talla) {
 
     // Notificación no intrusiva: crear un toast pequeño si es posible
     try {
-        const toast = document.createElement('div');
+        const toast = document.createElement('div'); // yo declaro toast para usarlo después
         toast.textContent = `${nombre} (Talla ${talla}) agregado al carrito`;
         toast.style.cssText = 'position:fixed;right:20px;bottom:20px;background:rgba(0,0,0,0.7);color:#fff;padding:8px 12px;border-radius:8px;z-index:9999;backdrop-filter:blur(6px)';
         document.body.appendChild(toast);
@@ -63,22 +64,22 @@ function agregarAlCarrito(nombre, precio, imagen, talla) {
 }
 
 // Función para mostrar el modal del carrito
-function mostrarCarrito() {
+function mostrarCarrito() { // yo defino una función que hace una acción específica
     const modal = document.getElementById('modal-carrito'); // Contenedor del modal
     const itemsCarrito = document.getElementById('items-carrito'); // Área para listar items
     const totalCarrito = document.getElementById('total-carrito'); // Área de total
 
-    if (!modal || !itemsCarrito || !totalCarrito) {
+    if (!modal || !itemsCarrito || !totalCarrito) { // yo verifico algo antes de continuar
         console.error('Elementos del modal del carrito no encontrados');
-        return; // Si faltan elementos, detener ejecución
+        return; // Si faltan elementos, detener ejecución // yo devuelvo este resultado
     }
 
     itemsCarrito.innerHTML = ''; // Limpiar listado previo
 
-    if (carrito.length === 0) {
+    if (carrito.length === 0) { // yo verifico algo antes de continuar
         itemsCarrito.innerHTML = '<p>Tu carrito está vacío</p>'; // Mensaje cuando no hay items
         totalCarrito.textContent = 'Total: Q.0.00'; // Total cero
-    } else {
+    } else { // yo verifico algo antes de continuar
         carrito.forEach((item, index) => {
             const itemDiv = document.createElement('div'); // Crear contenedor del item
             itemDiv.className = 'item-carrito'; // Clase CSS
@@ -115,27 +116,27 @@ function mostrarCarrito() {
 
     // Agregar delegación de eventos para botones de cantidad / eliminar
     itemsCarrito.querySelectorAll('button[data-action]').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            const action = this.getAttribute('data-action');
-            const idx = parseInt(this.getAttribute('data-index'));
-            if (action === 'remove') eliminarDelCarrito(idx);
-            if (action === 'increase') cambiarCantidad(idx, (carrito[idx].cantidad || 0) + 1);
-            if (action === 'decrease') cambiarCantidad(idx, (carrito[idx].cantidad || 0) - 1);
+        btn.addEventListener('click', function(e) { // yo le digo al navegador que escuche un evento del usuario
+            const action = this.getAttribute('data-action'); // yo declaro action para usarlo después
+            const idx = parseInt(this.getAttribute('data-index')); // yo declaro idx para usarlo después
+            if (action === 'remove') eliminarDelCarrito(idx); // yo verifico algo antes de continuar
+            if (action === 'increase') cambiarCantidad(idx, (carrito[idx].cantidad || 0) + 1); // yo verifico algo antes de continuar
+            if (action === 'decrease') cambiarCantidad(idx, (carrito[idx].cantidad || 0) - 1); // yo verifico algo antes de continuar
         });
     });
 }
 
 // Función para cerrar el modal del carrito
-function cerrarCarrito() {
+function cerrarCarrito() { // yo defino una función que hace una acción específica
     const modal = document.getElementById('modal-carrito'); // Contenedor del modal
-    if (modal) {
+    if (modal) { // yo verifico algo antes de continuar
         modal.style.display = 'none'; // Ocultar modal
     }
 }
 
 // Función para eliminar item del carrito
-function eliminarDelCarrito(index) {
-    if (index >= 0 && index < carrito.length) { // Verificar índice válido
+function eliminarDelCarrito(index) { // yo defino una función que hace una acción específica
+    if (index >= 0 && index < carrito.length) { // Verificar índice válido // yo verifico algo antes de continuar
         carrito.splice(index, 1); // Eliminar item
         localStorage.setItem('carrito', JSON.stringify(carrito)); // Guardar cambios
         actualizarContadorCarrito(); // Actualizar contador
@@ -144,44 +145,44 @@ function eliminarDelCarrito(index) {
 }
 
 // Eliminar producto por nombre y talla (más seguro que usar índice en listas dinámicas)
-function eliminarPorProducto(nombre, talla) {
-    const idx = carrito.findIndex(item => item.nombre === nombre && item.talla === talla);
-    if (idx !== -1) eliminarDelCarrito(idx);
+function eliminarPorProducto(nombre, talla) { // yo defino una función que hace una acción específica
+    const idx = carrito.findIndex(item => item.nombre === nombre && item.talla === talla); // yo declaro idx para usarlo después
+    if (idx !== -1) eliminarDelCarrito(idx); // yo verifico algo antes de continuar
 }
 
 // Cambiar la cantidad de un item dado su índice; si queda en 0 se elimina
-function cambiarCantidad(index, nuevaCantidad) {
-    if (index < 0 || index >= carrito.length) return;
-    if (nuevaCantidad <= 0) {
+function cambiarCantidad(index, nuevaCantidad) { // yo defino una función que hace una acción específica
+    if (index < 0 || index >= carrito.length) return; // yo verifico algo antes de continuar
+    if (nuevaCantidad <= 0) { // yo verifico algo antes de continuar
         eliminarDelCarrito(index);
-        return;
+        return; // yo devuelvo este resultado
     }
     carrito[index].cantidad = parseInt(nuevaCantidad, 10);
     localStorage.setItem('carrito', JSON.stringify(carrito));
     actualizarContadorCarrito();
     // Actualizar contador visual en modal si existe
-    const span = document.getElementById(`cantidad-${index}`);
-    if (span) span.textContent = carrito[index].cantidad;
+    const span = document.getElementById(`cantidad-${index}`); // yo declaro span para usarlo después
+    if (span) span.textContent = carrito[index].cantidad; // yo verifico algo antes de continuar
     // Actualizar total mostrado
-    const totalCarrito = document.getElementById('total-carrito');
-    if (totalCarrito) {
-        const total = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
+    const totalCarrito = document.getElementById('total-carrito'); // yo declaro totalCarrito para usarlo después
+    if (totalCarrito) { // yo verifico algo antes de continuar
+        const total = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0); // yo declaro total para usarlo después
         totalCarrito.textContent = `Total: Q.${total.toFixed(2)}`;
     }
 }
 
 // Función para finalizar compra y enviar al formulario de contacto con los productos seleccionados
-function finalizarCompra() {
-    if (carrito.length === 0) {
+function finalizarCompra() { // yo defino una función que hace una acción específica
+    if (carrito.length === 0) { // yo verifico algo antes de continuar
         alert('Tu carrito está vacío');
-        return; // No hay compra si el carrito está vacío
+        return; // No hay compra si el carrito está vacío // yo devuelvo este resultado
     }
 
-    const productosSeleccionados = carrito.map(item => `- ${item.nombre} (Talla ${item.talla}) x ${item.cantidad}`).join('\n');
-    const mensaje = `Hola, estoy interesado en los siguientes productos:\n${productosSeleccionados}\n\nPor favor contáctame para continuar con la compra.`;
+    const productosSeleccionados = carrito.map(item => `- ${item.nombre} (Talla ${item.talla}) x ${item.cantidad}`).join('\n'); // yo declaro productosSeleccionados para usarlo después
+    const mensaje = `Hola, estoy interesado en los siguientes productos:\n${productosSeleccionados}\n\nPor favor contáctame para continuar con la compra.`; // yo declaro mensaje para usarlo después
 
-    const estaEnHTML = window.location.pathname.includes('/HTML/');
-    const rutaContacto = estaEnHTML ? 'Contacto.html' : 'HTML/Contacto.html';
+    const estaEnHTML = window.location.pathname.includes('/HTML/'); // yo declaro estaEnHTML para usarlo después
+    const rutaContacto = estaEnHTML ? 'Contacto.html' : 'HTML/Contacto.html'; // yo declaro rutaContacto para usarlo después
 
     carrito = []; // Vaciar el carrito al finalizar compra
     localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -191,7 +192,7 @@ function finalizarCompra() {
 }
 
 // Función para seleccionar talla
-function seleccionarTalla(elemento) {
+function seleccionarTalla(elemento) { // yo defino una función que hace una acción específica
     document.querySelectorAll('.talla').forEach(talla => {
         talla.classList.remove('seleccionada'); // Quitar selección previa
     });
@@ -201,28 +202,28 @@ function seleccionarTalla(elemento) {
 }
 
 // Función para cambiar imagen principal en la galería
-function cambiarImagen(src) {
+function cambiarImagen(src) { // yo defino una función que hace una acción específica
     const imagenPrincipal = document.getElementById('imagen-principal'); // Elemento imagen principal
-    if (imagenPrincipal) {
+    if (imagenPrincipal) { // yo verifico algo antes de continuar
         imagenPrincipal.src = src; // Cambiar la imagen principal
     }
 }
 
 // Inicializar el carrito cuando se carga la página
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() { // yo espero a que la página cargue antes de usar elementos del DOM
     actualizarContadorCarrito(); // Actualizar contador inmediato
 
     const modal = document.getElementById('modal-carrito'); // Modal de carrito
-    if (modal) {
-        modal.addEventListener('click', function(event) {
-            if (event.target === modal) {
+    if (modal) { // yo verifico algo antes de continuar
+        modal.addEventListener('click', function(event) { // yo le digo al navegador que escuche un evento del usuario
+            if (event.target === modal) { // yo verifico algo antes de continuar
                 cerrarCarrito(); // Cerrar modal al hacer clic fuera
             }
         });
     }
     // Cerrar modal con Esc
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') cerrarCarrito();
+    document.addEventListener('keydown', function(e) { // yo espero a que la página cargue antes de usar elementos del DOM
+        if (e.key === 'Escape') cerrarCarrito(); // yo verifico algo antes de continuar
     });
     // Exponer funciones útiles para otros scripts o consola
     window.vaciarCarrito = vaciarCarrito;

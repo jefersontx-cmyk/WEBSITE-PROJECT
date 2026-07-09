@@ -1,219 +1,220 @@
+/* yo este archivo contiene estilos CSS con comentarios simples para aprender */
 
-.catalogo {
-    display: grid;
-    gap: 28px;
-    padding: 24px;
-    max-width: 1240px;
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
+.catalogo { /* yo inicio un bloque de estilo */
+    display: grid; /* yo controlo cómo se coloca el elemento */
+    gap: 28px; /* yo ajusto espacios o tamaños */
+    padding: 24px; /* yo ajusto espacios o tamaños */
+    max-width: 1240px; /* yo ajusto espacios o tamaños */
+    margin: 0 auto; /* yo ajusto espacios o tamaños */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* yo controlo cómo se coloca el elemento */
+} /* yo cierro el bloque de estilo */
 
 
 .cata-accesorios,
 .cata-velocity,
 .cata-tacos,
-.cata-equipacion {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
+.cata-equipacion { /* yo inicio un bloque de estilo */
+    display: grid; /* yo controlo cómo se coloca el elemento */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* yo controlo cómo se coloca el elemento */
+} /* yo cierro el bloque de estilo */
 
-.producto {
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.18);
-    display: flex;
-    flex-direction: column;
-    background: rgba(10, 18, 34, 0.92);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-}
+.producto { /* yo inicio un bloque de estilo */
+    border-radius: 24px; /* yo defino cómo se ve el elemento */
+    overflow: hidden; /* yo controlo cómo se coloca el elemento */
+    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.18); /* yo defino cómo se ve el elemento */
+    display: flex; /* yo controlo cómo se coloca el elemento */
+    flex-direction: column; /* yo aplico una propiedad de estilo */
+    background: rgba(10, 18, 34, 0.92); /* yo defino cómo se ve el elemento */
+    border: 1px solid rgba(255, 255, 255, 0.06); /* yo defino cómo se ve el elemento */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* yo aplico una propiedad de estilo */
+    height: 100%; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
 
-.producto:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 45px 110px rgba(0, 0, 0, 0.22);
-}
+.producto:hover { /* yo inicio un bloque de estilo */
+    transform: translateY(-4px); /* yo aplico una propiedad de estilo */
+    box-shadow: 0 45px 110px rgba(0, 0, 0, 0.22); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
 
-.producto img {
-    width: 100%;
-    height: 320px; 
-    object-fit: cover; 
-    object-position: top; 
-    transition: transform 0.45s ease;
-}
+.producto img { /* yo inicio un bloque de estilo */
+    width: 100%; /* yo ajusto espacios o tamaños */
+    height: 320px;  /* yo ajusto espacios o tamaños */
+    object-fit: cover;  /* yo aplico una propiedad de estilo */
+    object-position: top;  /* yo aplico una propiedad de estilo */
+    transition: transform 0.45s ease; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
 
-.producto:hover img {
-    transform: scale(1.03);
-}
-
-
-.cata-velocity .producto img {
-    max-height: 340px;
-}
+.producto:hover img { /* yo inicio un bloque de estilo */
+    transform: scale(1.03); /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
 
 
-.informacion {
-    padding: 26px 24px 28px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 12px;
-    transition: background-color 0.35s ease;
-}
+.cata-velocity .producto img { /* yo inicio un bloque de estilo */
+    max-height: 340px; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
 
-.producto:hover .informacion {
-    background-color: rgba(17, 26, 45, 0.96);
-}
 
-.informacion h3 {
-    margin: 0 0 4px 0;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-}
+.informacion { /* yo inicio un bloque de estilo */
+    padding: 26px 24px 28px; /* yo ajusto espacios o tamaños */
+    flex-grow: 1; /* yo aplico una propiedad de estilo */
+    display: flex; /* yo controlo cómo se coloca el elemento */
+    flex-direction: column; /* yo aplico una propiedad de estilo */
+    justify-content: space-between; /* yo controlo cómo se coloca el elemento */
+    gap: 12px; /* yo ajusto espacios o tamaños */
+    transition: background-color 0.35s ease; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
 
-.informacion p {
-    color: rgba(255,255,255,0.75);
-    line-height: 1.7;
-    margin-bottom: 8px;
-    font-size: 0.98rem;
-}
+.producto:hover .informacion { /* yo inicio un bloque de estilo */
+    background-color: rgba(17, 26, 45, 0.96); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
 
-.precio .dinero {
-    font-weight: 700;
-    font-size: 1.25rem;
-}
+.informacion h3 { /* yo inicio un bloque de estilo */
+    margin: 0 0 4px 0; /* yo ajusto espacios o tamaños */
+    font-family: 'Inter', sans-serif; /* yo aplico una propiedad de estilo */
+    font-size: 1.5rem; /* yo defino el estilo del texto */
+    text-transform: uppercase; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
 
-.btn-ver-producto {
-    padding: 0.95rem 1rem;
-    border-radius: 999px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    font-weight: 800;
-    margin-top: 14px;
-    width: fit-content;
-    align-self: flex-start;
-    transition: all 0.25s ease;
-    background: rgba(124, 58, 237, 0.16);
-    color: inherit;
-    border: 1px solid rgba(124, 58, 237, 0.22);
-}
+.informacion p { /* yo inicio un bloque de estilo */
+    color: rgba(255,255,255,0.75); /* yo defino el estilo del texto */
+    line-height: 1.7; /* yo defino el estilo del texto */
+    margin-bottom: 8px; /* yo aplico una propiedad de estilo */
+    font-size: 0.98rem; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
 
-.btn-ver-producto:hover {
-    background: rgba(124, 58, 237, 0.28);
-}
+.precio .dinero { /* yo inicio un bloque de estilo */
+    font-weight: 700; /* yo defino el estilo del texto */
+    font-size: 1.25rem; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
 
-#intro header {
-    text-align: center;
-    padding: 48px 24px;
-    max-width: 820px;
-    margin: 0 auto 20px;
-}
+.btn-ver-producto { /* yo inicio un bloque de estilo */
+    padding: 0.95rem 1rem; /* yo ajusto espacios o tamaños */
+    border-radius: 999px; /* yo defino cómo se ve el elemento */
+    cursor: pointer; /* yo aplico una propiedad de estilo */
+    font-size: 0.95rem; /* yo defino el estilo del texto */
+    font-weight: 800; /* yo defino el estilo del texto */
+    margin-top: 14px; /* yo aplico una propiedad de estilo */
+    width: fit-content; /* yo ajusto espacios o tamaños */
+    align-self: flex-start; /* yo controlo cómo se coloca el elemento */
+    transition: all 0.25s ease; /* yo aplico una propiedad de estilo */
+    background: rgba(124, 58, 237, 0.16); /* yo defino cómo se ve el elemento */
+    color: inherit; /* yo defino el estilo del texto */
+    border: 1px solid rgba(124, 58, 237, 0.22); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
 
-#intro h2 {
-    font-family: 'Inter', sans-serif;
-    font-size: clamp(2rem, 3.2vw, 3.4rem);
-    margin-bottom: 12px;
-}
+.btn-ver-producto:hover { /* yo inicio un bloque de estilo */
+    background: rgba(124, 58, 237, 0.28); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
 
-#intro h2::after {
-    content: "";
-    display: block;
-    width: 72px;
-    height: 4px;
-    margin: 14px auto 0;
-    border-radius: 999px;
-    background: rgba(124, 58, 237, 0.9);
-    position: relative;
-}
+#intro header { /* yo inicio un bloque de estilo */
+    text-align: center; /* yo defino el estilo del texto */
+    padding: 48px 24px; /* yo ajusto espacios o tamaños */
+    max-width: 820px; /* yo ajusto espacios o tamaños */
+    margin: 0 auto 20px; /* yo ajusto espacios o tamaños */
+} /* yo cierro el bloque de estilo */
 
-#descripcion {
-    font-size: 1.06rem;
-    font-style: italic;
-    color: rgba(255,255,255,0.78);
-    margin-top: 18px;
-}
+#intro h2 { /* yo inicio un bloque de estilo */
+    font-family: 'Inter', sans-serif; /* yo aplico una propiedad de estilo */
+    font-size: clamp(2rem, 3.2vw, 3.4rem); /* yo defino el estilo del texto */
+    margin-bottom: 12px; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
 
-.contenedor-boton-volver {
-    display: flex !important;
-    justify-content: flex-start; 
-    align-items: center;
-    max-width: 1240px;
-    margin: 100px auto 40px !important; 
-    padding: 0 24px;
-    width: 100%;
-    clear: both !important; 
-    position: relative !important;
-}
+#intro h2::after { /* yo inicio un bloque de estilo */
+    content: ""; /* yo aplico una propiedad de estilo */
+    display: block; /* yo controlo cómo se coloca el elemento */
+    width: 72px; /* yo ajusto espacios o tamaños */
+    height: 4px; /* yo ajusto espacios o tamaños */
+    margin: 14px auto 0; /* yo ajusto espacios o tamaños */
+    border-radius: 999px; /* yo defino cómo se ve el elemento */
+    background: rgba(124, 58, 237, 0.9); /* yo defino cómo se ve el elemento */
+    position: relative; /* yo controlo cómo se coloca el elemento */
+} /* yo cierro el bloque de estilo */
 
-.btn-regresar-catalogo {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    border-radius: 999px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08rem;
-    transition: all 0.25s ease;
-    background: rgba(0, 212, 255, 0.12);
-    color: #ffffff; 
-    border: 1px solid rgba(0, 212, 255, 0.3);
-    text-decoration: none;
-}
+#descripcion { /* yo inicio un bloque de estilo */
+    font-size: 1.06rem; /* yo defino el estilo del texto */
+    font-style: italic; /* yo defino el estilo del texto */
+    color: rgba(255,255,255,0.78); /* yo defino el estilo del texto */
+    margin-top: 18px; /* yo aplico una propiedad de estilo */
+} /* yo cierro el bloque de estilo */
 
-.btn-regresar-catalogo:hover {
-    background: rgba(0, 212, 255, 0.24);
-    transform: translateX(-4px);
-    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.15);
-}
+.contenedor-boton-volver { /* yo inicio un bloque de estilo */
+    display: flex !important; /* yo controlo cómo se coloca el elemento */
+    justify-content: flex-start;  /* yo controlo cómo se coloca el elemento */
+    align-items: center; /* yo controlo cómo se coloca el elemento */
+    max-width: 1240px; /* yo ajusto espacios o tamaños */
+    margin: 100px auto 40px !important;  /* yo ajusto espacios o tamaños */
+    padding: 0 24px; /* yo ajusto espacios o tamaños */
+    width: 100%; /* yo ajusto espacios o tamaños */
+    clear: both !important;  /* yo aplico una propiedad de estilo */
+    position: relative !important; /* yo controlo cómo se coloca el elemento */
+} /* yo cierro el bloque de estilo */
 
-@media (max-width: 768px) {
-    .catalogo {
-        gap: 20px;
-        padding: 18px;
-    }
-    .producto img {
-        height: 280px;
-    }
-    #intro h2 {
-        font-size: 2.3rem;
-    }
-    #descripcion {
-        font-size: 1rem;
-    }
-    .contenedor-boton-volver {
-        margin: 60px auto 30px !important;
-    }
-}
+.btn-regresar-catalogo { /* yo inicio un bloque de estilo */
+    display: inline-flex; /* yo controlo cómo se coloca el elemento */
+    align-items: center; /* yo controlo cómo se coloca el elemento */
+    justify-content: center; /* yo controlo cómo se coloca el elemento */
+    padding: 12px 24px; /* yo ajusto espacios o tamaños */
+    border-radius: 999px; /* yo defino cómo se ve el elemento */
+    cursor: pointer; /* yo aplico una propiedad de estilo */
+    font-size: 0.9rem; /* yo defino el estilo del texto */
+    font-weight: 700; /* yo defino el estilo del texto */
+    text-transform: uppercase; /* yo defino el estilo del texto */
+    letter-spacing: 0.08rem; /* yo defino el estilo del texto */
+    transition: all 0.25s ease; /* yo aplico una propiedad de estilo */
+    background: rgba(0, 212, 255, 0.12); /* yo defino cómo se ve el elemento */
+    color: #ffffff;  /* yo defino el estilo del texto */
+    border: 1px solid rgba(0, 212, 255, 0.3); /* yo defino cómo se ve el elemento */
+    text-decoration: none; /* yo defino el estilo del texto */
+} /* yo cierro el bloque de estilo */
 
-@media (max-width: 480px) {
-    .catalogo {
-        gap: 16px;
-        padding: 16px;
-        grid-template-columns: 1fr; 
-    }
-    .producto img {
-        height: auto;
-        max-height: 250px;
-    }
-    .informacion h3 {
-        font-size: 1.2rem;
-    }
-    .informacion p {
-        font-size: 0.92rem;
-    }
-    #intro h2 {
-        font-size: 1.9rem;
-    }
-    #descripcion {
-        font-size: 0.95rem;
-    }
-    .contenedor-boton-volver {
-        justify-content: center; 
-        margin: 40px auto 15px !important;
-    }
-}
+.btn-regresar-catalogo:hover { /* yo inicio un bloque de estilo */
+    background: rgba(0, 212, 255, 0.24); /* yo defino cómo se ve el elemento */
+    transform: translateX(-4px); /* yo aplico una propiedad de estilo */
+    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.15); /* yo defino cómo se ve el elemento */
+} /* yo cierro el bloque de estilo */
+
+@media (max-width: 768px) { /* yo inicio un bloque de estilo */
+    .catalogo { /* yo inicio un bloque de estilo */
+        gap: 20px; /* yo ajusto espacios o tamaños */
+        padding: 18px; /* yo ajusto espacios o tamaños */
+    } /* yo cierro el bloque de estilo */
+    .producto img { /* yo inicio un bloque de estilo */
+        height: 280px; /* yo ajusto espacios o tamaños */
+    } /* yo cierro el bloque de estilo */
+    #intro h2 { /* yo inicio un bloque de estilo */
+        font-size: 2.3rem; /* yo defino el estilo del texto */
+    } /* yo cierro el bloque de estilo */
+    #descripcion { /* yo inicio un bloque de estilo */
+        font-size: 1rem; /* yo defino el estilo del texto */
+    } /* yo cierro el bloque de estilo */
+    .contenedor-boton-volver { /* yo inicio un bloque de estilo */
+        margin: 60px auto 30px !important; /* yo ajusto espacios o tamaños */
+    } /* yo cierro el bloque de estilo */
+} /* yo cierro el bloque de estilo */
+
+@media (max-width: 480px) { /* yo inicio un bloque de estilo */
+    .catalogo { /* yo inicio un bloque de estilo */
+        gap: 16px; /* yo ajusto espacios o tamaños */
+        padding: 16px; /* yo ajusto espacios o tamaños */
+        grid-template-columns: 1fr;  /* yo controlo cómo se coloca el elemento */
+    } /* yo cierro el bloque de estilo */
+    .producto img { /* yo inicio un bloque de estilo */
+        height: auto; /* yo ajusto espacios o tamaños */
+        max-height: 250px; /* yo aplico una propiedad de estilo */
+    } /* yo cierro el bloque de estilo */
+    .informacion h3 { /* yo inicio un bloque de estilo */
+        font-size: 1.2rem; /* yo defino el estilo del texto */
+    } /* yo cierro el bloque de estilo */
+    .informacion p { /* yo inicio un bloque de estilo */
+        font-size: 0.92rem; /* yo defino el estilo del texto */
+    } /* yo cierro el bloque de estilo */
+    #intro h2 { /* yo inicio un bloque de estilo */
+        font-size: 1.9rem; /* yo defino el estilo del texto */
+    } /* yo cierro el bloque de estilo */
+    #descripcion { /* yo inicio un bloque de estilo */
+        font-size: 0.95rem; /* yo defino el estilo del texto */
+    } /* yo cierro el bloque de estilo */
+    .contenedor-boton-volver { /* yo inicio un bloque de estilo */
+        justify-content: center;  /* yo controlo cómo se coloca el elemento */
+        margin: 40px auto 15px !important; /* yo ajusto espacios o tamaños */
+    } /* yo cierro el bloque de estilo */
+} /* yo cierro el bloque de estilo */
